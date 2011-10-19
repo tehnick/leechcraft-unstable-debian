@@ -1,2 +1,2 @@
 version=3
-https://github.com/0xd34df00d/leechcraft/downloads .*/0xd34df00d/leechcraft/tarball/(\d.+) debian uupdate
+https://github.com/0xd34df00d/leechcraft/tags .*/0xd34df00d/leechcraft/tarball/(\d.+) debian uupdate

@@ -1,5 +1,11 @@
-leechcraft (0.4.90-1) unstable; urgency=low
+leechcraft-unstable (0.4.90-0ppa1~oneiric1) oneiric; urgency=low
 
-  * Initial release (closes: #607440).
+  * Update to stable release 0.4.90.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 19 Oct 2011 01:38:39 +0300
+
+leechcraft-unstable (0.4.80-0ppa1) unstable; urgency=low
+
+  * Initial release.
 
  -- Boris Pek <tehnick-8@mail.ru>  Mon, 10 Oct 2011 19:47:25 +0300

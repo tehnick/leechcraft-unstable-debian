@@ -3,7 +3,7 @@ Debianized-By: Boris Pek <tehnick-8@mail.ru>
 Debianized-Date: Sat, 16 Jul 2011 21:53:57 +0300
 Upstream-Name: LeechCraft
 Upstream-Author: Georg Rudoy <0xd34df00d@gmail.com>
-Original-Source: https://github.com/0xd34df00d/leechcraft/downloads
+Original-Source: https://github.com/0xd34df00d/leechcraft/tags
  The orig.tar.bz2 is generated from a few upstream source trees:
  git://github.com/0xd34df00d/leechcraft.git
  git://github.com/0xd34df00d/qxmpp-dev.git
