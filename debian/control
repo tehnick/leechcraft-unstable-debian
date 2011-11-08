@@ -20,6 +20,7 @@ Build-Depends: debhelper (>= 7),
  libcurl4-openssl-dev,
  libqscintilla2-dev,
  libqjson-dev,
+ libqca2-dev,
  libaspell-dev,
  libspeex-dev,
  qtmobility-dev,
@@ -782,8 +783,7 @@ Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
  libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- libqscintilla2-5
+ leechcraft (= ${binary:Version})
 Provides: leechcraft-provider-texteditor
 Description: Plain text editor for LeechCraft
  This package contains Popishu, a simple text editor for LeechCraft
