@@ -2,8 +2,8 @@ Format: http://dep.debian.net/deps/dep5/
 Debianized-By: Boris Pek <tehnick-8@mail.ru>
 Debianized-Date: Sat, 16 Jul 2011 21:53:57 +0300
 Upstream-Name: LeechCraft
-Upstream-Author: Georg Rudoy <0xd34df00d@gmail.com>
-Original-Source: https://github.com/0xd34df00d/leechcraft/tags
+Upstream-Contact: Georg Rudoy <0xd34df00d@gmail.com>
+Source: https://github.com/0xd34df00d/leechcraft/tags
  The orig.tar.bz2 is generated from a few upstream source trees:
  git://github.com/0xd34df00d/leechcraft.git
  git://github.com/0xd34df00d/qxmpp-dev.git
@@ -13,15 +13,13 @@ Original-Source: https://github.com/0xd34df00d/leechcraft/tags
  additional paches wich are not included in upstream.
  .
  Also few files and directories are not included in tarball:
- https://github.com/0xd34df00d/leechcraft/tree/master/doc/
- https://github.com/0xd34df00d/leechcraft/tree/master/iconsets/
  https://github.com/0xd34df00d/leechcraft/tree/master/src/plugins/lcftp/
  https://github.com/0xd34df00d/leechcraft/tree/master/src/plugins/cstp/resources/images/clients/*
  https://github.com/0xd34df00d/leechcraft/tree/master/src/plugins/azoth/share/azoth/iconsets/clients/default/* (except file unknown.png)
- https://github.com/0xd34df00d/leechcraft/tree/master/src/util/modeltest.*
  .
- Special patches in debian/patches/ directory give possibility to build program
- without these files.
+ These files were deleted from tarball because they are non-free or with very
+ questionable licenses. Special patches in debian/patches/ directory give
+ possibility to build program without these files.
 
 Files: src/* tools/*
 Copyright: 2006-2011 Georg Rudoy <0xd34df00d@gmail.com>
@@ -64,7 +62,6 @@ License: GPL-3 or LGPL-2.1
 Files: src/3dparty/*
 Copyright: 2010 Qxt Foundation <foundation@libqxt.org> (http://libqxt.org)
 License: LGPL-2.1 or CPL-1
- .
  This library is free software; you can redistribute it and/or modify it
  under the terms of the Common Public License, version 1.0, as published
  by IBM, and/or under the terms of the GNU Lesser General Public License,

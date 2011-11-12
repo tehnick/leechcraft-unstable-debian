@@ -82,7 +82,6 @@ get-orig-source:
 	tar xzf "master"
 	mv 0xd34df00d-qxmpp-dev-* "$(PACKAGE)-$(CUR_VER)"/qxmpp
 	# processing
-	rm -rf "$(PACKAGE)-$(CUR_VER)"/iconsets/
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/lcftp/
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/cstp/resources/images/clients/*
 	mv "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/default/unknown.png \
@@ -90,7 +89,6 @@ get-orig-source:
 	rm -f "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/default/*
 	mv "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/unknown.png \
 	   "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/default/unknown.png
-	rm -f "$(PACKAGE)-$(CUR_VER)"/src/util/modeltest.*
 	# tarball
 	tar -cjf "$(PACKAGE)_$(CUR_VER).orig.tar.bz2" "$(PACKAGE)-$(CUR_VER)"
 	# cleaning
