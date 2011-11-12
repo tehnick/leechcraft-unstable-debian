@@ -1,1 +1,3 @@
 usr/lib/leechcraft/plugins/*leechcraft_secman.so
+
+usr/lib/leechcraft/plugins/*leechcraft_secman_simplestorage.so

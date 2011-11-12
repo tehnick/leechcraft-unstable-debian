@@ -53,7 +53,6 @@ Depends: ${misc:Depends},
  leechcraft-popishu (= ${binary:Version}),
  leechcraft-poshuku (= ${binary:Version}),
  leechcraft-secman (= ${binary:Version}),
- leechcraft-secman-simplestorage (= ${binary:Version}),
  leechcraft-seekthru (= ${binary:Version}),
  leechcraft-shellopen (= ${binary:Version}),
  leechcraft-summary (= ${binary:Version}),
@@ -122,7 +121,6 @@ Recommends: leechcraft-aggregator,
  leechcraft-popishu,
  leechcraft-poshuku,
  leechcraft-secman,
- leechcraft-secman-simplestorage,
  leechcraft-seekthru,
  leechcraft-shellopen,
  leechcraft-summary,
@@ -616,26 +614,11 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft (= ${binary:Version})
 Provides: leechcraft-provider-securestorage
 Description: Security Manager plugin for LeechCraft
- This package contains the base plugin for secure storage and such
- stuff for LeechCraft. Particular storage backends are implemented
- by plugins for this plugin.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-secman-simplestorage
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-secman (= ${binary:Version})
-Description: Simple storage backend for SecMan
- This package contains a simple, unencrypted storage backend for
- SecMan, LeechCraft's security manager plugin.
+ This package contains the base plugin for secure storage stuff for LeechCraft
+ and its own sub-plugin:
+  * simplestorage (Simple storage backend)
+  This is a simple, unencrypted storage backend for  SecMan, LeechCraft's
+  security manager plugin.
  .
  LeechCraft is a free modular "Internet client" application.
  .
