@@ -9,6 +9,13 @@ usr/lib/leechcraft/plugins/*leechcraft_azoth_acetamide.so
 usr/share/leechcraft/translations/leechcraft_azoth_acetamide_*.qm
 usr/share/leechcraft/settings/azothacetamidesettings.xml
 
+usr/lib/leechcraft/plugins/*leechcraft_azoth_adiumstyles.so
+usr/share/leechcraft/azoth/styles/adium/*
+
+usr/lib/leechcraft/plugins/*leechcraft_azoth_autoidler.so
+usr/share/leechcraft/translations/leechcraft_azoth_autoidler_*.qm
+usr/share/leechcraft/settings/azothautoidlersettings.xml
+
 usr/lib/leechcraft/plugins/*leechcraft_azoth_autopaste.so
 usr/share/leechcraft/translations/leechcraft_azoth_autopaste_*.qm
 usr/share/leechcraft/settings/azothautopastesettings.xml
@@ -29,13 +36,33 @@ usr/lib/leechcraft/plugins/*leechcraft_azoth_hili.so
 usr/share/leechcraft/translations/leechcraft_azoth_hili_*.qm
 usr/share/leechcraft/settings/azothhilisettings.xml
 
+usr/lib/leechcraft/plugins/*leechcraft_azoth_isterique.so
+usr/share/leechcraft/translations/leechcraft_azoth_isterique_*.qm
+usr/share/leechcraft/settings/azothisteriquesettings.xml
+
 usr/lib/leechcraft/plugins/*leechcraft_azoth_juick.so
+
+usr/lib/leechcraft/plugins/*leechcraft_azoth_lastseen.so
+usr/share/leechcraft/translations/leechcraft_azoth_lastseen_*.qm
+
+usr/lib/leechcraft/plugins/*leechcraft_azoth_metacontacts.so
+usr/share/leechcraft/translations/leechcraft_azoth_metacontacts_*.qm
+
+usr/lib/leechcraft/plugins/*leechcraft_azoth_modnok.so
+usr/share/leechcraft/translations/leechcraft_azoth_modnok_*.qm
+usr/share/leechcraft/settings/azothmodnoksettings.xml
+usr/bin/lc_azoth_modnok_latexconvert.sh
 
 usr/lib/leechcraft/plugins/*leechcraft_azoth_nativeemoticons.so
 usr/share/leechcraft/azoth/emoticons/native/*
 
 usr/lib/leechcraft/plugins/*leechcraft_azoth_p100q.so
+usr/share/leechcraft/translations/leechcraft_azoth_p100q*.qm
 usr/share/leechcraft/settings/azothp100qsettings.xml
+
+usr/lib/leechcraft/plugins/*leechcraft_azoth_rosenthal.so
+usr/share/leechcraft/translations/leechcraft_azoth_rosenthal*.qm
+usr/share/leechcraft/settings/azothrosenthalsettings.xml
 
 usr/lib/leechcraft/plugins/*leechcraft_azoth_standardstyles.so
 usr/share/leechcraft/azoth/styles/standard/*

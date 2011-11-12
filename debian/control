@@ -273,7 +273,9 @@ Description: Modular IM client for LeechCraft
  This package contains the core of the Azoth plugin (the modular IM client for
  LeechCraft) and its own sub-plugins:
   * acetamide (IRC protocol support)
+  * adiumstyles (support for Adium styles)
   * autopaste (Automatic paste of long messages to pastebins)
+  * autoidler (Automatic changing of status according to idle time)
   * chathistory (History storage)
   * depester (Conference ignore plugin)
   This plugin allows one to ignore messages from selected multiuser
@@ -287,20 +289,25 @@ Description: Modular IM client for LeechCraft
   This plugin allows one to customize the highlight settings in multiuser
   chatrooms in Azoth. Highlights could be triggered by a plain string
   or by a regular expression.
-  * nativeemoticons (Support for emoticons packs)
-  This plugin adds support for "standard" emoticons to Azoth.
-  * standardstyles (Standard styling support)
-  Standard styling plugin that provides support for default (and pretty
-  unimpressive) themes for chat windows.
+  * isterique (Plugin for decapitalizing all-caps text)
   * juick (Plugin for the Juick.com service)
   This package contains Juick.com microblogging service plugin that
   enhances the experience of using the service.
+  * lastseen (Plugin for keeping track of the date of contacts being online)
+  * metacontacts (Support for metacontacts)
+  * modnok (Plugin for rendering and displaying LaTeX formulas)
+  * nativeemoticons (Support for emoticons packs)
+  This plugin adds support for "standard" emoticons to Azoth.
   * p100q (Plugin for psto.net service)
   This package contains psto.net microblogging service plugin that
   enhances the experience of using the service.
+  * rosenthal (Spellchecker plugin)
+  * standardstyles (Standard styling support)
+  Standard styling plugin that provides support for default (and pretty
+  unimpressive) themes for chat windows.
   * xoox (XMPP/Jabber support)
-  This package contains the XMPP protocol plugin for Azoth, based on the patched
-  QXmpp library.
+  This package contains the XMPP protocol plugin for Azoth, based on the
+  patched QXmpp library.
   * xtazy (Plugin for publishing current tune)
   This plugin allows one to publish current user tune. MPRIS-compatible
   players and standard files are supported as sources of information
