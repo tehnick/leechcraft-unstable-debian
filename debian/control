@@ -33,7 +33,6 @@ Homepage: http://leechcraft.org
 Package: leechcraft-full
 Architecture: any
 Depends: ${misc:Depends},
- libqt4-sql-sqlite (>= 4.6.0),
  leechcraft (= ${binary:Version}),
  leechcraft-aggregator (= ${binary:Version}),
  leechcraft-auscrie (= ${binary:Version}),
