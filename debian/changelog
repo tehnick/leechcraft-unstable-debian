@@ -1,3 +1,9 @@
+leechcraft-unstable (0.4.90-731-g4d6080a-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 0.4.90-731-g4d6080a.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sat, 12 Nov 2011 15:36:40 +0200
+
 leechcraft-unstable (0.4.90-670-g4cccdc3-0ppa1~precise1) precise; urgency=low
 
   * Update to stable release 0.4.90-670-g4cccdc3.

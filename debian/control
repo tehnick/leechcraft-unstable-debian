@@ -38,19 +38,6 @@ Depends: ${misc:Depends},
  leechcraft-aggregator (= ${binary:Version}),
  leechcraft-auscrie (= ${binary:Version}),
  leechcraft-azoth (= ${binary:Version}),
- leechcraft-azoth-acetamide (= ${binary:Version}),
- leechcraft-azoth-autopaste (= ${binary:Version}),
- leechcraft-azoth-chathistory (= ${binary:Version}),
- leechcraft-azoth-depester (= ${binary:Version}),
- leechcraft-azoth-embedmedia (= ${binary:Version}),
- leechcraft-azoth-herbicide (= ${binary:Version}),
- leechcraft-azoth-hili (= ${binary:Version}),
- leechcraft-azoth-juick (= ${binary:Version}),
- leechcraft-azoth-nativeemoticons (= ${binary:Version}),
- leechcraft-azoth-p100q (= ${binary:Version}),
- leechcraft-azoth-standardstyles (= ${binary:Version}),
- leechcraft-azoth-xoox (= ${binary:Version}),
- leechcraft-azoth-xtazy (= ${binary:Version}),
  leechcraft-bittorrent (= ${binary:Version}),
  leechcraft-cstp (= ${binary:Version}),
  leechcraft-dbusmanager (= ${binary:Version}),
@@ -126,18 +113,6 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
 Recommends: leechcraft-aggregator,
  leechcraft-auscrie,
  leechcraft-azoth,
- leechcraft-azoth-acetamide,
- leechcraft-azoth-autopaste,
- leechcraft-azoth-chathistory,
- leechcraft-azoth-depester,
- leechcraft-azoth-embedmedia,
- leechcraft-azoth-herbicide,
- leechcraft-azoth-hili,
- leechcraft-azoth-juick,
- leechcraft-azoth-nativeemoticons,
- leechcraft-azoth-p100q,
- leechcraft-azoth-xoox,
- leechcraft-azoth-xtazy,
  leechcraft-bittorrent,
  leechcraft-cstp,
  leechcraft-dbusmanager,
@@ -306,245 +281,40 @@ Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
  libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth-provider-styling
-Recommends: leechcraft-azoth-acetamide (= ${binary:Version}),
- leechcraft-azoth-autopaste (= ${binary:Version}),
- leechcraft-azoth-chathistory (= ${binary:Version}),
- leechcraft-azoth-depester (= ${binary:Version}),
- leechcraft-azoth-embedmedia (= ${binary:Version}),
- leechcraft-azoth-herbicide (= ${binary:Version}),
- leechcraft-azoth-hili (= ${binary:Version}),
- leechcraft-azoth-juick (= ${binary:Version}),
- leechcraft-azoth-nativeemoticons (= ${binary:Version}),
- leechcraft-azoth-p100q (= ${binary:Version}),
- leechcraft-azoth-xoox (= ${binary:Version}),
- leechcraft-azoth-xtazy (= ${binary:Version})
+ leechcraft (= ${binary:Version})
 Description: Modular IM client for LeechCraft
- This package contains the core of the Azoth, the modular IM client for
- LeechCraft.
- .
- In order to really make use of it, you will need to install some
- protocol plugins, like leechcraft-azoth-xoox for XMPP.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-acetamide
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: IRC protocol support for LeechCraft Azoth
- This plugin adds support for IRC protocol to Azoth.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-autopaste
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: Automatic paste of long messages to pastebins
- This plugin, if installed, suggests pasting long messages to a
- pastebin and sending the link to the pasted text to the chat session
- instead of the text itself.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-chathistory
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: History storage for LeechCraft Azoth
- This plugin adds support for storing chat history to Azoth.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-depester
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: Conference ignore plugin for LeechCraft Azoth
+ This package contains the core of the Azoth plugin (the modular IM client for
+ LeechCraft) and its own sub-plugins:
+ * acetamide (IRC protocol support)
+ * autopaste (Automatic paste of long messages to pastebins)
+ * chathistory (History storage)
+ * depester (Conference ignore plugin)
  This plugin allows one to ignore messages from selected multiuser
  chatroom participants, blocking both general messages in the room
  and private messages.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-embedmedia
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: Embeds media files in the chat window of Azoth
+ * embedmedia (Embeds media files in the chat window)
  This plugin allows one to show various media objects (like videos from
  the YouTube service) directly in the chat window.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-herbicide
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: Basic antispam plugin for Azoth
- This plugin adds basic antispam capabilities to LeechCraft Azoth.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-hili
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: Custom highlights for LeechCraft Azoth
+ * herbicide (Basic antispam plugin)
+ * hili (Custom highlights)
  This plugin allows one to customize the highlight settings in multiuser
  chatrooms in Azoth. Highlights could be triggered by a plain string
  or by a regular expression.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-nativeemoticons
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: Support for emoticons packs for LeechCraft Azoth
+ * nativeemoticons (Support for emoticons packs)
  This plugin adds support for "standard" emoticons to Azoth.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-standardstyles
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Provides: leechcraft-azoth-provider-styling
-Description: Standard styling support for LeechCraft Azoth
+ * standardstyles (Standard styling support)
  Standard styling plugin that provides support for default (and pretty
  unimpressive) themes for chat windows.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-juick
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: Plugin for the Juick.com service for LeechCraft Azoth
+ * juick (Plugin for the Juick.com service)
  This package contains Juick.com microblogging service plugin that
  enhances the experience of using the service.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-p100q
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: Plugin for psto.net service for LeechCraft Azoth
+ * p100q (Plugin for psto.net service)
  This package contains psto.net microblogging service plugin that
  enhances the experience of using the service.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-xoox
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: XMPP support for LeechCraft Azoth
- This package contains the XMPP protocol plugin for Azoth, based on the
+ * xoox (XMPP/Jabber support)
+ This package contains the XMPP protocol plugin for Azoth, based on the patched
  QXmpp library.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-azoth-xtazy
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
- libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version})
-Description: Plugin for publishing current tune for LeechCraft Azoth
+ * xtazy (Plugin for publishing current tune)
  This plugin allows one to publish current user tune. MPRIS-compatible
  players and standard files are supported as sources of information
  about current tune.
