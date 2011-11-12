@@ -1,8 +1,13 @@
-fix for lib names
+Description: Fix for lib names
+ Upstream is not interested in renaming these shared libraries.
+Author: Boris Pek <tehnick-8@yandex.ru>
+Last-Update: 2011-11-12
 
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index b9ca9bb..e399694 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -84,7 +84,7 @@ ADD_SUBDIRECTORY (xmlsettingsdialog)
+@@ -85,7 +85,7 @@ ADD_SUBDIRECTORY (xmlsettingsdialog)
  ADD_SUBDIRECTORY (iconsets)
  
  SET (LEECHCRAFT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
@@ -11,6 +16,8 @@ fix for lib names
  
  # Basic & traditional set of options
  OPTION (ENABLE_AGGREGATOR "Build Aggregator, the RSS/Atom feed reader" ON)
+diff --git a/src/FindLeechCraft.cmake.in b/src/FindLeechCraft.cmake.in
+index 74ab711..9a2a100 100644
 --- a/src/FindLeechCraft.cmake.in
 +++ b/src/FindLeechCraft.cmake.in
 @@ -6,8 +6,8 @@ FIND_PATH(LEECHCRAFT_INCLUDE_DIR NAMES leechcraft/config.h PATH ENV)
@@ -24,14 +31,18 @@ fix for lib names
  SET (LEECHCRAFT_LIBRARIES ${_LEECHCRAFT_UTIL} ${_LEECHCRAFT_XSD})
  SET (LEECHCRAFT_USE_FILE "${CMAKE_MODULE_PATH}/UseLeechCraft.cmake")
  
+diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
+index 8aebb11..dc92796 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -74,15 +74,16 @@ ADD_DEFINITIONS(-DQT_PLUGIN)
+@@ -76,17 +76,18 @@ ADD_DEFINITIONS(-DQT_PLUGIN)
  ADD_DEFINITIONS(-DQT_NO_DEBUG)
  ADD_DEFINITIONS(-DQT_SHARED)
  ADD_DEFINITIONS(-DQT_GUI_LIB)
 +ADD_DEFINITIONS(-Dlcutil_EXPORTS)
- QT4_WRAP_CPP (MOC_SRCS ${HEADERS})
+ IF (NOT LC_NO_MOC)
+ 	QT4_WRAP_CPP (MOC_SRCS ${HEADERS})
+ ENDIF (NOT LC_NO_MOC)
 -ADD_LIBRARY (lcutil SHARED
 +ADD_LIBRARY (leechcraft-util SHARED
  	${SRCS}
@@ -48,6 +59,8 @@ fix for lib names
 -INSTALL (TARGETS lcutil DESTINATION ${LIBDIR})
 +SET_PROPERTY (TARGET leechcraft-util PROPERTY SOVERSION 0.5.0)
 +INSTALL (TARGETS leechcraft-util DESTINATION ${LIBDIR})
+diff --git a/src/xmlsettingsdialog/CMakeLists.txt b/src/xmlsettingsdialog/CMakeLists.txt
+index a195da0..ab1dbe9 100644
 --- a/src/xmlsettingsdialog/CMakeLists.txt
 +++ b/src/xmlsettingsdialog/CMakeLists.txt
 @@ -5,6 +5,7 @@ INCLUDE_DIRECTORIES (${Boost_INCLUDE_DIRS}
@@ -58,9 +71,9 @@ fix for lib names
  
  SET (SRCS
      xmlsettingsdialog.cpp
-@@ -90,12 +91,12 @@ SET (FORMS
- 	)
- QT4_WRAP_CPP (MOC_SRCS ${HEADERS})
+@@ -94,12 +95,12 @@ IF (NOT LC_NO_MOC)
+ 	QT4_WRAP_CPP (MOC_SRCS ${HEADERS})
+ ENDIF (NOT LC_NO_MOC)
  QT4_WRAP_UI (UIS_H ${FORMS})
 -ADD_LIBRARY (xmlsettingsdialog SHARED
 +ADD_LIBRARY (leechcraft-xmlsettingsdialog SHARED

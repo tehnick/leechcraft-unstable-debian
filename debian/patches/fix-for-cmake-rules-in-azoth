@@ -1,4 +1,7 @@
-fix for cmake rules in azoth
+Description: Fix for cmake rules in azoth
+ This patch is needed for successfull builds in Debian.
+Author: Boris Pek <tehnick-8@yandex.ru>
+Last-Update: 2011-10-10
 
 --- a/src/plugins/azoth/CMakeLists.txt
 +++ b/src/plugins/azoth/CMakeLists.txt

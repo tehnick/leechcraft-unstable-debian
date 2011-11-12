@@ -24,6 +24,7 @@ CMAKEOPTS = "$(CURDIR)/$(DEB_SRCDIR)" \
 	-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
 	-DDISABLE_RPATH_TRICKS=True \
 	-DQXMPP_LOCAL="$(CURDIR)/qxmpp" \
+	-DLOCAL_MINIUPNP=True \
 	-DENABLE_POPISHU=True \
 	-DENABLE_SHELLOPEN=True \
 	-DENABLE_SECMAN=True \
@@ -34,7 +35,8 @@ CMAKEOPTS = "$(CURDIR)/$(DEB_SRCDIR)" \
 	-DENABLE_GLANCE=True \
 	-DENABLE_TABSLIST=True \
 	-DENABLE_FTP=False \
-	-DLEECHCRAFT_VERSION=$(CUR_VER)-stable
+	-DENABLE_ADVANCEDNOTIFICATIONS=True \
+	-DLEECHCRAFT_VERSION=$(CUR_VER)
 
 
 configure: configure-stamp
@@ -80,7 +82,6 @@ get-orig-source:
 	tar xzf "master"
 	mv 0xd34df00d-qxmpp-dev-* "$(PACKAGE)-$(CUR_VER)"/qxmpp
 	# processing
-	rm -rf "$(PACKAGE)-$(CUR_VER)"/doc/
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/iconsets/
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/lcftp/
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/cstp/resources/images/clients/*

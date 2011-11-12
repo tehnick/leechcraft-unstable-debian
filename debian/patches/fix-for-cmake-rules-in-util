@@ -1,4 +1,7 @@
-fix for cmake rules in util
+Description: Fix for cmake rules in azoth
+ This patch is needed for successfull builds in Debian.
+Author: Boris Pek <tehnick-8@yandex.ru>
+Last-Update: 2011-10-10
 
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt

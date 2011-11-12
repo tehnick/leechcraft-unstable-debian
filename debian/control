@@ -201,7 +201,7 @@ Description: Files required for development for LeechCraft
 Package: leechcraft-dbg
 Section: debug
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
+Depends: ${misc:Depends},
  leechcraft (= ${binary:Version})
 Description: Debug symbols for LeechCraft
  This package contains the debug symbols for LeechCraft and all its
