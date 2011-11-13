@@ -27,8 +27,8 @@ Build-Depends: debhelper (>= 7),
  qtmobility-dev,
  zlib1g-dev
 Standards-Version: 3.9.2
-Vcs-Git: git://github.com/tehnick/leechcraft-debian.git
-Vcs-Browser: https://github.com/tehnick/leechcraft-debian
+Vcs-Git: git://github.com/tehnick/leechcraft-unstable-debian.git
+Vcs-Browser: https://github.com/tehnick/leechcraft-unstable-debian
 Homepage: http://leechcraft.org
 
 Package: leechcraft-full
