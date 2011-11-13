@@ -21,6 +21,7 @@ Build-Depends: debhelper (>= 7),
  libqscintilla2-dev,
  libqjson-dev,
  libqca2-dev,
+ libotr2-dev,
  libaspell-dev,
  libspeex-dev,
  qtmobility-dev,
@@ -298,6 +299,7 @@ Description: Modular IM client for LeechCraft
   * modnok (Plugin for rendering and displaying LaTeX formulas)
   * nativeemoticons (Support for emoticons packs)
   This plugin adds support for "standard" emoticons to Azoth.
+  * otroid (Support Off-the-Record messaging)
   * p100q (Plugin for psto.net service)
   This package contains psto.net microblogging service plugin that
   enhances the experience of using the service.
