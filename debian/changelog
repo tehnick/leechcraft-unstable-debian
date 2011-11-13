@@ -1,3 +1,9 @@
+leechcraft-unstable (0.4.90-744-gda59196-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 0.4.90-744-gda59196.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 13 Nov 2011 18:12:10 +0200
+
 leechcraft-unstable (0.4.90-740-ged773bd-0ppa1~precise1) precise; urgency=low
 
   * Update to stable release 0.4.90-740-ged773bd.
