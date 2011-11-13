@@ -2,4 +2,3 @@ usr/lib/leechcraft/plugins/*leechcraft_azoth*.so
 usr/share/leechcraft/translations/leechcraft_azoth*.qm
 usr/share/leechcraft/settings/azoth*settings.xml
 usr/share/leechcraft/azoth/*
-usr/bin/lc_azoth_modnok_latexconvert.sh
