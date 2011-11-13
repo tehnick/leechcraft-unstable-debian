@@ -30,6 +30,7 @@ Copyright: 2006-2011 Georg Rudoy <0xd34df00d@gmail.com>
  2011 Andrey Batyiev
  2011 Alexander Konovalov
  2010 Vadim Misbakh-Soloviev
+ 2011 Eugene Mamin
 License: GPL-3+
 
 Files: src/plugins/qrosp/third-party/*
@@ -245,12 +246,6 @@ Copyright: 2007 Oxygen icons theme team (see http://www.oxygen-icons.org/)
  2007 Riccardo Iaconelli <riccardo@oxygen-icons.org>
  2007 David Miller <miller@oxygen-icons.org>
 License: LGPL-3
-
-Files: src/iconsets/Pevzi/*
-Copyright: 2010 Pevzi
-License: CC-BY-3.0
- Full text of Creative Commons Attribution license can be found here:
- http://creativecommons.org/licenses/by/3.0/legalcode
 
 Files: src/plugins/azoth/plugins/adiumstyles/share/azoth/styles/adium/*/Contents/Resources/*.png
  src/plugins/azoth/plugins/adiumstyles/share/azoth/styles/adium/*/Contents/Resources/*/*.png
