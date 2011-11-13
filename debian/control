@@ -35,6 +35,7 @@ Package: leechcraft-full
 Architecture: any
 Depends: ${misc:Depends},
  leechcraft (= ${binary:Version}),
+ leechcraft-advancednotifications (= ${binary:Version}),
  leechcraft-aggregator (= ${binary:Version}),
  leechcraft-auscrie (= ${binary:Version}),
  leechcraft-azoth (= ${binary:Version}),
@@ -43,6 +44,7 @@ Depends: ${misc:Depends},
  leechcraft-dbusmanager (= ${binary:Version}),
  leechcraft-deadlyrics (= ${binary:Version}),
  leechcraft-eiskaltdcpp (= ${binary:Version}),
+ leechcraft-glance (= ${binary:Version}),
  leechcraft-gmailnotifier (= ${binary:Version}),
  leechcraft-historyholder (= ${binary:Version}),
  leechcraft-kinotify (= ${binary:Version}),
@@ -56,6 +58,7 @@ Depends: ${misc:Depends},
  leechcraft-seekthru (= ${binary:Version}),
  leechcraft-shellopen (= ${binary:Version}),
  leechcraft-summary (= ${binary:Version}),
+ leechcraft-tabslist (= ${binary:Version}),
  leechcraft-tabpp (= ${binary:Version}),
  leechcraft-vgrabber (= ${binary:Version})
 Suggests:
@@ -104,7 +107,8 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
  libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
  libleechcraft-util0.5.0 (= ${binary:Version}),
  leechcraft-iconset
-Recommends: leechcraft-aggregator,
+Recommends: leechcraft-advancednotifications,
+ leechcraft-aggregator,
  leechcraft-auscrie,
  leechcraft-azoth,
  leechcraft-bittorrent,
@@ -112,6 +116,7 @@ Recommends: leechcraft-aggregator,
  leechcraft-dbusmanager,
  leechcraft-deadlyrics,
  leechcraft-eiskaltdcpp,
+ leechcraft-glance,
  leechcraft-gmailnotifier,
  leechcraft-historyholder,
  leechcraft-kinotify,
@@ -124,6 +129,7 @@ Recommends: leechcraft-aggregator,
  leechcraft-seekthru,
  leechcraft-shellopen,
  leechcraft-summary,
+ leechcraft-tabslist,
  leechcraft-tabpp,
  leechcraft-vgrabber
 Suggests: leechcraft-anhero
@@ -196,6 +202,35 @@ Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Common library for LeechCraft
  A library providing some useful and commonly used routines as well as
  communications with the LeechCraft core.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-advancednotifications
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
+ libleechcraft-util0.5.0 (= ${binary:Version}),
+ leechcraft (= ${binary:Version})
+Recommends: leechcraft-provider-notifier-visual
+Suggests: leechcraft-provider-mediaplayer
+Description: Advanced Notifications framework for LeechCraft
+ This plugin provides support for the notifications framework of the
+ same name. It supports various notifiers like visual notifications,
+ audio notifications, tray notifications and custom command execution.
+ .
+ It also allows one to define a list of rules for the events to be
+ matched with, thus providing fine-grained notifications configuration
+ for different events. For example, one could make it notify about IM
+ messages from "Personal" group using all available methods, and notify
+ about every message in a chosen conference using only visual
+ notifications.
+ .
+ Advanced Notifications module contains a default set of rules pretty
+ suitable for average use cases.
  .
  LeechCraft is a free modular "Internet client" application.
  .
@@ -371,7 +406,8 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
  libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
  libleechcraft-util0.5.0 (= ${binary:Version}),
  leechcraft (= ${binary:Version})
-Provides: leechcraft-provider-dbus
+Provides: leechcraft-provider-dbus,
+ leechcraft-provider-notifier-visual
 Description: D-Bus side of LeechCraft
  This package provides some DBus-related features, like integration with
  desktop notifications (KDE ≥ 4.4 and others supporting libnotify
@@ -419,6 +455,25 @@ Description: Direct Connect client for LeechCraft
  and ADC protocol. It is compatible with other DC clients, such as the
  original DC from Neomodus, DC++ and derivatives. EiskaltDC++ also
  interoperates with all common DC hub software.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-glance
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
+ libleechcraft-util0.5.0 (= ${binary:Version}),
+ leechcraft (= ${binary:Version})
+Provides: leechcraft-provider-dbus
+Description: Provides a quick overview of tabs in LeechCraft
+ This plugin adds an action to the quick launch area that allows one
+ to quickly overview all the currently opened tabs in LeechCraft,
+ with thumbnails. Of course, one could navigate to a chosen tab by
+ clicking on it.
  .
  LeechCraft is a free modular "Internet client" application.
  .
@@ -685,6 +740,23 @@ Description: Quick summary of what's going on in LeechCraft
  tasks like BitTorrent files as well as news, events and statuses, like
  unread items in RSS feed reader. It also allows one to perform search
  queries with instaled search plugins.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-tabslist
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
+ libleechcraft-util0.5.0 (= ${binary:Version}),
+ leechcraft (= ${binary:Version})
+Provides: leechcraft-provider-searchesview
+Description: Displays list of opened tabs, with navigation between them
+ This plugin adds an action to the quick launch area that, when triggered,
+ opens a list of tabs and allows one to navigate to another tab.
  .
  LeechCraft is a free modular "Internet client" application.
  .
