@@ -659,6 +659,7 @@ Description: Web browser for LeechCraft
   This is a plugin for the Poshuku web browser that allows it to synchronize
   local bookmarks with online social bookmarking systems like Read It Later.
   * pintab (Support of pinned tab)
+  * pogooglue (Support for searching selected text in Google)
   * wyfv (Flash video replacer)
   This is a plugin for the Poshuku web browser that replaces default flash-based
   video players on some sites with any suitable LeechCraft's media player thus

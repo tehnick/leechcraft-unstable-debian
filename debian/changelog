@@ -1,3 +1,39 @@
+leechcraft-unstable (0.4.90-907-gfd18b80-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 0.4.90-907-gfd18b80.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 20 Nov 2011 15:40:29 +0200
+
+leechcraft-unstable (0.4.90-881-g6bd329a-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 0.4.90-881-g6bd329a.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sat, 19 Nov 2011 19:21:02 +0200
+
+leechcraft-unstable (0.4.90-801-g2e80784-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 0.4.90-801-g2e80784.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Fri, 18 Nov 2011 00:38:50 +0200
+
+leechcraft-unstable (0.4.90-794-gaba4f16-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 0.4.90-794-gaba4f16.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 16 Nov 2011 21:46:20 +0200
+
+leechcraft-unstable (0.4.90-771-g1412382-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 0.4.90-771-g1412382.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 15 Nov 2011 01:43:14 +0200
+
+leechcraft-unstable (0.4.90-770-g0196bc0-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 0.4.90-770-g0196bc0.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 14 Nov 2011 20:29:16 +0200
+
 leechcraft-unstable (0.4.90-744-gda59196-0ppa1~precise1) precise; urgency=low
 
   * Update to stable release 0.4.90-744-gda59196.
