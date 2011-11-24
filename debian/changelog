@@ -1,3 +1,15 @@
+leechcraft-unstable (0.4.90-937-gdda22ce-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 0.4.90-937-gdda22ce.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 24 Nov 2011 22:49:19 +0200
+
+leechcraft-unstable (0.4.90-930-gdec60d7-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 0.4.90-930-gdec60d7.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 24 Nov 2011 20:31:41 +0200
+
 leechcraft-unstable (0.4.90-926-g7532e0d-0ppa1~precise1) precise; urgency=low
 
   * Update to stable release 0.4.90-926-g7532e0d.
