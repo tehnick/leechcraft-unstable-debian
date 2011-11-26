@@ -24,7 +24,6 @@ Build-Depends: debhelper (>= 7),
  libotr2-dev,
  libaspell-dev,
  libspeex-dev,
- qtmobility-dev,
  zlib1g-dev
 Standards-Version: 3.9.2
 Vcs-Git: git://github.com/tehnick/leechcraft-unstable-debian.git
