@@ -25,10 +25,10 @@ Build-Depends: debhelper (>= 7),
  libaspell-dev,
  libspeex-dev,
  zlib1g-dev
-Standards-Version: 3.9.2
+Homepage: http://leechcraft.org
 Vcs-Git: git://github.com/tehnick/leechcraft-unstable-debian.git
 Vcs-Browser: https://github.com/tehnick/leechcraft-unstable-debian
-Homepage: http://leechcraft.org
+Standards-Version: 3.9.2
 
 Package: leechcraft-full
 Architecture: any
