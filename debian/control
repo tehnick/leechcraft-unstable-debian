@@ -57,6 +57,7 @@ Depends: ${misc:Depends},
  leechcraft-seekthru (= ${binary:Version}),
  leechcraft-shellopen (= ${binary:Version}),
  leechcraft-summary (= ${binary:Version}),
+ leechcraft-tabsessmanager (= ${binary:Version}),
  leechcraft-tabslist (= ${binary:Version}),
  leechcraft-tabpp (= ${binary:Version}),
  leechcraft-vgrabber (= ${binary:Version})
@@ -128,6 +129,7 @@ Recommends: leechcraft-advancednotifications,
  leechcraft-seekthru,
  leechcraft-shellopen,
  leechcraft-summary,
+ leechcraft-tabsessmanager,
  leechcraft-tabslist,
  leechcraft-tabpp,
  leechcraft-vgrabber
@@ -626,7 +628,8 @@ Recommends: leechcraft-provider-http,
  leechcraft-provider-bittorrent,
  leechcraft-provider-feedreader,
  leechcraft-provider-search,
- leechcraft-provider-mediaplayer
+ leechcraft-provider-mediaplayer,
+ leechcraft-provider-sessionmanager
 Provides: leechcraft-provider-webbrowser
 Description: Web browser for LeechCraft
  This package contains a full-featured web browser for LeechCraft based
@@ -740,6 +743,24 @@ Description: Quick summary of what's going on in LeechCraft
  tasks like BitTorrent files as well as news, events and statuses, like
  unread items in RSS feed reader. It also allows one to perform search
  queries with instaled search plugins.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-tabsessmanager
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
+ libleechcraft-util0.5.0 (= ${binary:Version}),
+ leechcraft (= ${binary:Version})
+Provides: leechcraft-provider-sessionmanager
+Description: Tab Session Manager for LeechCraft
+ This plugin stores the list and state of opened tabs between LeechCraft runs.
+ It supports different types of tabs, like browser tab, IM chat or else.
+ It also supports manually saving and restoring different sessions.
  .
  LeechCraft is a free modular "Internet client" application.
  .
