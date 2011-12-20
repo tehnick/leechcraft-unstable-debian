@@ -33,6 +33,39 @@ Copyright: 2006-2011 Georg Rudoy <0xd34df00d@gmail.com>
  2011 Eugene Mamin
 License: GPL-3+
 
+Files: src/cmake/*
+ src/plugins/laure/cmake/*
+ src/plugins/lmp/cmake/*
+ src/plugins/bittorrent/cmake/*
+ src/plugins/azoth/cmake/*
+ src/plugins/azoth/plugins/otroid/cmake/*
+ src/plugins/azoth/plugins/xoox/cmake/*
+ src/plugins/azoth/plugins/zheet/cmake/*
+ src/plugins/popishu/cmake/*
+ src/plugins/liznoo/cmake/*
+ src/plugins/poshuku/plugins/onlinebookmarks/plugins/readitlater/cmake/*
+ src/plugins/qrosp/cmake/*
+Copyright: 2009 Brad Hards <bradh@kde.org>
+ 2009 Brad Hards <bradh@kde.org>
+ 2007 Pau Garcia i Quiles <pgquiles@elpauer.org>
+ 2008 Georg Rudoy <0xd34df00d@gmail.com>
+ 2008 Tanguy Krotoff <tkrotoff@gmail.com>
+ 2011 Minh Ngo <nlminhtl@gmail.com>
+ 2008 Matthias Kretz <kretz@kde.org>
+ 2008 Voker57 <voker57@gmail.com>
+ 2011 Eugene Mamin aka DZhon <TheDZhon@gmail.com>
+ 2006 Alessandro Praduroux <pradu@pradu.it>
+ 2007 Urs Wolfer <uwolfer@kde.org>
+ 2006 Andreas Schneider <mail@cynapses.org>
+ 2006 Michael Larouche <michael.larouche@kdemail.net>
+ 2007 Christian Ehrlicher <ch.ehrlicher@gmx.de>
+ 2008 Matt Rogers <mattr@kde.org>
+ 2008 Michael Zanetti <michael_zanetti@gnx.net>
+ 2006 David Faure <faure@kde.org>
+ 2007 Will Stephenson <wstephenson@kde.org>
+ 2007 Thomas Moenicke <thomas.moenicke@kdemail.net>
+License: BSD-3-clause
+
 Files: src/plugins/qrosp/third-party/*
 Copyright: 2011 Nokia Corporation and/or its subsidiary(-ies)
 License: GPL-3 or LGPL-2.1
