@@ -46,7 +46,7 @@ Files: src/cmake/*
  src/plugins/poshuku/plugins/onlinebookmarks/plugins/readitlater/cmake/*
  src/plugins/qrosp/cmake/*
 Copyright: 2009 Brad Hards <bradh@kde.org>
- 2009 Brad Hards <bradh@kde.org>
+ 2009 Michele Caini, <skypjack@gmail.com>
  2007 Pau Garcia i Quiles <pgquiles@elpauer.org>
  2008 Georg Rudoy <0xd34df00d@gmail.com>
  2008 Tanguy Krotoff <tkrotoff@gmail.com>
