@@ -1,23 +1,19 @@
 Description: Fix for lib names
  Upstream is not interested in renaming these shared libraries.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2011-11-12
+Last-Update: 2012-01-12
 
-diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index b9ca9bb..e399694 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -85,7 +85,7 @@ ADD_SUBDIRECTORY (xmlsettingsdialog)
- ADD_SUBDIRECTORY (iconsets)
+@@ -87,7 +87,7 @@
+ ADD_SUBDIRECTORY (xmlsettingsdialog)
  
  SET (LEECHCRAFT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 -SET (LEECHCRAFT_LIBRARIES lcutil xmlsettingsdialog)
 +SET (LEECHCRAFT_LIBRARIES leechcraft-util leechcraft-xmlsettingsdialog)
  
- # Basic & traditional set of options
- OPTION (ENABLE_AGGREGATOR "Build Aggregator, the RSS/Atom feed reader" ON)
-diff --git a/src/FindLeechCraft.cmake.in b/src/FindLeechCraft.cmake.in
-index 74ab711..9a2a100 100644
+ # Various options
+ OPTION (STRICT_LICENSING "Makes LeechCraft more prepared, for example, to lacking artwork due to licensing restrictions" OFF)
 --- a/src/FindLeechCraft.cmake.in
 +++ b/src/FindLeechCraft.cmake.in
 @@ -6,8 +6,8 @@ FIND_PATH(LEECHCRAFT_INCLUDE_DIR NAMES leechcraft/config.h PATH ENV)
@@ -31,8 +27,6 @@ index 74ab711..9a2a100 100644
  SET (LEECHCRAFT_LIBRARIES ${_LEECHCRAFT_UTIL} ${_LEECHCRAFT_XSD})
  SET (LEECHCRAFT_USE_FILE "${CMAKE_MODULE_PATH}/UseLeechCraft.cmake")
  
-diff --git a/src/util/CMakeLists.txt b/src/util/CMakeLists.txt
-index 8aebb11..dc92796 100644
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
 @@ -76,17 +76,18 @@ ADD_DEFINITIONS(-DQT_PLUGIN)
@@ -59,8 +53,6 @@ index 8aebb11..dc92796 100644
 -INSTALL (TARGETS lcutil DESTINATION ${LIBDIR})
 +SET_PROPERTY (TARGET leechcraft-util PROPERTY SOVERSION 0.5.0)
 +INSTALL (TARGETS leechcraft-util DESTINATION ${LIBDIR})
-diff --git a/src/xmlsettingsdialog/CMakeLists.txt b/src/xmlsettingsdialog/CMakeLists.txt
-index a195da0..ab1dbe9 100644
 --- a/src/xmlsettingsdialog/CMakeLists.txt
 +++ b/src/xmlsettingsdialog/CMakeLists.txt
 @@ -5,6 +5,7 @@ INCLUDE_DIRECTORIES (${Boost_INCLUDE_DIRS}

@@ -106,7 +106,7 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
  libqt4-svg (>= 4.6.0),
  libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
  libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft-iconset
+ oxygen-icon-theme | leechcraft-iconset
 Recommends: leechcraft-advancednotifications,
  leechcraft-aggregator,
  leechcraft-auscrie,
@@ -816,19 +816,6 @@ Provides: leechcraft-provider-search
 Description: vkontakte.ru plugin for LeechCraft
  This package contains a music search/grabber for the vkontakte.ru social
  network.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-iconset-oxygen
-Architecture: all
-Depends: ${misc:Depends}
-Provides: leechcraft-iconset
-Description: Oxygen-based iconset for LeechCraft
- This package contains icons taken from the Oxygen project for LeechCraft.
  .
  LeechCraft is a free modular "Internet client" application.
  .

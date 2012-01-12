@@ -1,0 +1,183 @@
+diff --git a/src/plugins/bittorrent/CMakeLists.txt b/src/plugins/bittorrent/CMakeLists.txt
+index 0186dd5..d315ac2 100644
+--- a/src/plugins/bittorrent/CMakeLists.txt
++++ b/src/plugins/bittorrent/CMakeLists.txt
+@@ -69,6 +69,7 @@ SET (SRCS
+ 	speedselectoraction.cpp
+ 	torrentmaker.cpp
+ 	singletrackerchanger.cpp
++	c11kludges.cpp
+ 	)
+ SET (HEADERS
+ 	torrentplugin.h
+@@ -104,6 +105,7 @@ SET (HEADERS
+ 	speedselectoraction.h
+ 	torrentmaker.h
+ 	singletrackerchanger.h
++	c11kludges.h
+ 	newtorrentparams.h
+ 	torrentinfo.h
+ 	fileinfo.h
+@@ -140,6 +142,13 @@ IF (WIN32)
+ 	ADD_DEFINITIONS (-DTORRENT_DISABLE_GEO_IP)
+ ENDIF (WIN32)
+ 
++IF (GCC_GENERATES_MOVE_CTORS_FOR_STRUCTS_WITH_BITFIELDS)
++	GET_SOURCE_FILE_PROPERTY (FG c11kludges.cpp COMPILER_FLAGS)
++	STRING (REPLACE "-std=c++0x" "" FG_FIXED "${FG}")
++	MESSAGE (STATUS "Changing flags for kludges from ${FG} to ${FG_FIXED}")
++	SET_SOURCE_FILES_PROPERTIES (c11kludges.cpp PROPERTIES COMPILER_FLAGS "${FG_FIXED}")
++ENDIF (GCC_GENERATES_MOVE_CTORS_FOR_STRUCTS_WITH_BITFIELDS)
++
+ IF (UNIX)
+ 	FIND_PROGRAM (LPKGC_CMD pkg-config)
+ 	EXECUTE_PROCESS (COMMAND "${LPKGC_CMD}" libtorrent-rasterbar --cflags
+diff --git a/src/plugins/bittorrent/c11kludges.cpp b/src/plugins/bittorrent/c11kludges.cpp
+new file mode 100644
+index 0000000..709e86f
+--- /dev/null
++++ b/src/plugins/bittorrent/c11kludges.cpp
+@@ -0,0 +1,59 @@
++/**********************************************************************
++ * LeechCraft - modular cross-platform feature rich internet client.
++ * Copyright (C) 2006-2012  Georg Rudoy
++ *
++ * This program is free software: you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation, either version 3 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
++ **********************************************************************/
++
++#include "c11kludges.h"
++#include <interfaces/core/icoreproxy.h>
++#include "core.h"
++
++namespace LeechCraft
++{
++namespace Plugins
++{
++namespace BitTorrent
++{
++	std::vector<libtorrent::announce_entry> GetTrackers (const QModelIndexList& sis)
++	{
++		std::vector<libtorrent::announce_entry> allTrackers;
++		Q_FOREACH (QModelIndex si, sis)
++		{
++			auto those = Core::Instance ()->GetTrackers (Core::Instance ()->
++					GetProxy ()->MapToSource (si).row ());
++			std::copy (those.begin (), those.end (),
++					std::back_inserter (allTrackers));
++		}
++
++		if (!allTrackers.size ())
++			allTrackers = Core::Instance ()->
++					GetTrackers (Core::Instance ()->
++							GetCurrentTorrent ());
++
++		std::stable_sort (allTrackers.begin (), allTrackers.end (),
++				[] (const libtorrent::announce_entry& l, const libtorrent::announce_entry& r)
++					{ return l.url < r.url; });
++
++		auto newLast = std::unique (allTrackers.begin (), allTrackers.end (),
++				[] (const libtorrent::announce_entry& l, const libtorrent::announce_entry& r)
++					{ return l.url == r.url; });
++
++		allTrackers.erase (newLast, allTrackers.end ());
++
++		return allTrackers;
++	}
++}
++}
++}
+diff --git a/src/plugins/bittorrent/c11kludges.h b/src/plugins/bittorrent/c11kludges.h
+new file mode 100644
+index 0000000..0b45bd8
+--- /dev/null
++++ b/src/plugins/bittorrent/c11kludges.h
+@@ -0,0 +1,35 @@
++/**********************************************************************
++ * LeechCraft - modular cross-platform feature rich internet client.
++ * Copyright (C) 2006-2012  Georg Rudoy
++ *
++ * This program is free software: you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation, either version 3 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
++ **********************************************************************/
++
++#ifndef PLUGINS_BITTORRENT_C11KLUDGES_H
++#define PLUGINS_BITTORRENT_C11KLUDGES_H
++#include <QModelIndex>
++#include <torrent_info.hpp>
++
++namespace LeechCraft
++{
++namespace Plugins
++{
++namespace BitTorrent
++{
++	std::vector<libtorrent::announce_entry> GetTrackers (const QModelIndexList&);
++}
++}
++}
++
++#endif
+diff --git a/src/plugins/bittorrent/torrentplugin.cpp b/src/plugins/bittorrent/torrentplugin.cpp
+index a62381e..20bdc69 100644
+--- a/src/plugins/bittorrent/torrentplugin.cpp
++++ b/src/plugins/bittorrent/torrentplugin.cpp
+@@ -50,6 +50,7 @@
+ #include "fastspeedcontrolwidget.h"
+ #include "ipfilterdialog.h"
+ #include "speedselectoraction.h"
++#include "c11kludges.h"
+ 
+ #ifdef AddJob
+ #undef AddJob
+@@ -759,29 +760,7 @@ namespace LeechCraft
+ 					return;
+ 				}
+ 
+-				std::vector<libtorrent::announce_entry> allTrackers;
+-				Q_FOREACH (QModelIndex si, sis)
+-				{
+-					auto those = Core::Instance ()->GetTrackers (Core::Instance ()->
+-							GetProxy ()->MapToSource (si).row ());
+-					std::copy (those.begin (), those.end (),
+-							std::back_inserter (allTrackers));
+-				}
+-
+-				if (!allTrackers.size ())
+-					allTrackers = Core::Instance ()->
+-							GetTrackers (Core::Instance ()->
+-									GetCurrentTorrent ());
+-
+-				std::stable_sort (allTrackers.begin (), allTrackers.end (),
+-						[] (const libtorrent::announce_entry& l, const libtorrent::announce_entry& r)
+-							{ return l.url < r.url; });
+-
+-				auto newLast = std::unique (allTrackers.begin (), allTrackers.end (),
+-						[] (const libtorrent::announce_entry& l, const libtorrent::announce_entry& r)
+-							{ return l.url == r.url; });
+-
+-				allTrackers.erase (newLast, allTrackers.end ());
++				const auto& allTrackers = GetTrackers (sis);
+ 
+ 				if (!allTrackers.size ())
+ 					return;
