@@ -1,5 +1,10 @@
-diff --git a/src/plugins/bittorrent/CMakeLists.txt b/src/plugins/bittorrent/CMakeLists.txt
-index 0186dd5..d315ac2 100644
+Description: GCC in Debian generates move ctors for structs with bitfields
+ GCC in Debian and Ubuntu fails to build program with libtorrent when
+ "-std=c++0x" option is enabled. There is no such problem in Gentoo, Arch Linux
+ and openSUSE with the same verisons of GCC and libtorrent.
+Author: Georg Rudoy
+Last-Update: 2012-01-14
+
 --- a/src/plugins/bittorrent/CMakeLists.txt
 +++ b/src/plugins/bittorrent/CMakeLists.txt
 @@ -69,6 +69,7 @@ SET (SRCS
@@ -18,26 +23,20 @@ index 0186dd5..d315ac2 100644
  	newtorrentparams.h
  	torrentinfo.h
  	fileinfo.h
-@@ -140,6 +142,13 @@ IF (WIN32)
+@@ -140,6 +142,10 @@ IF (WIN32)
  	ADD_DEFINITIONS (-DTORRENT_DISABLE_GEO_IP)
  ENDIF (WIN32)
  
 +IF (GCC_GENERATES_MOVE_CTORS_FOR_STRUCTS_WITH_BITFIELDS)
-+	GET_SOURCE_FILE_PROPERTY (FG c11kludges.cpp COMPILER_FLAGS)
-+	STRING (REPLACE "-std=c++0x" "" FG_FIXED "${FG}")
-+	MESSAGE (STATUS "Changing flags for kludges from ${FG} to ${FG_FIXED}")
-+	SET_SOURCE_FILES_PROPERTIES (c11kludges.cpp PROPERTIES COMPILER_FLAGS "${FG_FIXED}")
++	SET_SOURCE_FILES_PROPERTIES (c11kludges.cpp PROPERTIES COMPILE_FLAGS "-std=c++98")
 +ENDIF (GCC_GENERATES_MOVE_CTORS_FOR_STRUCTS_WITH_BITFIELDS)
 +
  IF (UNIX)
  	FIND_PROGRAM (LPKGC_CMD pkg-config)
  	EXECUTE_PROCESS (COMMAND "${LPKGC_CMD}" libtorrent-rasterbar --cflags
-diff --git a/src/plugins/bittorrent/c11kludges.cpp b/src/plugins/bittorrent/c11kludges.cpp
-new file mode 100644
-index 0000000..709e86f
 --- /dev/null
 +++ b/src/plugins/bittorrent/c11kludges.cpp
-@@ -0,0 +1,59 @@
+@@ -0,0 +1,54 @@
 +/**********************************************************************
 + * LeechCraft - modular cross-platform feature rich internet client.
 + * Copyright (C) 2006-2012  Georg Rudoy
@@ -57,8 +56,6 @@ index 0000000..709e86f
 + **********************************************************************/
 +
 +#include "c11kludges.h"
-+#include <interfaces/core/icoreproxy.h>
-+#include "core.h"
 +
 +namespace LeechCraft
 +{
@@ -66,40 +63,34 @@ index 0000000..709e86f
 +{
 +namespace BitTorrent
 +{
-+	std::vector<libtorrent::announce_entry> GetTrackers (const QModelIndexList& sis)
++	namespace
 +	{
-+		std::vector<libtorrent::announce_entry> allTrackers;
-+		Q_FOREACH (QModelIndex si, sis)
++		bool Less (const libtorrent::announce_entry& l, const libtorrent::announce_entry& r)
 +		{
-+			auto those = Core::Instance ()->GetTrackers (Core::Instance ()->
-+					GetProxy ()->MapToSource (si).row ());
-+			std::copy (those.begin (), those.end (),
-+					std::back_inserter (allTrackers));
++			return l.url < r.url;
 +		}
 +
-+		if (!allTrackers.size ())
-+			allTrackers = Core::Instance ()->
-+					GetTrackers (Core::Instance ()->
-+							GetCurrentTorrent ());
++		bool Cmp (const libtorrent::announce_entry& l, const libtorrent::announce_entry& r)
++		{
++			return l.url == r.url;
++		}
++	}
 +
-+		std::stable_sort (allTrackers.begin (), allTrackers.end (),
-+				[] (const libtorrent::announce_entry& l, const libtorrent::announce_entry& r)
-+					{ return l.url < r.url; });
++	std::vector<libtorrent::announce_entry> GetTrackers (const QList<std::vector<libtorrent::announce_entry> >& list)
++	{
++		std::vector<libtorrent::announce_entry> allTrackers;
++		Q_FOREACH (const std::vector<libtorrent::announce_entry>& v, list)
++			std::copy (v.begin (), v.end (), std::back_inserter (allTrackers));
 +
-+		auto newLast = std::unique (allTrackers.begin (), allTrackers.end (),
-+				[] (const libtorrent::announce_entry& l, const libtorrent::announce_entry& r)
-+					{ return l.url == r.url; });
-+
++		std::stable_sort (allTrackers.begin (), allTrackers.end (), Less);
++		std::vector<libtorrent::announce_entry>::iterator newLast =
++				std::unique (allTrackers.begin (), allTrackers.end (), Cmp);
 +		allTrackers.erase (newLast, allTrackers.end ());
-+
 +		return allTrackers;
 +	}
 +}
 +}
 +}
-diff --git a/src/plugins/bittorrent/c11kludges.h b/src/plugins/bittorrent/c11kludges.h
-new file mode 100644
-index 0000000..0b45bd8
 --- /dev/null
 +++ b/src/plugins/bittorrent/c11kludges.h
 @@ -0,0 +1,35 @@
@@ -132,14 +123,42 @@ index 0000000..0b45bd8
 +{
 +namespace BitTorrent
 +{
-+	std::vector<libtorrent::announce_entry> GetTrackers (const QModelIndexList&);
++	std::vector<libtorrent::announce_entry> GetTrackers (const QList<std::vector<libtorrent::announce_entry> >&);
 +}
 +}
 +}
 +
 +#endif
+diff --git a/src/plugins/bittorrent/core.cpp b/src/plugins/bittorrent/core.cpp
+index e7e2f39..f19896a 100644
+--- a/src/plugins/bittorrent/core.cpp
++++ b/src/plugins/bittorrent/core.cpp
+@@ -1164,6 +1164,11 @@ namespace LeechCraft
+ 				ResetFiles ();
+ 			}
+ 
++			std::vector<libtorrent::announce_entry> Core::GetTrackers (const QModelIndex& index) const
++			{
++				return GetTrackers (Proxy_->MapToSource (index).row ());
++			}
++
+ 			std::vector<libtorrent::announce_entry> Core::GetTrackers (const boost::optional<int>& row) const
+ 			{
+ 				int tor = row ? *row : CurrentTorrent_;
+diff --git a/src/plugins/bittorrent/core.h b/src/plugins/bittorrent/core.h
+index d87f193..8a98c6d 100644
+--- a/src/plugins/bittorrent/core.h
++++ b/src/plugins/bittorrent/core.h
+@@ -265,6 +265,7 @@ namespace LeechCraft
+ 				void RemoveWebSeed (const QString&, bool);
+ 				void SetFilePriority (int, int);
+ 				void SetFilename (int, const QString&);
++				std::vector<libtorrent::announce_entry> GetTrackers (const QModelIndex&) const;
+ 				std::vector<libtorrent::announce_entry> GetTrackers (const boost::optional<int>& = boost::optional<int> ()) const;
+ 				void SetTrackers (const std::vector<libtorrent::announce_entry>&,
+ 						const boost::optional<int>& = boost::optional<int> ());
 diff --git a/src/plugins/bittorrent/torrentplugin.cpp b/src/plugins/bittorrent/torrentplugin.cpp
-index a62381e..20bdc69 100644
+index c1751b7..e2efa34 100644
 --- a/src/plugins/bittorrent/torrentplugin.cpp
 +++ b/src/plugins/bittorrent/torrentplugin.cpp
 @@ -50,6 +50,7 @@
@@ -150,7 +169,7 @@ index a62381e..20bdc69 100644
  
  #ifdef AddJob
  #undef AddJob
-@@ -759,29 +760,7 @@ namespace LeechCraft
+@@ -759,29 +760,16 @@ namespace LeechCraft
  					return;
  				}
  
@@ -175,9 +194,17 @@ index a62381e..20bdc69 100644
 -				auto newLast = std::unique (allTrackers.begin (), allTrackers.end (),
 -						[] (const libtorrent::announce_entry& l, const libtorrent::announce_entry& r)
 -							{ return l.url == r.url; });
--
++				QList<std::vector<libtorrent::announce_entry>> entries;
++				if (!sis.isEmpty ())
++					Q_FOREACH (const QModelIndex& si, sis)
++						entries << Core::Instance ()->GetTrackers (Core::Instance ()->
++									GetProxy ()->MapToSource (si).row ());
++				else
++					entries << Core::Instance ()->
++							GetTrackers (Core::Instance ()->GetCurrentTorrent ());
+ 
 -				allTrackers.erase (newLast, allTrackers.end ());
-+				const auto& allTrackers = GetTrackers (sis);
++				const auto& allTrackers = GetTrackers (entries);
  
  				if (!allTrackers.size ())
  					return;
