@@ -1,4 +1,4 @@
-Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?revision=202
+Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5/index.html?revision=248
 Debianized-By: Boris Pek <tehnick-8@mail.ru>
 Debianized-Date: Sat, 16 Jul 2011 21:53:57 +0300
 Upstream-Name: LeechCraft
@@ -22,7 +22,7 @@ Source: https://github.com/0xd34df00d/leechcraft/tags
  possibility to build program without these files.
 
 Files: src/* tools/*
-Copyright: 2006-2011 Georg Rudoy <0xd34df00d@gmail.com>
+Copyright: 2006-2012 Georg Rudoy <0xd34df00d@gmail.com>
  2010-2011 Oleg Linkin
  2011 Yury Erik Potapov
  2011 Minh Ngo
@@ -292,7 +292,7 @@ Copyright: 2008-2011 The QXmpp developers (http://code.google.com/p/qxmpp)
 License: LGPL-2.1+
 
 Files: debian/*
-Copyright: 2011 Boris Pek <tehnick-8@mail.ru>
+Copyright: 2011-2012 Boris Pek <tehnick-8@mail.ru>
 License: GPL-2+
 
 License: GPL-2
