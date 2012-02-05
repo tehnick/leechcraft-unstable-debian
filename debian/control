@@ -24,6 +24,8 @@ Build-Depends: debhelper (>= 7),
  libotr2-dev,
  libaspell-dev,
  libspeex-dev,
+ libqwt-dev,
+ libmsn-dev,
  zlib1g-dev
 Homepage: http://leechcraft.org
 Vcs-Git: git://github.com/tehnick/leechcraft-unstable-debian.git
@@ -47,8 +49,11 @@ Depends: ${misc:Depends},
  leechcraft-gmailnotifier (= ${binary:Version}),
  leechcraft-historyholder (= ${binary:Version}),
  leechcraft-kinotify (= ${binary:Version}),
- leechcraft-lackman  (= ${binary:Version}),
+ leechcraft-lackman (= ${binary:Version}),
+ leechcraft-lhtr (= ${binary:Version}),
+ leechcraft-liznoo (= ${binary:Version}),
  leechcraft-lmp (= ${binary:Version}),
+ leechcraft-netstoremanager (= ${binary:Version}),
  leechcraft-networkmonitor (= ${binary:Version}),
  leechcraft-newlife (= ${binary:Version}),
  leechcraft-popishu (= ${binary:Version}),
@@ -56,6 +61,7 @@ Depends: ${misc:Depends},
  leechcraft-secman (= ${binary:Version}),
  leechcraft-seekthru (= ${binary:Version}),
  leechcraft-shellopen (= ${binary:Version}),
+ leechcraft-sidebar (= ${binary:Version}),
  leechcraft-summary (= ${binary:Version}),
  leechcraft-tabsessmanager (= ${binary:Version}),
  leechcraft-tabslist (= ${binary:Version}),
@@ -121,6 +127,7 @@ Recommends: leechcraft-advancednotifications,
  leechcraft-historyholder,
  leechcraft-kinotify,
  leechcraft-lmp,
+ leechcraft-netstoremanager,
  leechcraft-networkmonitor,
  leechcraft-newlife,
  leechcraft-popishu,
@@ -128,6 +135,7 @@ Recommends: leechcraft-advancednotifications,
  leechcraft-secman,
  leechcraft-seekthru,
  leechcraft-shellopen,
+ leechcraft-sidebar,
  leechcraft-summary,
  leechcraft-tabsessmanager,
  leechcraft-tabslist,
@@ -343,6 +351,7 @@ Description: Modular IM client for LeechCraft
   * standardstyles (Standard styling support)
   Standard styling plugin that provides support for default (and pretty
   unimpressive) themes for chat windows.
+  * vader (Support for the MRIM protocol)
   * xoox (XMPP/Jabber support)
   This package contains the XMPP protocol plugin for Azoth, based on the
   patched QXmpp library.
@@ -350,6 +359,7 @@ Description: Modular IM client for LeechCraft
   This plugin allows one to publish current user tune. MPRIS-compatible
   players and standard files are supported as sources of information
   about current tune.
+  * zheet (libmsn-based Windows Live protocol support)
  .
  LeechCraft is a free modular "Internet client" application.
  .
@@ -548,6 +558,44 @@ Description: Userspace Package Manager for LeechCraft
  files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
  download or play podcasts and other media files and much more.
 
+Package: leechcraft-lhtr
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
+ libleechcraft-util0.5.0 (= ${binary:Version}),
+ leechcraft (= ${binary:Version}),
+ leechcraft-sidebar
+Provides: leechcraft-provider-html-wysiwyg
+Description: LeechCraft HTML Text editor in WYSIWYG style
+ This package contains LHTR. This module provides basic WYSIWYG HTML/rich text
+ editing facilities. It is embedded into other plugins, like mail clients,
+ blog clients, etc.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-liznoo
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
+ libleechcraft-util0.5.0 (= ${binary:Version}),
+ leechcraft (= ${binary:Version}),
+ leechcraft-sidebar
+Description: UPower-based power manager for LeechCraft
+ This package contains Liznoo, UPower-based power manager. Liznoo also detects
+ suspend/resume events and allows other plugins to respond correspondingly.
+ For example Azoth gracefully disconnects from the servers after receiving
+ suspend notification, and reconnects back after resume.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
 Package: leechcraft-lmp
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
@@ -559,6 +607,22 @@ Description: Media Previewer for LeechCraft
  This package contains the LMP, LeechCraft Media Previewer, small and
  dirty media player designed to preview already downloaded files or to
  stream media content live.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-netstoremanager
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
+ libleechcraft-util0.5.0 (= ${binary:Version}),
+ leechcraft (= ${binary:Version})
+Description: Manages network data storages for LeechCraft
+ This package contains NetStoreManager, the module for managing network data
+ storages like Yandex.Disk.
  .
  LeechCraft is a free modular "Internet client" application.
  .
@@ -723,6 +787,24 @@ Description: Support for opening files with external apps in LeechCraft
  handle entities with external applications. For example, you may choose
  to open a video file with your favorite media player instead of LC's
  one.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-sidebar
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
+ libleechcraft-util0.5.0 (= ${binary:Version}),
+ leechcraft (= ${binary:Version})
+Description: Sidebar with quick launch, tabs and tray areas in LeechCraft
+ This package contains module that adds a nice sidebar with quick launch area,
+ tabs and tray-like area. The sidebar supports grouping of similar tabs (like
+ browser tabs or tabs from one web site), and it also supports hiding unneeded
+ launch actions and tray items.
  .
  LeechCraft is a free modular "Internet client" application.
  .

@@ -1,0 +1,3 @@
+usr/lib/leechcraft/plugins/*leechcraft_netstoremanager.so
+usr/share/leechcraft/translations/leechcraft_netstoremanager*.qm
+usr/share/leechcraft/settings/netstoremanagersettings.xml
