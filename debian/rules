@@ -55,7 +55,8 @@ CMAKEOPTS = "$(CURDIR)/$(DEB_SRCDIR)" \
 	-DENABLE_CHOROID=False \
 	-DENABLE_VFSCORE=False \
 	-DENABLE_SNAILS=False \
-	-DENABLE_FTP=False
+	-DENABLE_FTP=False \
+	-DENABLE_TABPP=False
 
 
 configure: configure-stamp
