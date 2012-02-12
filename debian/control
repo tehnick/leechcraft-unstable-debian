@@ -44,7 +44,6 @@ Depends: ${misc:Depends},
  leechcraft-cstp (= ${binary:Version}),
  leechcraft-dbusmanager (= ${binary:Version}),
  leechcraft-deadlyrics (= ${binary:Version}),
- leechcraft-eiskaltdcpp (= ${binary:Version}),
  leechcraft-glance (= ${binary:Version}),
  leechcraft-gmailnotifier (= ${binary:Version}),
  leechcraft-historyholder (= ${binary:Version}),
@@ -87,7 +86,8 @@ Description: Full LeechCraft installation
 Package: leechcraft-extra
 Architecture: any
 Depends: ${misc:Depends},
- leechcraft-anhero (= ${binary:Version})
+ leechcraft-anhero (= ${binary:Version}),
+ leechcraft-eiskaltdcpp (= ${binary:Version})
 Description: Extra LeechCraft plugins beyond full installation
  This metapackage installs additional LeechCraft plugins that may
  pull a lot of dependencies on some systems (like AnHero pulling
