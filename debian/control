@@ -15,8 +15,10 @@ Build-Depends: debhelper (>= 7),
  libphonon-dev,
  libbz2-dev,
  libqt4-dev (>= 4.6.0),
+ libqxmpp-dev (>= 0.3.46),
  libqtwebkit-dev,
  libgeoip-dev,
+ libtelepathy-qt4-dev,
  libcurl4-openssl-dev,
  libqscintilla2-dev,
  libqjson-dev,
@@ -311,52 +313,63 @@ Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
  libleechcraft-util0.5.0 (= ${binary:Version}),
- leechcraft (= ${binary:Version})
+ leechcraft (= ${binary:Version}),
+Recommends: telepathy-mission-control-5, telepathy-haze
+Suggests: telepathy-butterfly, telepathy-rakia, telepathy-salut
 Description: Modular IM client for LeechCraft
  This package contains the core of the Azoth plugin (the modular IM client for
  LeechCraft) and its own sub-plugins:
   * acetamide (IRC protocol support)
-  * adiumstyles (support for Adium styles)
+  * adiumstyles (Support for Adium styles)
+  * astrality (Support for protocols provided by Telepathy)
+    Telepathy is also hight modular system, you can use these modules:
+    - butterfly (MSN connection manager)
+    - haze (Connection manager based on libpurple)
+      Libpurple (pidgin) currently supports such protocols:
+      AIM/ICQ, Yahoo!, MSN, IRC, Jabber/XMPP/Google Talk, Napster, Zephyr,
+      Gadu-Gadu, Bonjour, Groupwise, Sametime, SIMPLE, MySpaceIM, and MXit.
+    - rakia (SIP connection manager)
+    - salut (Provides Link-local Jabber functionality)
   * autopaste (Automatic paste of long messages to pastebins)
   * autoidler (Automatic changing of status according to idle time)
   * chathistory (History storage)
   * depester (Conference ignore plugin)
-  This plugin allows one to ignore messages from selected multiuser
-  chatroom participants, blocking both general messages in the room
-  and private messages.
+    This plugin allows one to ignore messages from selected multiuser
+    chatroom participants, blocking both general messages in the room
+    and private messages.
   * embedmedia (Embeds media files in the chat window)
-  This plugin allows one to show various media objects (like videos from
-  the YouTube service) directly in the chat window.
+    This plugin allows one to show various media objects (like videos from
+    the YouTube service) directly in the chat window.
   * herbicide (Basic antispam plugin)
   * hili (Custom highlights)
-  This plugin allows one to customize the highlight settings in multiuser
-  chatrooms in Azoth. Highlights could be triggered by a plain string
-  or by a regular expression.
+    This plugin allows one to customize the highlight settings in multiuser
+    chatrooms in Azoth. Highlights could be triggered by a plain string
+    or by a regular expression.
   * isterique (Plugin for decapitalizing all-caps text)
   * juick (Plugin for the Juick.com service)
-  This package contains Juick.com microblogging service plugin that
-  enhances the experience of using the service.
+    This package contains Juick.com microblogging service plugin that
+    enhances the experience of using the service.
   * lastseen (Plugin for keeping track of the date of contacts being online)
   * metacontacts (Support for metacontacts)
   * modnok (Plugin for rendering and displaying LaTeX formulas)
   * nativeemoticons (Support for emoticons packs)
-  This plugin adds support for "standard" emoticons to Azoth.
+    This plugin adds support for "standard" emoticons to Azoth.
   * otroid (Support Off-the-Record messaging)
   * p100q (Plugin for psto.net service)
-  This package contains psto.net microblogging service plugin that
-  enhances the experience of using the service.
+    This package contains psto.net microblogging service plugin that
+    enhances the experience of using the service.
   * rosenthal (Spellchecker plugin)
   * standardstyles (Standard styling support)
-  Standard styling plugin that provides support for default (and pretty
-  unimpressive) themes for chat windows.
+    Standard styling plugin that provides support for default (and pretty
+    unimpressive) themes for chat windows.
   * vader (Support for the MRIM protocol)
   * xoox (XMPP/Jabber support)
-  This package contains the XMPP protocol plugin for Azoth, based on the
-  patched QXmpp library.
+    This package contains the XMPP protocol plugin for Azoth, based on the
+    patched QXmpp library.
   * xtazy (Plugin for publishing current tune)
-  This plugin allows one to publish current user tune. MPRIS-compatible
-  players and standard files are supported as sources of information
-  about current tune.
+    This plugin allows one to publish current user tune. MPRIS-compatible
+    players and standard files are supported as sources of information
+    about current tune.
   * zheet (libmsn-based Windows Live protocol support)
  .
  LeechCraft is a free modular "Internet client" application.

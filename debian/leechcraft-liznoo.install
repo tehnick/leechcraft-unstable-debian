@@ -1,2 +1,3 @@
 usr/lib/leechcraft/plugins/*leechcraft_liznoo.so
 usr/share/leechcraft/translations/leechcraft_liznoo*.qm
+usr/share/leechcraft/settings/liznoosettings.xml

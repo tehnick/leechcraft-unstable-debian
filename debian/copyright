@@ -4,20 +4,14 @@ Debianized-Date: Sat, 16 Jul 2011 21:53:57 +0300
 Upstream-Name: LeechCraft
 Upstream-Contact: Georg Rudoy <0xd34df00d@gmail.com>
 Source: https://github.com/0xd34df00d/leechcraft/tags
- The orig.tar.bz2 is generated from a few upstream source trees:
- git://github.com/0xd34df00d/leechcraft.git
- git://github.com/0xd34df00d/qxmpp-dev.git
- See section get-orig-source in debian/rules file for details.
- .
- qxmpp-dev is a single project but its version in this repo has a lot of
- additional paches wich are not included in upstream.
- .
- Also few files and directories are not included in tarball:
+ Few files and directories are excluded from tarball:
  https://github.com/0xd34df00d/leechcraft/tree/master/src/plugins/lcftp/
  https://github.com/0xd34df00d/leechcraft/tree/master/src/plugins/cstp/resources/images/clients/*
  https://github.com/0xd34df00d/leechcraft/tree/master/src/plugins/azoth/share/azoth/iconsets/clients/default/* (except file unknown.png)
  .
- These files were deleted from tarball because they are non-free or with very
+ See section get-orig-source in debian/rules file for details.
+ .
+ These files are deleted from tarball because they are non-free or with very
  questionable licenses. Special patches in debian/patches/ directory give
  possibility to build program without these files.
 
@@ -45,6 +39,7 @@ Files: src/cmake/*
  src/plugins/liznoo/cmake/*
  src/plugins/poshuku/plugins/onlinebookmarks/plugins/readitlater/cmake/*
  src/plugins/qrosp/cmake/*
+ src/plugins/azoth/plugins/astrality/cmake/*
 Copyright: 2009 Brad Hards <bradh@kde.org>
  2009 Michele Caini, <skypjack@gmail.com>
  2007 Pau Garcia i Quiles <pgquiles@elpauer.org>
@@ -64,6 +59,9 @@ Copyright: 2009 Brad Hards <bradh@kde.org>
  2006 David Faure <faure@kde.org>
  2007 Will Stephenson <wstephenson@kde.org>
  2007 Thomas Moenicke <thomas.moenicke@kdemail.net>
+ 2008 Allen Winter <winter@kde.org>
+ 2009 Andre Moreira Magalhaes <andrunko@gmail.com>
+ 2010 Casper van Donderen <casper.vandonderen@basyskom.de>
 License: BSD-3-clause
 
 Files: src/plugins/qrosp/third-party/*
