@@ -1,7 +1,7 @@
 Description: GCC in Debian generates move ctors for structs with bitfields
  GCC in Debian and Ubuntu fails to build program with libtorrent when
  "-std=c++0x" option is enabled. There is no such problem in Gentoo, Arch Linux
- and openSUSE with the same verisons of GCC and libtorrent.
+ and openSUSE with the same versions of GCC and libtorrent.
 Author: Georg Rudoy
 Last-Update: 2012-01-14
 

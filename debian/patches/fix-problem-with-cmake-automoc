@@ -1,0 +1,26 @@
+Description: Fix problem with cmake automoc in Debian
+ When automoc option is enabled in cmake program has uncorrectable compilation
+ errors in Debian and Ubuntu. There is no such problem in Gentoo, Arch Linux
+ and openSUSE with the same versions of cmake.
+Author: Boris Pek <tehnick-8@yandex.ru>
+Last-Update: 2012-02-22
+
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -77,11 +77,11 @@ IF (CMAKE_INSTALL_PREFIX AND NOT STANDARD_PREFIX)
+ 	ADD_DEFINITIONS (-DINSTALL_PREFIX="${CMAKE_INSTALL_PREFIX}")
+ ENDIF (CMAKE_INSTALL_PREFIX AND NOT STANDARD_PREFIX)
+ 
+-IF (NOT CMAKE_VERSION VERSION_LESS 2.8.6)
+-	MESSAGE (STATUS "CMake 2.8.6 or greater found, enabling automoc...")
+-	SET (CMAKE_AUTOMOC TRUE)
+-	SET (LC_NO_MOC TRUE)
+-ENDIF (NOT CMAKE_VERSION VERSION_LESS 2.8.6)
++#IF (NOT CMAKE_VERSION VERSION_LESS 2.8.6)
++#	MESSAGE (STATUS "CMake 2.8.6 or greater found, enabling automoc...")
++#	SET (CMAKE_AUTOMOC TRUE)
++#	SET (LC_NO_MOC TRUE)
++#ENDIF (NOT CMAKE_VERSION VERSION_LESS 2.8.6)
+ 
+ ADD_SUBDIRECTORY (util)
+ ADD_SUBDIRECTORY (xmlsettingsdialog)

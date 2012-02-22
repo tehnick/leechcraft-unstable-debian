@@ -1,3 +1,4 @@
 fix-for-lib-names
 fix-for-resources-in-cstp
 fix-problem-with-gcc-and-libtorrent
+fix-problem-with-cmake-automoc
