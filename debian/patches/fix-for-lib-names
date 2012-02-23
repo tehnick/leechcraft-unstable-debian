@@ -1,7 +1,7 @@
 Description: Fix for lib names
  Upstream is not interested in renaming these shared libraries.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2012-01-12
+Last-Update: 2012-02-23
 
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
@@ -29,7 +29,7 @@ Last-Update: 2012-01-12
  
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -76,17 +76,18 @@ ADD_DEFINITIONS(-DQT_PLUGIN)
+@@ -80,17 +80,18 @@ ADD_DEFINITIONS(-DQT_PLUGIN)
  ADD_DEFINITIONS(-DQT_NO_DEBUG)
  ADD_DEFINITIONS(-DQT_SHARED)
  ADD_DEFINITIONS(-DQT_GUI_LIB)
