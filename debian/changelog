@@ -1,3 +1,9 @@
+leechcraft-unstable (0.4.95-1056-gf693340-0ppa1~precise1) precise; urgency=low
+
+  * Minor update from GIT master branch.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 05 Mar 2012 22:28:14 +0200
+
 leechcraft-unstable (0.4.95-1036-g01be9fe-0ppa1~precise1) precise; urgency=low
 
   * Minor update from GIT master branch.
