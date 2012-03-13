@@ -57,6 +57,7 @@ Depends: ${misc:Depends},
  leechcraft-netstoremanager (= ${binary:Version}),
  leechcraft-networkmonitor (= ${binary:Version}),
  leechcraft-newlife (= ${binary:Version}),
+ leechcraft-pintab (= ${binary:Version}),
  leechcraft-popishu (= ${binary:Version}),
  leechcraft-poshuku (= ${binary:Version}),
  leechcraft-secman (= ${binary:Version}),
@@ -114,7 +115,7 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
  libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
  libleechcraft-util0.5.0 (= ${binary:Version}),
  oxygen-icon-theme | tango-icon-theme | nuvola-icon-theme
-Recommends: leechcraft-advancednotifications,
+Suggests: leechcraft-advancednotifications,
  leechcraft-aggregator,
  leechcraft-auscrie,
  leechcraft-azoth,
@@ -130,6 +131,7 @@ Recommends: leechcraft-advancednotifications,
  leechcraft-netstoremanager,
  leechcraft-networkmonitor,
  leechcraft-newlife,
+ leechcraft-pintab,
  leechcraft-popishu,
  leechcraft-poshuku,
  leechcraft-secman,
@@ -140,7 +142,6 @@ Recommends: leechcraft-advancednotifications,
  leechcraft-tabsessmanager,
  leechcraft-tabslist,
  leechcraft-vgrabber
-Suggests: leechcraft-anhero
 Description: Core executable of LeechCraft
  This package contains the main LeechCraft executable, which connects
  all the plugins with each other, routes requests between them, tracks
@@ -667,6 +668,25 @@ Description: Settings importer for LeechCraft
  This package contains importer of settings, preferences etc. from
  various applications into LeechCraft. Currently it supports importing
  RSS feeds and settings from Akregator and Liferea.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-pintab
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ libleechcraft-xmlsettingsdialog0.3.0 (= ${binary:Version}),
+ libleechcraft-util0.5.0 (= ${binary:Version}),
+ leechcraft (= ${binary:Version})
+Recommends: leechcraft-provider-sessionmanager
+Description: Tabs pinning for LeechCraft
+ This package contains the Pintab module which allows tabs to be pinned, so that
+ important tabs that are to be always opened can occupy less space. You can also
+ install TabSessManager for Pintab to preserve the pinned state across
+ LeechCraft runs.
  .
  LeechCraft is a free modular "Internet client" application.
  .
