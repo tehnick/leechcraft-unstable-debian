@@ -36,39 +36,39 @@ Standards-Version: 3.9.3
 
 Package: leechcraft-full
 Section: metapackages
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends},
- leechcraft (= ${binary:Version}),
- leechcraft-advancednotifications (= ${binary:Version}),
- leechcraft-aggregator (= ${binary:Version}),
- leechcraft-auscrie (= ${binary:Version}),
- leechcraft-azoth (= ${binary:Version}),
- leechcraft-bittorrent (= ${binary:Version}),
- leechcraft-cstp (= ${binary:Version}),
- leechcraft-dbusmanager (= ${binary:Version}),
- leechcraft-deadlyrics (= ${binary:Version}),
- leechcraft-glance (= ${binary:Version}),
- leechcraft-gmailnotifier (= ${binary:Version}),
- leechcraft-historyholder (= ${binary:Version}),
- leechcraft-kinotify (= ${binary:Version}),
- leechcraft-lackman (= ${binary:Version}),
- leechcraft-lhtr (= ${binary:Version}),
- leechcraft-liznoo (= ${binary:Version}),
- leechcraft-lmp (= ${binary:Version}),
- leechcraft-netstoremanager (= ${binary:Version}),
- leechcraft-networkmonitor (= ${binary:Version}),
- leechcraft-newlife (= ${binary:Version}),
- leechcraft-pintab (= ${binary:Version}),
- leechcraft-popishu (= ${binary:Version}),
- leechcraft-poshuku (= ${binary:Version}),
- leechcraft-secman (= ${binary:Version}),
- leechcraft-seekthru (= ${binary:Version}),
- leechcraft-shellopen (= ${binary:Version}),
- leechcraft-sidebar (= ${binary:Version}),
- leechcraft-summary (= ${binary:Version}),
- leechcraft-tabsessmanager (= ${binary:Version}),
- leechcraft-tabslist (= ${binary:Version}),
- leechcraft-vgrabber (= ${binary:Version})
+ leechcraft (>= ${source:Version}),
+ leechcraft-advancednotifications (>= ${source:Version}),
+ leechcraft-aggregator (>= ${source:Version}),
+ leechcraft-auscrie (>= ${source:Version}),
+ leechcraft-azoth (>= ${source:Version}),
+ leechcraft-bittorrent (>= ${source:Version}),
+ leechcraft-cstp (>= ${source:Version}),
+ leechcraft-dbusmanager (>= ${source:Version}),
+ leechcraft-deadlyrics (>= ${source:Version}),
+ leechcraft-glance (>= ${source:Version}),
+ leechcraft-gmailnotifier (>= ${source:Version}),
+ leechcraft-historyholder (>= ${source:Version}),
+ leechcraft-kinotify (>= ${source:Version}),
+ leechcraft-lackman (>= ${source:Version}),
+ leechcraft-lhtr (>= ${source:Version}),
+ leechcraft-liznoo (>= ${source:Version}),
+ leechcraft-lmp (>= ${source:Version}),
+ leechcraft-netstoremanager (>= ${source:Version}),
+ leechcraft-networkmonitor (>= ${source:Version}),
+ leechcraft-newlife (>= ${source:Version}),
+ leechcraft-pintab (>= ${source:Version}),
+ leechcraft-popishu (>= ${source:Version}),
+ leechcraft-poshuku (>= ${source:Version}),
+ leechcraft-secman (>= ${source:Version}),
+ leechcraft-seekthru (>= ${source:Version}),
+ leechcraft-shellopen (>= ${source:Version}),
+ leechcraft-sidebar (>= ${source:Version}),
+ leechcraft-summary (>= ${source:Version}),
+ leechcraft-tabsessmanager (>= ${source:Version}),
+ leechcraft-tabslist (>= ${source:Version}),
+ leechcraft-vgrabber (>= ${source:Version})
 Suggests:
  leechcraft-extra
 Recommends:
@@ -89,10 +89,10 @@ Description: Full LeechCraft installation
 
 Package: leechcraft-extra
 Section: metapackages
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends},
- leechcraft-anhero (= ${binary:Version}),
- leechcraft-eiskaltdcpp (= ${binary:Version})
+ leechcraft-anhero (>= ${source:Version}),
+ leechcraft-eiskaltdcpp (>= ${source:Version})
 Description: Extra LeechCraft plugins beyond full installation
  This metapackage installs additional LeechCraft plugins that may
  pull a lot of dependencies on some systems (like AnHero pulling
@@ -159,9 +159,9 @@ Description: Core executable of LeechCraft
 
 Package: leechcraft-dev
 Section: devel
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft (>= ${source:Version})
 Description: Files required for development for LeechCraft
  This package contains header files required to develop new modules for
  LeechCraft.

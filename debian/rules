@@ -98,6 +98,7 @@ get-orig-source:
 	# processing
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/lcftp/
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/cstp/resources/images/clients/*
+	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/advancednotifications/share/sounds/*
 	mv "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/default/unknown.png \
 	   "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/unknown.png
 	rm -f "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/default/*
