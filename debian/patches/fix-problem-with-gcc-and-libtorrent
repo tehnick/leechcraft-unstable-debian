@@ -3,7 +3,7 @@ Description: GCC in Debian generates move ctors for structs with bitfields
  "-std=c++0x" option is enabled. There is no such problem in Gentoo, Arch Linux
  and openSUSE with the same versions of GCC and libtorrent.
 Author: Georg Rudoy
-Last-Update: 2012-01-14
+Last-Update: 2012-03-20
 
 --- a/src/plugins/bittorrent/CMakeLists.txt
 +++ b/src/plugins/bittorrent/CMakeLists.txt
@@ -158,10 +158,10 @@ index d87f193..8a98c6d 100644
  				void SetTrackers (const std::vector<libtorrent::announce_entry>&,
  						const boost::optional<int>& = boost::optional<int> ());
 diff --git a/src/plugins/bittorrent/torrentplugin.cpp b/src/plugins/bittorrent/torrentplugin.cpp
-index c1751b7..e2efa34 100644
+index e89292d..1e67a9e 100644
 --- a/src/plugins/bittorrent/torrentplugin.cpp
 +++ b/src/plugins/bittorrent/torrentplugin.cpp
-@@ -50,6 +50,7 @@
+@@ -51,6 +51,7 @@
  #include "fastspeedcontrolwidget.h"
  #include "ipfilterdialog.h"
  #include "speedselectoraction.h"
@@ -169,7 +169,7 @@ index c1751b7..e2efa34 100644
  
  #ifdef AddJob
  #undef AddJob
-@@ -759,29 +760,16 @@ namespace LeechCraft
+@@ -738,29 +739,16 @@ namespace LeechCraft
  					return;
  				}
  
@@ -182,7 +182,7 @@ index c1751b7..e2efa34 100644
 -							std::back_inserter (allTrackers));
 -				}
 -
--				if (!allTrackers.size ())
+-				if (allTrackers.empty ())
 -					allTrackers = Core::Instance ()->
 -							GetTrackers (Core::Instance ()->
 -									GetCurrentTorrent ());
@@ -206,5 +206,5 @@ index c1751b7..e2efa34 100644
 -				allTrackers.erase (newLast, allTrackers.end ());
 +				const auto& allTrackers = GetTrackers (entries);
  
- 				if (!allTrackers.size ())
+ 				if (allTrackers.empty ())
  					return;
