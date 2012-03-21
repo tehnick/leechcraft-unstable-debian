@@ -16,12 +16,16 @@ PACKAGE = leechcraft
 DEVELOPER = 0xd34df00d
 PROJECT = leechcraft
 
-CUR_VER = $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(\([0-9]\+\):\)\?\(.*\)-.*/\3/p')
+DEB_VER = "$(shell dpkg-parsechangelog | sed -ne 's/^Version: \(\([0-9]\+\):\)\?\(.*\)-.*/\3/p')"
+CLN_VER = "$(shell echo $(DEB_VER) | sed 's/\+dfsg//')"
+
+NEW_VER = "$(shell uscan --dehs | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')"
+CUR_VER = "$(NEW_VER)\+dfsg"
 
 CMAKEOPTS = "$(CURDIR)/$(DEB_SRCDIR)" \
 	-DCMAKE_INSTALL_PREFIX=/usr \
 	-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
-	-DLEECHCRAFT_VERSION="$(CUR_VER)" \
+	-DLEECHCRAFT_VERSION="$(CLN_VER)" \
 	-DDISABLE_RPATH_TRICKS=True \
 	-DSTRICT_LICENSING=True \
 	-DLOCAL_MINIUPNP=True \
@@ -90,9 +94,9 @@ get-orig-source:
 	# preparation
 	rm -rf  "$(CUR_VER)"/ "$(PACKAGE)-$(CUR_VER)"/
 	# main sources
-	wget -4 "http://nodeload.github.com/$(DEVELOPER)/$(PROJECT)/tarball/$(CUR_VER)"
+	wget -4 "http://nodeload.github.com/$(DEVELOPER)/$(PROJECT)/tarball/$(NEW_VER)"
 	rm -rf $(DEVELOPER)-$(PROJECT)-*
-	tar xzf "$(CUR_VER)"
+	tar xzf "$(NEW_VER)"
 	mv $(DEVELOPER)-$(PROJECT)-* "$(PACKAGE)-$(CUR_VER)"
 	# processing
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/lcftp/
