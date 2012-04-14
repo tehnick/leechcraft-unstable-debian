@@ -91,8 +91,7 @@ Package: leechcraft-extra
 Section: metapackages
 Architecture: all
 Depends: ${misc:Depends},
- leechcraft-anhero (>= ${source:Version}),
- leechcraft-eiskaltdcpp (>= ${source:Version})
+ leechcraft-anhero (>= ${source:Version})
 Description: Extra LeechCraft plugins beyond full installation
  This metapackage installs additional LeechCraft plugins that may
  pull a lot of dependencies on some systems (like AnHero pulling
@@ -433,30 +432,6 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: Song lyrics finder for LeechCraft
  This package contains a simple client for finding song lyrics on
  various sites.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-eiskaltdcpp
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
-Suggests: php5-cli
-Recommends:
- libqtscript4-core,
- libqtscript4-gui,
- libqtscript4-network,
- libqtscript4-xml
-Description: Direct Connect client for LeechCraft
- This package contains EiskaltDC++  plugin for LeechCraft.
- .
- EiskaltDC++ is a cross-platform program that uses the Direct Connect
- and ADC protocol. It is compatible with other DC clients, such as the
- original DC from Neomodus, DC++ and derivatives. EiskaltDC++ also
- interoperates with all common DC hub software.
  .
  LeechCraft is a free modular "Internet client" application.
  .
