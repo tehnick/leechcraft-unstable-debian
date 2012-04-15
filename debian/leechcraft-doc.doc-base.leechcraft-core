@@ -1,0 +1,12 @@
+Document: leechcraft-core
+Title: Documentation files for LeechCraft Core
+Author: LeechCraft Team
+Abstract: This documentation is for LeechCraft core API. It contains
+ description of core API used for developing first-level LeechCraft plugins.
+ For developing sub-plugins, please refer to corresponding documentation
+ sections (like for Azoth).
+Section: Network/Communication
+
+Format: HTML
+Index: /usr/share/doc/leechcraft-doc/html/core/index.html
+Files: /usr/share/doc/leechcraft-doc/html/core/*.html

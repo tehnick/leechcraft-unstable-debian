@@ -1,0 +1,11 @@
+Document: leechcraft-azoth
+Title: Documentation files for LeechCraft Azoth plugin (modular IM client)
+Author: LeechCraft Team
+Abstract: This documentation is for API of the LeechCraft Azoth module. It
+ contains description of Azoth's API used for developing Azoth's sub-plugins.
+ It may be helpful, for example, for implementing new protocols.
+Section: Network/Communication
+
+Format: HTML
+Index: /usr/share/doc/leechcraft-doc/html/azoth/index.html
+Files: /usr/share/doc/leechcraft-doc/html/azoth/*.html

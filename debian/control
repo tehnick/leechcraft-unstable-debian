@@ -2,7 +2,7 @@ Source: leechcraft-unstable
 Section: net
 Priority: extra
 Maintainer: Boris Pek <tehnick-8@mail.ru>
-Build-Depends: debhelper (>= 7),
+Build-Depends: debhelper (>= 7.0.50~),
  po-debconf,
  cmake (>= 2.8),
  kdelibs5-dev (>= 4.2.0),
@@ -28,7 +28,9 @@ Build-Depends: debhelper (>= 7),
  libspeex-dev,
  libqwt-dev,
  libmsn-dev,
- zlib1g-dev
+ zlib1g-dev,
+ graphviz,
+ doxygen
 Homepage: http://leechcraft.org
 Vcs-Git: git://github.com/tehnick/leechcraft-unstable-debian.git
 Vcs-Browser: https://github.com/tehnick/leechcraft-unstable-debian
@@ -161,6 +163,7 @@ Section: devel
 Architecture: all
 Depends: ${misc:Depends},
  leechcraft (>= ${source:Version})
+Suggests: leechcraft-doc
 Description: Files required for development for LeechCraft
  This package contains header files required to develop new modules for
  LeechCraft.
@@ -183,6 +186,26 @@ Depends: ${misc:Depends},
 Description: Debug symbols for LeechCraft
  This package contains the debug symbols for LeechCraft and all its
  official plugins.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+ .
+ Features can be easily added via plugins that can be integrated with
+ each other with no effert while staying abstract from the exact
+ implementation.
+
+Package: leechcraft-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends},
+ libjs-jquery
+Recommends: leechcraft-dev
+Description: Documentation files for LeechCraft
+ This package contains documentation files which should be helpful for
+ LeechCraft developing.
  .
  LeechCraft is a free modular "Internet client" application.
  .
