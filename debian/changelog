@@ -1,14 +1,8 @@
-leechcraft-unstable (0.5.60-435-ga31196b+dfsg-0ppa1~precise1) precise; urgency=low
+leechcraft-unstable (0.5.60-470-g4c1afc3+dfsg-0ppa1~precise1) precise; urgency=low
 
   * Minor update from GIT master branch.
 
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 16 Apr 2012 21:02:18 +0300
-
-leechcraft-unstable (0.5.60-408-gf80fdb9+dfsg-0ppa1~precise1) precise; urgency=low
-
-  * Minor update from GIT master branch.
-
- -- Boris Pek <tehnick-8@mail.ru>  Sat, 14 Apr 2012 23:48:37 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Sat, 21 Apr 2012 18:03:27 +0300
 
 leechcraft-unstable (0.4.90-0ppa1~oneiric1) oneiric; urgency=low
 

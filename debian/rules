@@ -97,8 +97,6 @@ override_dh_auto_install:
 	mkdir -p $(DEB_DOCDIR)/html/azoth
 	cp -r $(CURDIR)/doc/doxygen/core/out/html/* $(DEB_DOCDIR)/html/core/
 	cp -r $(CURDIR)/doc/doxygen/azoth/out/html/* $(DEB_DOCDIR)/html/azoth/
-	ln -sf /usr/share/javascript/jquery/jquery.js $(DEB_DOCDIR)/html/azoth/jquery.js
-	ln -sf /usr/share/javascript/jquery/jquery.js $(DEB_DOCDIR)/html/core/jquery.js
 
 override_dh_installchangelogs:
 	dh_installchangelogs CHANGELOG

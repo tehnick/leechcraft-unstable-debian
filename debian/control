@@ -1,6 +1,6 @@
 Source: leechcraft-unstable
 Section: net
-Priority: extra
+Priority: optional
 Maintainer: Boris Pek <tehnick-8@mail.ru>
 Build-Depends: debhelper (>= 7.0.50~),
  po-debconf,
@@ -15,7 +15,7 @@ Build-Depends: debhelper (>= 7.0.50~),
  libphonon-dev,
  libbz2-dev,
  libqt4-dev (>= 4.7),
- libqxmpp-dev (>= 0.3.47),
+ libqxmpp-lc-dev (>= 0.3.47),
  libqtwebkit-dev,
  libgeoip-dev,
  libtelepathy-qt4-dev,
@@ -180,9 +180,11 @@ Description: Files required for development for LeechCraft
 
 Package: leechcraft-dbg
 Section: debug
+Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
  leechcraft (= ${binary:Version})
+Recommends: libqxmpp-lc0-dbg
 Description: Debug symbols for LeechCraft
  This package contains the debug symbols for LeechCraft and all its
  official plugins.
