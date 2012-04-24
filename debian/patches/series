@@ -1,3 +1,4 @@
+fix-for-cmake
 fix-for-lib-names
 fix-for-resources-in-cstp
 fix-problem-with-cmake-automoc
