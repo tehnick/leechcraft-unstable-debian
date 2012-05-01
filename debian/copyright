@@ -63,6 +63,7 @@ Copyright: 2009 Brad Hards <bradh@kde.org>
  2008 Allen Winter <winter@kde.org>
  2009 Andre Moreira Magalhaes <andrunko@gmail.com>
  2010 Casper van Donderen <casper.vandonderen@basyskom.de>
+ 2006 Laurent Montel <montel@kde.org>
 License: BSD-3-clause
 
 Files: src/plugins/qrosp/third-party/*
