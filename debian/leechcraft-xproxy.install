@@ -1,0 +1,3 @@
+usr/lib/leechcraft/plugins/*leechcraft_xproxy.so
+usr/share/leechcraft/translations/leechcraft_xproxy*.qm
+usr/share/leechcraft/settings/xproxysettings.xml
