@@ -30,6 +30,7 @@ Build-Depends: debhelper (>= 7.0.50~),
  libqwt-dev,
  libmsn-dev,
  zlib1g-dev,
+ libx11-dev,
  graphviz,
  doxygen
 Homepage: http://leechcraft.org
