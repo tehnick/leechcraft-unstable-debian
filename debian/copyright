@@ -18,9 +18,9 @@ Source: https://github.com/0xd34df00d/leechcraft/tags
 
 Files: src/* tools/*
 Copyright: 2006-2012 Georg Rudoy <0xd34df00d@gmail.com>
- 2010-2011 Oleg Linkin
+ 2010-2012 Oleg Linkin
+ 2011-2012 Minh Ngo
  2011 Yury Erik Potapov
- 2011 Minh Ngo
  2011 ForNeVeR
  2011 Andrey Batyiev
  2011 Alexander Konovalov
