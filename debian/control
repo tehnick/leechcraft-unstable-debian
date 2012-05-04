@@ -64,7 +64,6 @@ Depends: ${misc:Depends},
  leechcraft-netstoremanager (>= ${source:Version}),
  leechcraft-networkmonitor (>= ${source:Version}),
  leechcraft-newlife (>= ${source:Version}),
- leechcraft-otlozhu (>= ${source:Version}),
  leechcraft-pintab (>= ${source:Version}),
  leechcraft-popishu (>= ${source:Version}),
  leechcraft-poshuku (>= ${source:Version}),
@@ -141,7 +140,6 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-netstoremanager,
  leechcraft-networkmonitor,
  leechcraft-newlife,
- leechcraft-otlozhu,
  leechcraft-pintab,
  leechcraft-popishu,
  leechcraft-poshuku,
@@ -679,20 +677,6 @@ Description: Settings importer for LeechCraft
  This package contains importer of settings, preferences etc. from
  various applications into LeechCraft. Currently it supports importing
  RSS feeds and settings from Akregator and Liferea.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-otlozhu
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
-Description: GTD-inspired TODO manager for LeechCraft
- This package contains the Otlozhu module which implements simple but very
- helpful TODO manager inspired by GTD (Getting Things Done) method.
  .
  LeechCraft is a free modular "Internet client" application.
  .
