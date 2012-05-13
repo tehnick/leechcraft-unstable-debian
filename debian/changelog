@@ -1,8 +1,8 @@
-leechcraft-unstable (0.5.65-317-g7215582+dfsg-0ppa1~quantal1) quantal; urgency=low
+leechcraft-unstable (0.5.65-402-gf56d98c+dfsg-0ppa1~quantal1) quantal; urgency=low
 
   * Minor update from GIT master branch.
 
- -- Boris Pek <tehnick-8@mail.ru>  Wed, 09 May 2012 14:11:21 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 13 May 2012 02:50:03 +0300
 
 leechcraft-unstable (0.4.90-0ppa1~oneiric1) oneiric; urgency=low
 
