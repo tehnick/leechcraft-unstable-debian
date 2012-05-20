@@ -26,6 +26,7 @@ Copyright: 2006-2012 Georg Rudoy <0xd34df00d@gmail.com>
  2011 Alexander Konovalov
  2010 Vadim Misbakh-Soloviev
  2011 Eugene Mamin
+ 2012 Dimitriy Ryazantcev
 License: GPL-3+
 
 Files: src/cmake/*

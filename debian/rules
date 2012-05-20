@@ -8,6 +8,11 @@ ifeq (,$(NUMJOBS))
 	NUMJOBS = 1
 endif
 
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(CPPFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+
 DEB_BUILDDIR = builddir
 DEB_SRCDIR = src
 DEB_DH_INSTALL_SOURCEDIR = $(CURDIR)/debian/tmp
@@ -24,9 +29,14 @@ NEW_VER = $(shell uscan --dehs | sed -n 's/.*<upstream-version>\(.*\)<\/upstream
 CUR_VER = $(NEW_VER)\+dfsg
 
 CMAKEOPTS = "$(CURDIR)/$(DEB_SRCDIR)" \
-	-DCMAKE_INSTALL_PREFIX=/usr \
+	-DCMAKE_C_FLAGS="$(CFLAGS)" \
+	-DCMAKE_CXX_FLAGS="$(CXXFLAGS)" \
+	-DCMAKE_SHARED_LINKER_FLAGS="$(LDFLAGS)" \
+	-DCMAKE_MODULE_LINKER_FLAGS="$(LDFLAGS)" \
+	-DCMAKE_EXE_LINKER_FLAGS="$(LDFLAGS)" \
 	-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
 	-DLEECHCRAFT_VERSION="$(CLN_VER)" \
+	-DCMAKE_INSTALL_PREFIX=/usr \
 	-DDISABLE_RPATH_TRICKS=True \
 	-DSTRICT_LICENSING=True \
 	-DLOCAL_MINIUPNP=True \
