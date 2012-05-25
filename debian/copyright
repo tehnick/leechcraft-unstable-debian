@@ -284,11 +284,6 @@ Files: src/plugins/azoth/plugins/modnok/lc_azoth_modnok_latexconvert.sh
 Copyright: 2004 Andreas Reigber <anderl@nought.de>
 License: GPL-3+
 
-Files: src/plugins/azoth/plugins/rosenthal/hunspell/*
-Copyright: 2000 Bjoern Jacke <bjoern@j3e.de>
- 2002 Kevin B. Hendricks
-License: LGPL-2.1
-
 Files: qxmpp/*
 Copyright: 2008-2011 The QXmpp developers (http://code.google.com/p/qxmpp)
  2008-2011 Georg Rudoy <0xd34df00d@gmail.com>

@@ -141,6 +141,7 @@ get-orig-source:
 	mv $(DEVELOPER)-$(PROJECT)-* "$(PACKAGE)-$(CUR_VER)"
 	# processing
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/lcftp/
+	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/plugins/rosenthal/3dparty/
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/cstp/resources/images/clients/*
 	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/advancednotifications/share/sounds/*
 	mv "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/default/unknown.png \
