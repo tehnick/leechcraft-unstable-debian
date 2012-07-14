@@ -619,6 +619,7 @@ Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft (= ${binary:Version})
 Provides: leechcraft-provider-mediaplayer
+Recommends: ffmpeg
 Description: Music Player for LeechCraft
  This package contains the LMP (LeechCraft  Music Player).
  .
