@@ -39,8 +39,6 @@ usr/share/doc/leechcraft-doc/html/core/tab_s.png usr/share/doc/leechcraft-doc/ht
 
 usr/share/doc/leechcraft-doc/html/core/graph_legend.png usr/share/doc/leechcraft-doc/html/azoth/graph_legend.png
 
-usr/share/doc/leechcraft-doc/html/core/installdox usr/share/doc/leechcraft-doc/html/azoth/installdox
-
 usr/share/doc/leechcraft-doc/html/core/ftv2doc.png usr/share/doc/leechcraft-doc/html/core/ftv2link.png
 usr/share/doc/leechcraft-doc/html/core/ftv2doc.png usr/share/doc/leechcraft-doc/html/azoth/ftv2doc.png
 usr/share/doc/leechcraft-doc/html/core/ftv2doc.png usr/share/doc/leechcraft-doc/html/azoth/ftv2link.png
@@ -390,3 +388,12 @@ usr/share/doc/leechcraft-doc/html/azoth/search/enumvalues_6d.html usr/share/doc/
 usr/share/doc/leechcraft-doc/html/azoth/isupportmicroblogs_8h__incl.map usr/share/doc/leechcraft-doc/html/core/class_leech_craft_1_1_util_1_1_resource_loader_a0c6debef0b52e83f809afdd496601f9c_cgraph.map
 usr/share/doc/leechcraft-doc/html/azoth/isupportmicroblogs_8h__incl.map usr/share/doc/leechcraft-doc/html/core/class_leech_craft_1_1_util_1_1_resource_loader_a0c6debef0b52e83f809afdd496601f9c_icgraph.map
 usr/share/doc/leechcraft-doc/html/azoth/isupportmicroblogs_8h__incl.map usr/share/doc/leechcraft-doc/html/core/iremovabledevmanager_8h__incl.map
+
+usr/share/doc/leechcraft-doc/html/azoth/ftv2ns.png usr/share/doc/leechcraft-doc/html/core/ftv2ns.png
+usr/share/doc/leechcraft-doc/html/azoth/sync_off.png usr/share/doc/leechcraft-doc/html/core/sync_off.png
+usr/share/doc/leechcraft-doc/html/azoth/bdwn.png usr/share/doc/leechcraft-doc/html/core/bdwn.png
+usr/share/doc/leechcraft-doc/html/azoth/ftv2mo.png usr/share/doc/leechcraft-doc/html/core/ftv2mo.png
+usr/share/doc/leechcraft-doc/html/azoth/nav_g.png usr/share/doc/leechcraft-doc/html/core/nav_g.png
+usr/share/doc/leechcraft-doc/html/azoth/sync_on.png usr/share/doc/leechcraft-doc/html/core/sync_on.png
+usr/share/doc/leechcraft-doc/html/azoth/ftv2cl.png usr/share/doc/leechcraft-doc/html/core/ftv2cl.png
+
