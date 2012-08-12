@@ -22,6 +22,7 @@ Build-Depends: debhelper (>= 7.0.50~),
  libqscintilla2-dev,
  libpoppler-qt4-dev,
  libhunspell-dev,
+ liblastfm-dev,
  libqjson-dev,
  libqca2-dev,
  libotr2-dev,
@@ -62,6 +63,7 @@ Depends: ${misc:Depends},
  leechcraft-lackman (>= ${source:Version}),
  leechcraft-lhtr (>= ${source:Version}),
  leechcraft-liznoo (>= ${source:Version}),
+ leechcraft-lastfmscrobble (>= ${source:Version}),
  leechcraft-lmp (>= ${source:Version}),
  leechcraft-monocle (>= ${source:Version}),
  leechcraft-nacheku (>= ${source:Version}),
@@ -139,6 +141,7 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-historyholder,
  leechcraft-kbswitch,
  leechcraft-kinotify,
+ leechcraft-lastfmscrobble,
  leechcraft-lmp,
  leechcraft-monocle,
  leechcraft-nacheku,
@@ -618,12 +621,29 @@ Description: UPower-based power manager for LeechCraft
  files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
  download or play podcasts and other media files and much more.
 
+Package: leechcraft-lastfmscrobble
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft (= ${binary:Version})
+Recommends: leechcraft-provider-securestorage
+Provides: leechcraft-provider-mediaartistinfo
+Description: Last.fm scrobbler for LeechCraft
+ This package contains LastFMScrobble, which provides support for various
+ Last.FM-related services from scrobbling and streaming to obtaining
+ recommendations, similar artists and biographies.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
 Package: leechcraft-lmp
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft (= ${binary:Version})
 Provides: leechcraft-provider-mediaplayer
-Recommends: ffmpeg
+Recommends: ffmpeg, leechcraft-lastfmscrobble
 Description: Music Player for LeechCraft
  This package contains the LMP (LeechCraft  Music Player).
  .
