@@ -20,6 +20,7 @@ Build-Depends: debhelper (>= 7.0.50~),
  libtelepathy-qt4-dev,
  libcurl4-openssl-dev,
  libqscintilla2-dev,
+ libpoppler-qt4-dev,
  libhunspell-dev,
  libqjson-dev,
  libqca2-dev,
@@ -62,6 +63,7 @@ Depends: ${misc:Depends},
  leechcraft-lhtr (>= ${source:Version}),
  leechcraft-liznoo (>= ${source:Version}),
  leechcraft-lmp (>= ${source:Version}),
+ leechcraft-monocle (>= ${source:Version}),
  leechcraft-nacheku (>= ${source:Version}),
  leechcraft-netstoremanager (>= ${source:Version}),
  leechcraft-networkmonitor (>= ${source:Version}),
@@ -138,6 +140,7 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-kbswitch,
  leechcraft-kinotify,
  leechcraft-lmp,
+ leechcraft-monocle,
  leechcraft-nacheku,
  leechcraft-netstoremanager,
  leechcraft-networkmonitor,
@@ -623,6 +626,27 @@ Provides: leechcraft-provider-mediaplayer
 Recommends: ffmpeg
 Description: Music Player for LeechCraft
  This package contains the LMP (LeechCraft  Music Player).
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-monocle
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft (= ${binary:Version})
+Recommends: leechcraft-provider-sessionmanager
+Description: Document viewer for LeechCraft
+ This package contains Monocle, the modular document reader for LeechCraft.
+ Currently it has the following backend modules:
+  * fxb -- FictionBook file format (*.fb2)
+  * pdf -- PDF file format (*.pdf) (libpoppler is used)
+ .
+ Monocle supports links and tables of contents, two-page spreads, copying
+ selection as image or text, fullscreen presentation mode and has a bunch
+ of other features.
  .
  LeechCraft is a free modular "Internet client" application.
  .
