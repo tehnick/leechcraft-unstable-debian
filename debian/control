@@ -408,6 +408,7 @@ Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft (= ${binary:Version}),
  leechcraft-provider-tasksview
+Recommends: geoip-database
 Provides: leechcraft-provider-bittorrent
 Description: BitTorrent client for LeechCraft
  This package contains a sophisticated BitTorrent client. It's based on
