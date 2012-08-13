@@ -86,6 +86,7 @@ Depends: ${misc:Depends},
  leechcraft-vrooby (>= ${source:Version}),
  leechcraft-xproxy (>= ${source:Version})
 Suggests:
+ leechcraft-lads (>= ${source:Version}),
  leechcraft-extra
 Recommends:
  libqt4-sql-psql (>= 4.6.0),
@@ -585,6 +586,19 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: Userspace Package Manager for LeechCraft
  This package contains LackMan, the Package Manager for userspace stuff
  like script plugins, extensions, themes and frequently updated data.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-lads
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft (= ${binary:Version})
+Description: Ubuntu Unity integration layer for LeechCraft
+ This package contains Lads, Ubuntu Unity integration layer for LeechCraft.
  .
  LeechCraft is a free modular "Internet client" application.
  .
