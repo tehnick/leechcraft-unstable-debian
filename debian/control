@@ -83,6 +83,7 @@ Depends: ${misc:Depends},
  leechcraft-tabsessmanager (>= ${source:Version}),
  leechcraft-tabslist (>= ${source:Version}),
  leechcraft-vgrabber (>= ${source:Version}),
+ leechcraft-vrooby (>= ${source:Version}),
  leechcraft-xproxy (>= ${source:Version})
 Suggests:
  leechcraft-extra
@@ -162,6 +163,7 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-tabsessmanager,
  leechcraft-tabslist,
  leechcraft-vgrabber,
+ leechcraft-vrooby,
  leechcraft-xproxy
 Description: Core executable of LeechCraft
  This package contains the main LeechCraft executable, which connects
@@ -645,7 +647,8 @@ Package: leechcraft-lmp
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft (= ${binary:Version})
-Recommends: ffmpeg, leechcraft-lastfmscrobble
+Recommends: ffmpeg, leechcraft-lastfmscrobble,
+ leechcraft-provider-removabledevicemgr
 Suggests: leechcraft-provider-todolist
 Provides: leechcraft-provider-mediaplayer
 Description: Music Player for LeechCraft
@@ -969,6 +972,25 @@ Provides: leechcraft-provider-search
 Description: vkontakte.ru plugin for LeechCraft
  This package contains a music search/grabber for the vkontakte.ru social
  network.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-vrooby
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft (= ${binary:Version}),
+ leechcraft-sidebar,
+ udisks (>= 1.0)
+Provides: leechcraft-provider-removabledevicemgr
+Description: removable storage devices manager for LeechCraft
+ This package contains Vrooby, the removable storage device manager for
+ LeechCraft. This module allows other plugins to enumerate and work with
+ removable devices (like LMP device syncer), as well at allows the user
+ to mount and unmount devices easily.
  .
  LeechCraft is a free modular "Internet client" application.
  .
