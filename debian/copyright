@@ -28,6 +28,7 @@ Copyright: 2006-2012 Georg Rudoy <0xd34df00d@gmail.com>
  2011 Eugene Mamin
  2012 Dimitriy Ryazantcev
  2012 Maxim Ignatenko
+ 2012 Maxim Koltsov
 License: GPL-3+
 
 Files: src/cmake/*
@@ -44,6 +45,7 @@ Files: src/cmake/*
  src/plugins/qrosp/cmake/*
  src/plugins/azoth/plugins/astrality/cmake/*
  src/plugins/monocle/plugins/pdf/cmake/*
+ src/plugins/hotstreams/cmake/*
 Copyright: 2009 Brad Hards <bradh@kde.org>
  2009 Michele Caini, <skypjack@gmail.com>
  2007 Pau Garcia i Quiles <pgquiles@elpauer.org>
