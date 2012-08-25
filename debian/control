@@ -44,7 +44,7 @@ Vcs-Git: git://github.com/tehnick/leechcraft-unstable-debian.git
 Vcs-Browser: https://github.com/tehnick/leechcraft-unstable-debian
 Standards-Version: 3.9.3
 
-Package: leechcraft-full
+Package: leechcraft
 Section: metapackages
 Architecture: all
 Depends: ${misc:Depends},
