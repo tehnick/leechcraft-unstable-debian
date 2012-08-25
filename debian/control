@@ -48,7 +48,7 @@ Package: leechcraft-full
 Section: metapackages
 Architecture: all
 Depends: ${misc:Depends},
- leechcraft (>= ${source:Version}),
+ leechcraft-core (>= ${source:Version}),
  leechcraft-advancednotifications (>= ${source:Version}),
  leechcraft-aggregator (>= ${source:Version}),
  leechcraft-auscrie (>= ${source:Version}),
@@ -186,7 +186,7 @@ Package: leechcraft-dev
 Section: devel
 Architecture: any
 Depends: ${misc:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Suggests: leechcraft-doc
 Description: Files required for development for LeechCraft
  This package contains header files required to develop new modules for
@@ -207,7 +207,7 @@ Section: debug
 Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Recommends: libqxmpp-lc0-dbg
 Description: Debug symbols for LeechCraft
  This package contains the debug symbols for LeechCraft and all its
@@ -269,7 +269,7 @@ Description: Common library for LeechCraft
 Package: leechcraft-advancednotifications
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-provider-notifier-visual
 Suggests: leechcraft-provider-mediaplayer
 Description: Advanced Notifications framework for LeechCraft
@@ -296,7 +296,7 @@ Description: Advanced Notifications framework for LeechCraft
 Package: leechcraft-aggregator
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-provider-http
 Provides: leechcraft-provider-feedreader
 Recommends: leechcraft-provider-webbrowser,
@@ -323,7 +323,7 @@ Description: RSS/Atom feed reader for LeechCraft
 Package: leechcraft-anhero
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Description: Crash handler for LeechCraft
  This package contains AnHero, the crash handler for LeechCraft.
  .
@@ -336,7 +336,7 @@ Description: Crash handler for LeechCraft
 Package: leechcraft-auscrie
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Description: Screenshooter for LeechCraft
  This package contains Auscrie, the auto screenshooter for LeechCraft.
  It can make screenshots of LeechCraft and then either save them locally
@@ -351,7 +351,7 @@ Description: Screenshooter for LeechCraft
 Package: leechcraft-azoth
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
 Recommends: telepathy-mission-control-5, telepathy-haze
 Suggests: telepathy-butterfly, telepathy-rakia, telepathy-salut
 Description: Modular IM client for LeechCraft
@@ -419,7 +419,7 @@ Description: Modular IM client for LeechCraft
 Package: leechcraft-bittorrent
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-provider-tasksview
 Recommends: geoip-database
 Provides: leechcraft-provider-bittorrent
@@ -445,7 +445,7 @@ Description: BitTorrent client for LeechCraft
 Package: leechcraft-cstp
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-provider-tasksview
 Provides: leechcraft-provider-http
 Description: HTTP client for LeechCraft
@@ -460,7 +460,7 @@ Description: HTTP client for LeechCraft
 Package: leechcraft-dbusmanager
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-dbus,
  leechcraft-provider-notifier-visual
 Description: D-Bus side of LeechCraft
@@ -477,7 +477,7 @@ Description: D-Bus side of LeechCraft
 Package: leechcraft-deadlyrics
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-provider-searchesview
 Description: Song lyrics finder for LeechCraft
  This package contains a simple client for finding song lyrics on
@@ -492,7 +492,7 @@ Description: Song lyrics finder for LeechCraft
 Package: leechcraft-dolozhee
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-provider-securestorage
 Description: Plugin for feature requests and bug reports for LeechCraft
  This package contains Dolozhee module which simplifies making feature requests
@@ -508,7 +508,7 @@ Description: Plugin for feature requests and bug reports for LeechCraft
 Package: leechcraft-glance
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-dbus
 Description: Provides a quick overview of tabs in LeechCraft
  This plugin adds an action to the quick launch area that allows one
@@ -525,7 +525,7 @@ Description: Provides a quick overview of tabs in LeechCraft
 Package: leechcraft-gmailnotifier
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-dbus
 Description: Notifications about new mail in GMail for LeechCraft
  This plugin notifies whenever new mail arrives to your GMail inbox.
@@ -539,7 +539,7 @@ Description: Notifications about new mail in GMail for LeechCraft
 Package: leechcraft-historyholder
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-provider-searchesview
 Description: History keeper for LeechCraft
  This package contains a history keeper that stores information about
@@ -554,7 +554,7 @@ Description: History keeper for LeechCraft
 Package: leechcraft-kbswitch
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Description: Keyboard plugin for LeechCraft
  This package contains the KBSwitch plugin which allows one to have different
  keyboard layouts for different tabs.
@@ -568,7 +568,7 @@ Description: Keyboard plugin for LeechCraft
 Package: leechcraft-kinotify
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Description: Fancy notifications for LeechCraft
  This package contains Kinotify which provides fancy notifications for
  LeechCraft instead of old-style tray-based ones.
@@ -582,7 +582,7 @@ Description: Fancy notifications for LeechCraft
 Package: leechcraft-lackman
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-provider-http
 Description: Userspace Package Manager for LeechCraft
  This package contains LackMan, the Package Manager for userspace stuff
@@ -597,7 +597,7 @@ Description: Userspace Package Manager for LeechCraft
 Package: leechcraft-lads
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Description: Ubuntu Unity integration layer for LeechCraft
  This package contains Lads, Ubuntu Unity integration layer for LeechCraft.
  .
@@ -610,7 +610,7 @@ Description: Ubuntu Unity integration layer for LeechCraft
 Package: leechcraft-lhtr
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-sidebar
 Provides: leechcraft-provider-html-wysiwyg
 Description: LeechCraft HTML Text editor in WYSIWYG style
@@ -627,7 +627,7 @@ Description: LeechCraft HTML Text editor in WYSIWYG style
 Package: leechcraft-liznoo
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-sidebar
 Description: UPower-based power manager for LeechCraft
  This package contains Liznoo, UPower-based power manager. Liznoo also detects
@@ -644,7 +644,7 @@ Description: UPower-based power manager for LeechCraft
 Package: leechcraft-lastfmscrobble
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-provider-securestorage
 Provides: leechcraft-provider-mediaartistinfo
 Description: Last.fm scrobbler for LeechCraft
@@ -661,7 +661,7 @@ Description: Last.fm scrobbler for LeechCraft
 Package: leechcraft-lmp
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Recommends: ffmpeg, leechcraft-lastfmscrobble,
  leechcraft-provider-removabledevicemgr
 Suggests: leechcraft-provider-todolist
@@ -678,7 +678,7 @@ Description: Music Player for LeechCraft
 Package: leechcraft-monocle
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-provider-sessionmanager
 Description: Document viewer for LeechCraft
  This package contains Monocle, the modular document reader for LeechCraft.
@@ -700,7 +700,7 @@ Description: Document viewer for LeechCraft
 Package: leechcraft-nacheku
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Description: Clipboard/download dir watcher for LeechCraft
  This package contains Nacheku. This module watches clipboard and download
  directory in order to get links and download files.
@@ -714,7 +714,7 @@ Description: Clipboard/download dir watcher for LeechCraft
 Package: leechcraft-netstoremanager
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Description: Manages network data storages for LeechCraft
  This package contains NetStoreManager, the module for managing network data
  storages like Yandex.Disk.
@@ -728,7 +728,7 @@ Description: Manages network data storages for LeechCraft
 Package: leechcraft-networkmonitor
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Description: Network monitor for LeechCraft
  This package contains a monitor that watches for HTTP requests
  and responses around.
@@ -742,7 +742,7 @@ Description: Network monitor for LeechCraft
 Package: leechcraft-newlife
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-importer
 Description: Settings importer for LeechCraft
  This package contains importer of settings, preferences etc. from
@@ -758,7 +758,7 @@ Description: Settings importer for LeechCraft
 Package: leechcraft-otlozhu
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-advancednotifications
 Provides: leechcraft-provider-todolist
 Description: (Getting Things Done style) TODO manager for LeechCraft
@@ -780,7 +780,7 @@ Description: (Getting Things Done style) TODO manager for LeechCraft
 Package: leechcraft-pintab
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-provider-sessionmanager
 Description: Tabs pinning for LeechCraft
  This package contains the Pintab module which allows tabs to be pinned, so that
@@ -797,7 +797,7 @@ Description: Tabs pinning for LeechCraft
 Package: leechcraft-popishu
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-texteditor
 Description: Plain text editor for LeechCraft
  This package contains Popishu, a simple text editor for LeechCraft
@@ -813,7 +813,7 @@ Description: Plain text editor for LeechCraft
 Package: leechcraft-poshuku
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-provider-http,
  leechcraft-provider-bittorrent,
  leechcraft-provider-feedreader,
@@ -866,7 +866,7 @@ Description: Web browser for LeechCraft
 Package: leechcraft-secman
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-securestorage
 Description: Security Manager plugin for LeechCraft
  This package contains the base plugin for secure storage stuff for LeechCraft
@@ -884,7 +884,7 @@ Description: Security Manager plugin for LeechCraft
 Package: leechcraft-seekthru
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-provider-webbrowser,
  leechcraft-provider-searchesview
 Provides: leechcraft-provider-search
@@ -900,7 +900,7 @@ Description: OpenSearch-support plugin for LeechCraft
 Package: leechcraft-shellopen
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Description: Support for opening files with external apps in LeechCraft
  This package contains module that adds an option to open files and
  handle entities with external applications. For example, you may choose
@@ -916,7 +916,7 @@ Description: Support for opening files with external apps in LeechCraft
 Package: leechcraft-sidebar
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Description: Sidebar with quick launch, tabs and tray areas in LeechCraft
  This package contains module that adds a nice sidebar with quick launch area,
  tabs and tray-like area. The sidebar supports grouping of similar tabs (like
@@ -932,7 +932,7 @@ Description: Sidebar with quick launch, tabs and tray areas in LeechCraft
 Package: leechcraft-summary
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-searchesview,
  leechcraft-provider-tasksview
 Description: Quick summary of what's going on in LeechCraft
@@ -950,7 +950,7 @@ Description: Quick summary of what's going on in LeechCraft
 Package: leechcraft-tabsessmanager
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-sessionmanager
 Description: Tab Session Manager for LeechCraft
  This plugin stores the list and state of opened tabs between LeechCraft runs.
@@ -966,7 +966,7 @@ Description: Tab Session Manager for LeechCraft
 Package: leechcraft-tabslist
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version})
+ leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-searchesview
 Description: Displays list of opened tabs, with navigation between them
  This plugin adds an action to the quick launch area that, when triggered,
@@ -981,7 +981,7 @@ Description: Displays list of opened tabs, with navigation between them
 Package: leechcraft-vgrabber
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-provider-http,
  leechcraft-provider-searchesview
 Provides: leechcraft-provider-search
@@ -998,7 +998,7 @@ Description: vkontakte.ru plugin for LeechCraft
 Package: leechcraft-vrooby
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-sidebar,
  udisks (>= 1.0)
 Provides: leechcraft-provider-removabledevicemgr
@@ -1017,7 +1017,7 @@ Description: removable storage devices manager for LeechCraft
 Package: leechcraft-xproxy
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft (= ${binary:Version}),
+ leechcraft-core (= ${binary:Version}),
  leechcraft-provider-http
 Description: Advanced proxy manager for LeechCraft
  This package contains XProxy, the advanced proxy manager for LeechCraft.
