@@ -32,6 +32,7 @@ Build-Depends: debhelper (>= 9),
  libspeex-dev,
  libtag1-dev,
  libqwt-dev,
+ libqxt-dev,
  libmsn-dev,
  libbz2-dev,
  zlib1g-dev,
@@ -57,6 +58,7 @@ Depends: ${misc:Depends},
  leechcraft-cstp (>= ${source:Version}),
  leechcraft-dbusmanager (>= ${source:Version}),
  leechcraft-deadlyrics (>= ${source:Version}),
+ leechcraft-gacts (>= ${source:Version}),
  leechcraft-glance (>= ${source:Version}),
  leechcraft-gmailnotifier (>= ${source:Version}),
  leechcraft-historyholder (>= ${source:Version}),
@@ -141,6 +143,7 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-cstp,
  leechcraft-dbusmanager,
  leechcraft-deadlyrics,
+ leechcraft-gacts,
  leechcraft-glance,
  leechcraft-gmailnotifier,
  leechcraft-historyholder,
@@ -505,6 +508,21 @@ Description: Plugin for feature requests and bug reports for LeechCraft
  files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
  download or play podcasts and other media files and much more.
 
+Package: leechcraft-gacts
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft-core (= ${binary:Version})
+Provides: leechcraft-provider-globalshortcuts
+Description: Global Actions provider plugin for LeechCraft
+ This package contains the GActs module that adds support for global shortcuts
+ to LeechCraft.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
 Package: leechcraft-glance
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
@@ -663,7 +681,8 @@ Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Recommends: ffmpeg, leechcraft-lastfmscrobble,
- leechcraft-provider-removabledevicemgr
+ leechcraft-provider-removabledevicemgr,
+ leechcraft-provider-globalshortcuts
 Suggests: leechcraft-provider-todolist
 Provides: leechcraft-provider-mediaplayer
 Description: Music Player for LeechCraft
