@@ -128,7 +128,7 @@ Description: Extra LeechCraft plugins beyond full installation
  each other with no effert while staying abstract from the exact
  implementation.
 
-Package: leechcraft
+Package: leechcraft-core
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  libqt4-sql-sqlite (>= 4.6.0),
