@@ -736,7 +736,7 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Description: Manages network data storages for LeechCraft
  This package contains NetStoreManager, the module for managing network data
- storages like Yandex.Disk.
+ storages like Google Drive.
  .
  LeechCraft is a free modular "Internet client" application.
  .
