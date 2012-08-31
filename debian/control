@@ -65,6 +65,7 @@ Depends: ${misc:Depends},
  leechcraft-hotstreams (>= ${source:Version}),
  leechcraft-kbswitch (>= ${source:Version}),
  leechcraft-kinotify (>= ${source:Version}),
+ leechcraft-knowhow (>= ${source:Version}),
  leechcraft-lackman (>= ${source:Version}),
  leechcraft-lastfmscrobble (>= ${source:Version}),
  leechcraft-launchy (>= ${source:Version}),
@@ -152,6 +153,7 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-hotstreams,
  leechcraft-kbswitch,
  leechcraft-kinotify,
+ leechcraft-knowhow,
  leechcraft-lackman,
  leechcraft-lastfmscrobble,
  leechcraft-launchy,
@@ -610,6 +612,20 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: Fancy notifications for LeechCraft
  This package contains Kinotify which provides fancy notifications for
  LeechCraft instead of old-style tray-based ones.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-knowhow
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft-core (= ${binary:Version})
+Description: Plugin for displaying tips of the day about LeechCraft
+ This package contains the KnowHow module which displays various tips at
+ startup.
  .
  LeechCraft is a free modular "Internet client" application.
  .
