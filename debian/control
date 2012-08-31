@@ -62,6 +62,7 @@ Depends: ${misc:Depends},
  leechcraft-glance (>= ${source:Version}),
  leechcraft-gmailnotifier (>= ${source:Version}),
  leechcraft-historyholder (>= ${source:Version}),
+ leechcraft-hotstreams (>= ${source:Version}),
  leechcraft-kbswitch (>= ${source:Version}),
  leechcraft-kinotify (>= ${source:Version}),
  leechcraft-lackman (>= ${source:Version}),
@@ -147,6 +148,7 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-glance,
  leechcraft-gmailnotifier,
  leechcraft-historyholder,
+ leechcraft-hotstreams,
  leechcraft-kbswitch,
  leechcraft-kinotify,
  leechcraft-lastfmscrobble,
@@ -569,6 +571,21 @@ Description: History keeper for LeechCraft
  files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
  download or play podcasts and other media files and much more.
 
+Package: leechcraft-hotstreams
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft-core (= ${binary:Version})
+Provides: leechcraft-provider-radiostreams
+Description: Radio streams provider module for LeechCraft
+ This package contains the HotStreams module which provides some cool radio
+ stations to media players.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
 Package: leechcraft-kbswitch
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
@@ -682,7 +699,8 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Recommends: ffmpeg, leechcraft-lastfmscrobble,
  leechcraft-provider-removabledevicemgr,
- leechcraft-provider-globalshortcuts
+ leechcraft-provider-globalshortcuts,
+ leechcraft-provider-radiostreams
 Suggests: leechcraft-provider-todolist
 Provides: leechcraft-provider-mediaplayer
 Description: Music Player for LeechCraft
