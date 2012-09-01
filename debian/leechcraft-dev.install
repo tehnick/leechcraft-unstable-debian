@@ -1,2 +1,3 @@
 usr/include/leechcraft/*
 usr/share/leechcraft/cmake/FindLeechCraft.cmake
+usr/share/cmake/Modules/* usr/share/cmake-2.8/Modules
