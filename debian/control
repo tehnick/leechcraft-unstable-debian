@@ -14,7 +14,7 @@ Build-Depends: debhelper (>= 9),
  libtorrent-rasterbar-dev (>=0.15),
  libphonon-dev,
  libqt4-dev (>= 4.8),
- libqxmpp-dev (>= 0.6.3.1),
+ libqxmpp-dev (>= 0.7.1),
  libqtwebkit-dev,
  libgeoip-dev,
  libtelepathy-qt4-dev,
@@ -216,7 +216,7 @@ Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
  leechcraft-core (= ${binary:Version})
-Recommends: libqxmpp-lc0-dbg
+Recommends: libqxmpp0-dbg
 Description: Debug symbols for LeechCraft
  This package contains the debug symbols for LeechCraft and all its
  official plugins.
@@ -411,7 +411,7 @@ Description: Modular IM client for LeechCraft
   * vader (Support for the MRIM protocol)
   * xoox (XMPP/Jabber support)
     This package contains the XMPP protocol plugin for Azoth, based on the
-    patched QXmpp library.
+    QXmpp library.
   * xtazy (Plugin for publishing current tune)
     This plugin allows one to publish current user tune. MPRIS-compatible
     players and standard files are supported as sources of information
