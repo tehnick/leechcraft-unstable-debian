@@ -1,11 +1,11 @@
 Description: Fix for lib names
  Upstream is not interested in renaming these shared libraries.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2012-02-23
+Last-Update: 2012-09-20
 
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -87,7 +87,7 @@
+@@ -104,7 +104,7 @@
  ADD_SUBDIRECTORY (xmlsettingsdialog)
  
  SET (LEECHCRAFT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
@@ -16,7 +16,7 @@ Last-Update: 2012-02-23
  OPTION (STRICT_LICENSING "Makes LeechCraft more prepared, for example, to lacking artwork due to licensing restrictions" OFF)
 --- a/src/FindLeechCraft.cmake.in
 +++ b/src/FindLeechCraft.cmake.in
-@@ -6,8 +6,8 @@ FIND_PATH(LEECHCRAFT_INCLUDE_DIR NAMES leechcraft/config.h PATH ENV)
+@@ -6,8 +6,8 @@
  IF (LEECHCRAFT_INCLUDE_DIR)
  	SET (LEECHCRAFT_INCLUDE_DIR "${LEECHCRAFT_INCLUDE_DIR}/leechcraft")
  ENDIF (LEECHCRAFT_INCLUDE_DIR)
@@ -29,7 +29,7 @@ Last-Update: 2012-02-23
  
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -80,17 +80,18 @@ ADD_DEFINITIONS(-DQT_PLUGIN)
+@@ -93,17 +93,18 @@
  ADD_DEFINITIONS(-DQT_NO_DEBUG)
  ADD_DEFINITIONS(-DQT_SHARED)
  ADD_DEFINITIONS(-DQT_GUI_LIB)
@@ -55,7 +55,7 @@ Last-Update: 2012-02-23
 +INSTALL (TARGETS leechcraft-util DESTINATION ${LIBDIR})
 --- a/src/xmlsettingsdialog/CMakeLists.txt
 +++ b/src/xmlsettingsdialog/CMakeLists.txt
-@@ -5,6 +5,7 @@ INCLUDE_DIRECTORIES (${Boost_INCLUDE_DIRS}
+@@ -5,6 +5,7 @@
  	${CMAKE_CURRENT_BINARY_DIR}
  	..
  	)
@@ -63,10 +63,10 @@ Last-Update: 2012-02-23
  
  SET (SRCS
      xmlsettingsdialog.cpp
-@@ -94,12 +95,12 @@ IF (NOT LC_NO_MOC)
- 	QT4_WRAP_CPP (MOC_SRCS ${HEADERS})
- ENDIF (NOT LC_NO_MOC)
- QT4_WRAP_UI (UIS_H ${FORMS})
+@@ -104,12 +105,12 @@
+ SET (XSD_SRCS ${XSD_SRCS} PARENT_SCOPE)
+ SET (XSD_FORMS ${XSD_FORMS} PARENT_SCOPE)
+ 
 -ADD_LIBRARY (xmlsettingsdialog SHARED
 +ADD_LIBRARY (leechcraft-xmlsettingsdialog SHARED
  	${SRCS}
