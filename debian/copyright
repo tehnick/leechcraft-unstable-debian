@@ -46,6 +46,7 @@ Files: src/cmake/*
  src/plugins/azoth/plugins/astrality/cmake/*
  src/plugins/monocle/plugins/pdf/cmake/*
  src/plugins/hotstreams/cmake/*
+ src/plugins/poshuku/plugins/cleanweb/cmake/*
 Copyright: 2009 Brad Hards <bradh@kde.org>
  2009 Michele Caini, <skypjack@gmail.com>
  2007 Pau Garcia i Quiles <pgquiles@elpauer.org>
@@ -70,6 +71,7 @@ Copyright: 2009 Brad Hards <bradh@kde.org>
  2010 Casper van Donderen <casper.vandonderen@basyskom.de>
  2006 Laurent Montel <montel@kde.org>
  2006 Wilfried Huss <wilfried.huss@gmx.at>
+ 2006 Alexander Neundorf <neundorf@kde.org>
 License: BSD-3-clause
 
 Files: src/plugins/qrosp/third-party/*
