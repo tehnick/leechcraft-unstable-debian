@@ -1,18 +1,5 @@
 #!/usr/bin/make -f
 
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-
-ifeq (,$(NUMJOBS))
-	NUMJOBS = 1
-endif
-
-DEB_BUILDDIR = builddir
-DEB_SRCDIR = src
-DEB_DH_INSTALL_SOURCEDIR = $(CURDIR)/debian/tmp
-DEB_DOCDIR = $(DEB_DH_INSTALL_SOURCEDIR)/usr/share/doc/leechcraft-doc
-
 PACKAGE = leechcraft
 DEVELOPER = 0xd34df00d
 PROJECT = leechcraft
@@ -23,12 +10,12 @@ CLN_VER = $(shell echo $(DEB_VER) | sed 's/\+dfsg//')
 NEW_VER = $(shell uscan --dehs | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
 CUR_VER = $(NEW_VER)\+dfsg
 
-CMAKEOPTS = "$(CURDIR)/$(DEB_SRCDIR)" \
-	-DCMAKE_C_FLAGS="$(CFLAGS) $(CPPFLAGS)" \
-	-DCMAKE_CXX_FLAGS="$(CXXFLAGS) $(CPPFLAGS)" \
-	-DCMAKE_SHARED_LINKER_FLAGS="$(LDFLAGS) -Wl,--as-needed" \
-	-DCMAKE_MODULE_LINKER_FLAGS="$(LDFLAGS) -Wl,--as-needed" \
-	-DCMAKE_EXE_LINKER_FLAGS="$(LDFLAGS) -Wl,--as-needed" \
+DEB_BUILDDIR = obj-$(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_DOCDIR = $(CURDIR)/debian/tmp/usr/share/doc/leechcraft-doc
+
+LDFLAGS+=-Wl,--as-needed
+
+CMAKEOPTS = "$(CURDIR)/src" \
 	-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
 	-DLEECHCRAFT_VERSION="$(CLN_VER)" \
 	-DCMAKE_INSTALL_PREFIX=/usr \
@@ -96,7 +83,7 @@ override_dh_auto_configure:
 		-e "s/PROJECT_NUMBER         = .*/PROJECT_NUMBER         = $(CLN_VER)/"
 
 override_dh_auto_build:
-	cd $(DEB_BUILDDIR) && $(MAKE) -j$(NUMJOBS)
+	dh_auto_build --buildsystem=cmake
 	cd $(CURDIR)/doc/doxygen/core/ && doxygen Doxyfile
 	cd $(CURDIR)/doc/doxygen/azoth/ && doxygen Doxyfile
 
@@ -108,11 +95,10 @@ override_dh_auto_clean:
 		( cd $(CURDIR)/doc/doxygen/core/  && mv -f Doxyfile.orig Doxyfile )
 	[ ! -f $(CURDIR)/doc/doxygen/azoth/Doxyfile.orig ] || \
 		( cd $(CURDIR)/doc/doxygen/azoth/ && mv -f Doxyfile.orig Doxyfile )
-	[ ! -f Makefile ] || ( cd $(DEB_BUILDDIR) && $(MAKE) clean )
-	[ ! -d $(DEB_BUILDDIR) ] || rm -r $(DEB_BUILDDIR)
+	dh_auto_clean
 
 override_dh_auto_install:
-	cd $(DEB_BUILDDIR) && $(MAKE) install DESTDIR=$(DEB_DH_INSTALL_SOURCEDIR)
+	dh_auto_install
 	mkdir -p $(DEB_DOCDIR)/html/core
 	mkdir -p $(DEB_DOCDIR)/html/azoth
 	cp -r $(CURDIR)/doc/doxygen/core/out/html/* $(DEB_DOCDIR)/html/core/
@@ -137,7 +123,7 @@ override_dh_shlibdeps:
 
 get-orig-source:
 	# preparation
-	rm -rf  "$(CUR_VER)"/ "$(PACKAGE)-$(CUR_VER)"/
+	rm -rf  "$(CUR_VER)" "$(PACKAGE)-$(CUR_VER)"
 	# main sources
 	wget -4 "http://nodeload.github.com/$(DEVELOPER)/$(PROJECT)/tarball/$(NEW_VER)"
 	rm -rf $(DEVELOPER)-$(PROJECT)-*
