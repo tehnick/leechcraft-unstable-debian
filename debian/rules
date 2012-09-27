@@ -121,6 +121,9 @@ override_dh_shlibdeps:
 	dh_shlibdeps -a -ldebian/libleechcraft-xmlsettingsdialog0.3.0/usr/lib \
 					-ldebian/libleechcraft-util0.5.0/usr/lib
 
+override_dh_builddeb:
+	dh_builddeb -- -Zbzip2
+
 get-orig-source:
 	# preparation
 	rm -rf  "$(CUR_VER)" "$(PACKAGE)-$(CUR_VER)"
