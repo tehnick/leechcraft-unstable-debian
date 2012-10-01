@@ -583,6 +583,7 @@ Package: leechcraft-hotstreams
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
+Recommends: leechcraft-provider-http
 Provides: leechcraft-provider-radiostreams
 Description: Radio streams provider module for LeechCraft
  This package contains the HotStreams module which provides some cool radio
