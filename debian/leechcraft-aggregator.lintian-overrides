@@ -1,0 +1,2 @@
+# False positives for lintian tag hardening-no-fortify-functions.
+leechcraft-aggregator: hardening-no-fortify-functions usr/lib/leechcraft/plugins/libleechcraft_aggregator.so

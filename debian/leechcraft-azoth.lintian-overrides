@@ -1,0 +1,2 @@
+# False positives for lintian tag hardening-no-fortify-functions.
+leechcraft-azoth: hardening-no-fortify-functions usr/lib/leechcraft/plugins/libleechcraft_azoth_otroid.so
