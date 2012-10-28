@@ -1055,6 +1055,23 @@ Description: Displays list of opened tabs, with navigation between them
  files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
  download or play podcasts and other media files and much more.
 
+Package: leechcraft-tpi
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft-core (= ${binary:Version}),
+ leechcraft-quark-display
+Description: Task Progress Indicator quark
+ This package provides the Task Progress Indicator task which displays small
+ progress bars for ongoing tasks (like BitTorrent downloads, IM file transfers
+ or cloud synchronization). The indicator is shown in a suitable quark
+ displayer like SB2.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
 Package: leechcraft-vgrabber
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
