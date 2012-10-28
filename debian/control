@@ -973,6 +973,23 @@ Description: Support for opening files with external apps in LeechCraft
  files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
  download or play podcasts and other media files and much more.
 
+Package: leechcraft-sb2
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft-core (= ${binary:Version})
+Provides: leechcraft-quark-display
+Description: Next generation kinetic sidebar for LeechCraft
+ This package contains the sb2 module which provides a nice sidebar with
+ combined quick launch and grouping tabs switcher, tray area and support
+ for displaying components (quarks) from other plugins, as well as
+ standalone quarks.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
 Package: leechcraft-sidebar
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
