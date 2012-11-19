@@ -1,12 +1,12 @@
 Description: Fix for lib names
  Upstream is not interested in renaming these shared libraries.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2012-09-20
+Last-Update: 2012-11-19
 
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -104,7 +104,7 @@
- ADD_SUBDIRECTORY (xmlsettingsdialog)
+@@ -109,7 +109,7 @@
+ ENDIF (NOT CMAKE_VERSION VERSION_LESS 2.8.6)
  
  SET (LEECHCRAFT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 -SET (LEECHCRAFT_LIBRARIES lcutil xmlsettingsdialog)
@@ -29,7 +29,7 @@ Last-Update: 2012-09-20
  
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -93,17 +93,18 @@
+@@ -103,20 +103,21 @@
  ADD_DEFINITIONS(-DQT_NO_DEBUG)
  ADD_DEFINITIONS(-DQT_SHARED)
  ADD_DEFINITIONS(-DQT_GUI_LIB)
@@ -53,9 +53,12 @@ Last-Update: 2012-09-20
 -INSTALL (TARGETS lcutil DESTINATION ${LIBDIR})
 +SET_PROPERTY (TARGET leechcraft-util PROPERTY SOVERSION 0.5.0)
 +INSTALL (TARGETS leechcraft-util DESTINATION ${LIBDIR})
+ 
+ IF (USE_QT5)
+ 	QT5_USE_MODULES (lcutil Network Xml Sql Widgets)
 --- a/src/xmlsettingsdialog/CMakeLists.txt
 +++ b/src/xmlsettingsdialog/CMakeLists.txt
-@@ -5,6 +5,7 @@
+@@ -7,6 +7,7 @@
  	${CMAKE_CURRENT_BINARY_DIR}
  	..
  	)
@@ -63,7 +66,7 @@ Last-Update: 2012-09-20
  
  SET (SRCS
      xmlsettingsdialog.cpp
-@@ -104,12 +105,12 @@
+@@ -111,15 +112,15 @@
  SET (XSD_SRCS ${XSD_SRCS} PARENT_SCOPE)
  SET (XSD_FORMS ${XSD_FORMS} PARENT_SCOPE)
  
@@ -80,3 +83,6 @@ Last-Update: 2012-09-20
 -INSTALL (TARGETS xmlsettingsdialog DESTINATION ${LIBDIR})
 +SET_PROPERTY (TARGET leechcraft-xmlsettingsdialog PROPERTY SOVERSION 0.3.0)
 +INSTALL (TARGETS leechcraft-xmlsettingsdialog DESTINATION ${LIBDIR})
+ 
+ IF (USE_QT5)
+ 	QT5_USE_MODULES (xmlsettingsdialog Xml Sql Widgets Script Network)
