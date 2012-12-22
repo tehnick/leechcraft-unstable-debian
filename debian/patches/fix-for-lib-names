@@ -1,7 +1,7 @@
 Description: Fix for lib names
  Upstream is not interested in renaming these shared libraries.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2012-11-19
+Last-Update: 2012-12-22
 
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
@@ -29,7 +29,7 @@ Last-Update: 2012-11-19
  
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -103,20 +103,21 @@
+@@ -110,20 +110,21 @@
  ADD_DEFINITIONS(-DQT_NO_DEBUG)
  ADD_DEFINITIONS(-DQT_SHARED)
  ADD_DEFINITIONS(-DQT_GUI_LIB)
@@ -55,7 +55,7 @@ Last-Update: 2012-11-19
 +INSTALL (TARGETS leechcraft-util DESTINATION ${LIBDIR})
  
  IF (USE_QT5)
- 	QT5_USE_MODULES (lcutil Network Xml Sql Widgets)
+ 	QT5_USE_MODULES (lcutil Declarative Network Xml Sql Widgets)
 --- a/src/xmlsettingsdialog/CMakeLists.txt
 +++ b/src/xmlsettingsdialog/CMakeLists.txt
 @@ -7,6 +7,7 @@
