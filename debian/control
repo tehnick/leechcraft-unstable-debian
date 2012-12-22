@@ -747,6 +747,7 @@ Description: Document viewer for LeechCraft
   * fxb -- FictionBook file format (*.fb2)
   * pdf -- PDF file format (*.pdf) (libpoppler is used)
   * seen -- DjVu file format (*.djvu) (libdjvulibre is used)
+  * postrus -- PostScript file format (*.ps) (libspectre is used)
  .
  Monocle supports links and tables of contents, two-page spreads, copying
  selection as image or text, fullscreen presentation mode and has a bunch
