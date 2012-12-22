@@ -1,3 +1,4 @@
 usr/lib/leechcraft/plugins/*leechcraft_monocle*.so
 usr/share/leechcraft/translations/leechcraft_monocle*.qm
 usr/share/leechcraft/settings/monocle*settings.xml
+usr/share/applications/leechcraft-monocle*.desktop
