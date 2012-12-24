@@ -1,2 +1,5 @@
 # False positives for lintian tag hardening-no-fortify-functions.
 leechcraft-bittorrent: hardening-no-fortify-functions usr/lib/leechcraft/plugins/libleechcraft_bittorrent.so
+
+# This *.desktop file is useless without plugin from this package.
+leechcraft-bittorrent: desktop-command-not-in-package usr/share/applications/leechcraft-bittorrent.desktop leechcraft
