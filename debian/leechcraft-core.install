@@ -12,7 +12,7 @@ usr/share/leechcraft/translations/leechcraft_ru_RU.qm
 usr/share/leechcraft/translations/leechcraft_tr.qm
 usr/share/leechcraft/translations/leechcraft_uk_UA.qm
 usr/share/leechcraft/settings/coresettings.xml
-usr/share/leechcraft/qml/common/*
+usr/share/leechcraft/qml/org/LC/common/*
 usr/share/leechcraft/themes
 usr/share/man/man1/leechcraft.1.gz
 usr/share/applications/leechcraft.desktop
