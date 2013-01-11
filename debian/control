@@ -979,6 +979,7 @@ Package: leechcraft-sb2
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
+Conflicts: leechcraft-sidebar
 Replaces: leechcraft-sidebar
 Provides: leechcraft-quark-display, leechcraft-sidebar
 Description: Next generation kinetic sidebar for LeechCraft
