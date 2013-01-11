@@ -1,3 +1,9 @@
+leechcraft-unstable (0.5.90-201-g3e3e66f+dfsg-0ppa1~raring1) raring; urgency=low
+
+  * Minor update from GIT  branch.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Fri, 11 Jan 2013 07:45:43 +0200
+
 leechcraft-unstable (0.5.90-200-ged280bd+dfsg-0ppa1~raring1) raring; urgency=low
 
   * Minor update from GIT  branch.
