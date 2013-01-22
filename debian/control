@@ -728,7 +728,35 @@ Recommends: ffmpeg, leechcraft-lastfmscrobble,
 Suggests: leechcraft-provider-todolist
 Provides: leechcraft-provider-mediaplayer
 Description: Music Player for LeechCraft
- This package contains the LMP (LeechCraft  Music Player).
+ This package contains the LMP (LeechCraft Music Player), a collection-oriented
+ music player based on Phonon. Currently it features:
+  * Collection-oriented music player with playback statistics.
+  * Collection synchronization with portable media players, with transcoding.
+  * Support for scrobbling played tracks to services like Last.FM.
+  * Automatic fetching of album art if it's not present.
+  * Support for requesting a bunch of information from services like Last.FM,
+    including: artist biography, similar artists, personalized recommendations,
+    recent releases by the artists in user's library, events nearby, hyped
+    tracks and artists.
+  * Fetching artists' discographies from MusicBrainz.
+  * Previewing artsits, tracks and albums from VKontakte.
+  * Support for fetching lyrics.
+  * Support for radio streams (of course, including Last.FM radio).
+  * Play queue with different play modes like sequential, shuffle, repeating
+    track/album/whole playlist.
+  * MPRIS support.
+  * Undo/redo for play queue.
+  * Dynamic playlists like "50 Random Tracks".
+  * Static playlists.
+  * Support for M3U8, PLS and XSPF playlist formats.
+  * Fast threaded collection scanner.
+ .
+ Some features in the above list rely on other plugins like LastFMScrobble.
+ .
+ Such sub-plugins are also available in this package:
+  * dumbsync (for uploading files to USB flash-like media players)
+  * mp3tunes (for synchronization with the corresponding service)
+  * graffiti (for editing audo tags)
  .
  LeechCraft is a free modular "Internet client" application.
  .
@@ -892,7 +920,7 @@ Description: Web browser for LeechCraft
   * tagging bookmarks
   * support for SQLite or PostgreSQL storage
  .
- Such sub-plugins available in this package:
+ Such sub-plugins are available in this package:
   * cleanweb (Ad filter for Web browser)
   This is a plugin for the Poshuku web browser that filters out ads according to
   predefined rules. It is compatible with Firefox's AdBlock rules list files.
