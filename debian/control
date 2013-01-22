@@ -57,6 +57,7 @@ Depends: ${misc:Depends},
  leechcraft-auscrie (>= ${source:Version}),
  leechcraft-azoth (>= ${source:Version}),
  leechcraft-bittorrent (>= ${source:Version}),
+ leechcraft-blogique (>= ${source:Version}),
  leechcraft-cstp (>= ${source:Version}),
  leechcraft-dbusmanager (>= ${source:Version}),
  leechcraft-deadlyrics (>= ${source:Version}),
@@ -147,6 +148,7 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-auscrie,
  leechcraft-azoth,
  leechcraft-bittorrent,
+ leechcraft-blogique,
  leechcraft-cstp,
  leechcraft-dbusmanager,
  leechcraft-deadlyrics,
@@ -449,6 +451,26 @@ Description: BitTorrent client for LeechCraft
   * torrents queue with smart rotation depending on torrent's health
   * fast resume
   * speed limits and IP filter
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-blogique
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft-core (= ${binary:Version}),
+ leechcraft-provider-html-wysiwyg
+Description: blogging client for LeechCraft
+ This package contains the base plugin of LeechCraft blogging client and its
+ own sub-plugin:
+  * metida (LiveJournal support)
+  Supports all post fields available ranging from the post body itself to mood,
+  location and avatar. It also supports fetching all the entries from a blog as
+  well as local drafts and backups. LHTR module is used for editing, providing
+  WYSIWYG functionality.
  .
  LeechCraft is a free modular "Internet client" application.
  .
