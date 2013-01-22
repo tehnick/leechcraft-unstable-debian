@@ -1,8 +1,8 @@
-leechcraft-unstable (0.5.90-283-g23ed5df+dfsg-0ppa1~raring1) raring; urgency=low
+leechcraft-unstable (0.5.90-353-g9c29b96+dfsg-0ppa1~raring1) raring; urgency=low
 
   * Minor update from GIT  branch.
 
- -- Boris Pek <tehnick-8@mail.ru>  Wed, 16 Jan 2013 22:24:56 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 22 Jan 2013 22:24:07 +0200
 
 leechcraft-unstable (0.4.90-0ppa1~oneiric1) oneiric; urgency=low
 
