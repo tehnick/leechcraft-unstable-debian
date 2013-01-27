@@ -56,7 +56,7 @@ Copyright: 2009 Brad Hards <bradh@kde.org>
  2008 Georg Rudoy <0xd34df00d@gmail.com>
  2008 Tanguy Krotoff <tkrotoff@gmail.com>
  2011 Minh Ngo <nlminhtl@gmail.com>
- 2008 Matthias Kretz <kretz@kde.org>
+ 2006-2008 Matthias Kretz <kretz@kde.org>
  2008 Voker57 <voker57@gmail.com>
  2011 Eugene Mamin aka DZhon <TheDZhon@gmail.com>
  2006 Alessandro Praduroux <pradu@pradu.it>
@@ -74,10 +74,11 @@ Copyright: 2009 Brad Hards <bradh@kde.org>
  2010 Casper van Donderen <casper.vandonderen@basyskom.de>
  2006 Laurent Montel <montel@kde.org>
  2006 Wilfried Huss <wilfried.huss@gmx.at>
- 2006 Alexander Neundorf <neundorf@kde.org>
+ 2006-2008 Alexander Neundorf <neundorf@kde.org>
  2006-2007 Pino Toscano <pino@kde.org>
  2008 Albert Astals Cid <aacid@kde.org>
  2011 DZhon <TheDZhon@gmail.com>
+ 2011 Michael Jansen <kde@michael-jansen.biz>
 License: BSD-3-clause
 
 Files: src/plugins/qrosp/third-party/*
