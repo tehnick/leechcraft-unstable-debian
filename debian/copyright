@@ -39,11 +39,12 @@ Files: src/cmake/*
  src/plugins/azoth/plugins/otroid/cmake/*
  src/plugins/azoth/plugins/xoox/cmake/*
  src/plugins/azoth/plugins/zheet/cmake/*
+ src/plugins/azoth/plugins/astrality/cmake/*
+ src/plugins/azoth/plugins/velvetbird/cmake/*
  src/plugins/popishu/cmake/*
  src/plugins/liznoo/cmake/*
  src/plugins/poshuku/plugins/onlinebookmarks/plugins/readitlater/cmake/*
  src/plugins/qrosp/cmake/*
- src/plugins/azoth/plugins/astrality/cmake/*
  src/plugins/monocle/plugins/pdf/cmake/*
  src/plugins/hotstreams/cmake/*
  src/plugins/poshuku/plugins/cleanweb/cmake/*
@@ -72,13 +73,14 @@ Copyright: 2009 Brad Hards <bradh@kde.org>
  2008 Allen Winter <winter@kde.org>
  2009 Andre Moreira Magalhaes <andrunko@gmail.com>
  2010 Casper van Donderen <casper.vandonderen@basyskom.de>
- 2006 Laurent Montel <montel@kde.org>
+ 2006-2008 Laurent Montel <montel@kde.org>
  2006 Wilfried Huss <wilfried.huss@gmx.at>
  2006-2008 Alexander Neundorf <neundorf@kde.org>
  2006-2007 Pino Toscano <pino@kde.org>
  2008 Albert Astals Cid <aacid@kde.org>
  2011 DZhon <TheDZhon@gmail.com>
  2011 Michael Jansen <kde@michael-jansen.biz>
+ 2008 Tarrisse Laurent <laurent@mbdsys.com>
 License: BSD-3-clause
 
 Files: src/plugins/qrosp/third-party/*
