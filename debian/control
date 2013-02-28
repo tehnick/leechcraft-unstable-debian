@@ -86,7 +86,6 @@ Depends: ${misc:Depends},
  leechcraft-sb2 (>= ${source:Version}),
  leechcraft-secman (>= ${source:Version}),
  leechcraft-seekthru (>= ${source:Version}),
- leechcraft-shellopen (>= ${source:Version}),
  leechcraft-summary (>= ${source:Version}),
  leechcraft-tabsessmanager (>= ${source:Version}),
  leechcraft-tabslist (>= ${source:Version}),
@@ -175,7 +174,6 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-sb2,
  leechcraft-secman,
  leechcraft-seekthru,
- leechcraft-shellopen,
  leechcraft-summary,
  leechcraft-tabsessmanager,
  leechcraft-tabslist,
@@ -1002,22 +1000,6 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
 Provides: leechcraft-provider-search
 Description: OpenSearch-support plugin for LeechCraft
  This package contains a search client for OpenSearch-aware web sites.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-shellopen
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft-core (= ${binary:Version})
-Description: Support for opening files with external apps in LeechCraft
- This package contains module that adds an option to open files and
- handle entities with external applications. For example, you may choose
- to open a video file with your favorite media player instead of LC's
- one.
  .
  LeechCraft is a free modular "Internet client" application.
  .
