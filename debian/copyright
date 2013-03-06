@@ -16,8 +16,8 @@ Source: https://github.com/0xd34df00d/leechcraft/tags
  possibility to build program without these files.
 
 Files: src/* tools/*
-Copyright: 2006-2012 Georg Rudoy <0xd34df00d@gmail.com>
- 2010-2012 Oleg Linkin
+Copyright: 2006-2013 Georg Rudoy <0xd34df00d@gmail.com>
+ 2010-2013 Oleg Linkin
  2011-2012 Minh Ngo
  2011 Yury Erik Potapov
  2011 ForNeVeR
@@ -54,7 +54,7 @@ Files: src/cmake/*
 Copyright: 2009 Brad Hards <bradh@kde.org>
  2009 Michele Caini, <skypjack@gmail.com>
  2007 Pau Garcia i Quiles <pgquiles@elpauer.org>
- 2008 Georg Rudoy <0xd34df00d@gmail.com>
+ 2008-2013 Georg Rudoy <0xd34df00d@gmail.com>
  2008 Tanguy Krotoff <tkrotoff@gmail.com>
  2011 Minh Ngo <nlminhtl@gmail.com>
  2006-2008 Matthias Kretz <kretz@kde.org>
@@ -129,7 +129,7 @@ Copyright: 2004 Andreas Reigber <anderl@nought.de>
 License: GPL-3+
 
 Files: debian/*
-Copyright: 2011-2012 Boris Pek <tehnick-8@mail.ru>
+Copyright: 2011-2013 Boris Pek <tehnick-8@mail.ru>
 License: GPL-2+
 
 License: GPL-2+
