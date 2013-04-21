@@ -1,11 +1,11 @@
 Description: Fix for lib names
  Upstream is not interested in renaming these shared libraries.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2012-12-22
+Last-Update: 2013-04-22
 
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -109,7 +109,7 @@
+@@ -133,7 +133,7 @@
  ENDIF (NOT CMAKE_VERSION VERSION_LESS 2.8.6)
  
  SET (LEECHCRAFT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
@@ -29,18 +29,15 @@ Last-Update: 2012-12-22
  
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -110,20 +110,21 @@
+@@ -81,17 +81,18 @@
  ADD_DEFINITIONS(-DQT_NO_DEBUG)
  ADD_DEFINITIONS(-DQT_SHARED)
  ADD_DEFINITIONS(-DQT_GUI_LIB)
 +ADD_DEFINITIONS(-Dlcutil_EXPORTS)
- IF (NOT LC_NO_MOC)
- 	QT4_WRAP_CPP (MOC_SRCS ${HEADERS})
- ENDIF (NOT LC_NO_MOC)
+ 
 -ADD_LIBRARY (lcutil SHARED
 +ADD_LIBRARY (leechcraft-util SHARED
  	${SRCS}
- 	${MOC_SRCS}
  	${UIS_H}
  	)
 -TARGET_LINK_LIBRARIES (lcutil
@@ -66,7 +63,7 @@ Last-Update: 2012-12-22
  
  SET (SRCS
      xmlsettingsdialog.cpp
-@@ -111,15 +112,15 @@
+@@ -111,15 +112,15 @@ ENDFOREACH (FORM)
  SET (XSD_SRCS ${XSD_SRCS} PARENT_SCOPE)
  SET (XSD_FORMS ${XSD_FORMS} PARENT_SCOPE)
  
