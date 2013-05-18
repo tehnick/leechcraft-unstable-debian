@@ -367,7 +367,8 @@ Package: leechcraft-azoth
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version}),
-Recommends: telepathy-mission-control-5, telepathy-haze
+Recommends: leechcraft-provider-securestorage,
+ telepathy-mission-control-5, telepathy-haze
 Suggests: telepathy-butterfly, telepathy-rakia, telepathy-salut
 Description: Modular IM client for LeechCraft
  This package contains the core of the Azoth plugin (the modular IM client for
