@@ -1,7 +1,7 @@
 Description: Fix for lib names
  Upstream is not interested in renaming these shared libraries.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2013-04-22
+Last-Update: 2013-05-18
 
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
@@ -29,7 +29,7 @@ Last-Update: 2013-04-22
  
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -81,17 +81,18 @@
+@@ -91,18 +91,19 @@ ADD_DEFINITIONS(-DQT_PLUGIN)
  ADD_DEFINITIONS(-DQT_NO_DEBUG)
  ADD_DEFINITIONS(-DQT_SHARED)
  ADD_DEFINITIONS(-DQT_GUI_LIB)
@@ -43,6 +43,7 @@ Last-Update: 2013-04-22
 -TARGET_LINK_LIBRARIES (lcutil
 +TARGET_LINK_LIBRARIES (leechcraft-util
  	${QT_LIBRARIES}
+ 	${MAGIC_LIBRARIES}
 -	xmlsettingsdialog
 +	leechcraft-xmlsettingsdialog
  	)
