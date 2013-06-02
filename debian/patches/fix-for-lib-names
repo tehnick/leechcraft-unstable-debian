@@ -1,7 +1,7 @@
 Description: Fix for lib names
  Upstream is not interested in renaming these shared libraries.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2013-05-18
+Last-Update: 2013-06-03
 
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
@@ -16,7 +16,7 @@ Last-Update: 2013-05-18
  OPTION (STRICT_LICENSING "Makes LeechCraft more prepared, for example, to lacking artwork due to licensing restrictions" OFF)
 --- a/src/FindLeechCraft.cmake.in
 +++ b/src/FindLeechCraft.cmake.in
-@@ -6,8 +6,8 @@
+@@ -6,8 +6,8 @@ FIND_PATH(LEECHCRAFT_INCLUDE_DIR NAMES leechcraft/config.h PATH ENV)
  IF (LEECHCRAFT_INCLUDE_DIR)
  	SET (LEECHCRAFT_INCLUDE_DIR "${LEECHCRAFT_INCLUDE_DIR}/leechcraft")
  ENDIF (LEECHCRAFT_INCLUDE_DIR)
@@ -29,7 +29,7 @@ Last-Update: 2013-05-18
  
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -91,18 +91,19 @@ ADD_DEFINITIONS(-DQT_PLUGIN)
+@@ -105,19 +105,20 @@
  ADD_DEFINITIONS(-DQT_NO_DEBUG)
  ADD_DEFINITIONS(-DQT_SHARED)
  ADD_DEFINITIONS(-DQT_GUI_LIB)
@@ -44,6 +44,7 @@ Last-Update: 2013-05-18
 +TARGET_LINK_LIBRARIES (leechcraft-util
  	${QT_LIBRARIES}
  	${MAGIC_LIBRARIES}
+ 	${ADDITIONAL_LIBS}
 -	xmlsettingsdialog
 +	leechcraft-xmlsettingsdialog
  	)
@@ -64,7 +65,7 @@ Last-Update: 2013-05-18
  
  SET (SRCS
      xmlsettingsdialog.cpp
-@@ -111,15 +112,15 @@ ENDFOREACH (FORM)
+@@ -111,15 +112,15 @@
  SET (XSD_SRCS ${XSD_SRCS} PARENT_SCOPE)
  SET (XSD_FORMS ${XSD_FORMS} PARENT_SCOPE)
  
