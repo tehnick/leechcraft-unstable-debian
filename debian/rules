@@ -126,7 +126,7 @@ get-orig-source:
 	# preparation
 	rm -rf  "$(CUR_VER)" "$(PACKAGE)-$(CUR_VER)"
 	# main sources
-	wget -4 "http://nodeload.github.com/$(DEVELOPER)/$(PROJECT)/tarball/$(NEW_VER)"
+	wget -4 "https://codeload.github.com/$(DEVELOPER)/$(PROJECT)/tarball/$(NEW_VER)"
 	rm -rf $(DEVELOPER)-$(PROJECT)-*
 	tar xzf "$(NEW_VER)"
 	mv $(DEVELOPER)-$(PROJECT)-* "$(PACKAGE)-$(CUR_VER)"
