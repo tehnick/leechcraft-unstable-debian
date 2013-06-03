@@ -1,14 +1,8 @@
-leechcraft-unstable (0.5.95-260-g6a98fba+dfsg-0ppa1~saucy1) saucy; urgency=low
+leechcraft-unstable (0.5.95-712-ged48f65+dfsg-0ppa1~saucy1) saucy; urgency=low
 
   * Minor update from Git  branch.
 
- -- Boris Pek <tehnick-8@mail.ru>  Sat, 18 May 2013 19:34:03 +0300
-
-leechcraft-unstable (0.5.90-803-gbe75a9c+dfsg-0ppa1~raring1) raring; urgency=low
-
-  * Minor update from Git  branch.
-
- -- Boris Pek <tehnick-8@mail.ru>  Wed, 13 Mar 2013 21:01:48 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 03 Jun 2013 02:24:44 +0300
 
 leechcraft-unstable (0.4.90-0ppa1~oneiric1) oneiric; urgency=low
 
