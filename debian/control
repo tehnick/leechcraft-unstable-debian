@@ -708,8 +708,8 @@ Description: Last.fm scrobbler for LeechCraft
 Package: leechcraft-lhtr
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft-core (= ${binary:Version}),
- leechcraft-sb2
+ leechcraft-core (= ${binary:Version})
+Recommends: leechcraft-sb2
 Provides: leechcraft-provider-html-wysiwyg
 Description: LeechCraft HTML Text editor in WYSIWYG style
  This package contains LHTR. This module provides basic WYSIWYG HTML/rich text
