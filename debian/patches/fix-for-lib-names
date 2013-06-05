@@ -1,87 +1,91 @@
 Description: Fix for lib names
  Upstream is not interested in renaming these shared libraries.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2013-06-03
+Last-Update: 2013-06-05
 
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -133,7 +133,7 @@
- ENDIF (NOT CMAKE_VERSION VERSION_LESS 2.8.6)
+ endif ()
  
- SET (LEECHCRAFT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
--SET (LEECHCRAFT_LIBRARIES lcutil xmlsettingsdialog)
-+SET (LEECHCRAFT_LIBRARIES leechcraft-util leechcraft-xmlsettingsdialog)
+ set (LEECHCRAFT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
+-set (LEECHCRAFT_LIBRARIES lcutil xmlsettingsdialog)
++set (LEECHCRAFT_LIBRARIES leechcraft-util leechcraft-xmlsettingsdialog)
  
  # Various options
- OPTION (STRICT_LICENSING "Makes LeechCraft more prepared, for example, to lacking artwork due to licensing restrictions" OFF)
+ option (STRICT_LICENSING "Makes LeechCraft more prepared, for example, to lacking artwork due to licensing restrictions" OFF)
 --- a/src/FindLeechCraft.cmake.in
 +++ b/src/FindLeechCraft.cmake.in
-@@ -6,8 +6,8 @@ FIND_PATH(LEECHCRAFT_INCLUDE_DIR NAMES leechcraft/config.h PATH ENV)
- IF (LEECHCRAFT_INCLUDE_DIR)
- 	SET (LEECHCRAFT_INCLUDE_DIR "${LEECHCRAFT_INCLUDE_DIR}/leechcraft")
- ENDIF (LEECHCRAFT_INCLUDE_DIR)
--FIND_LIBRARY(_LEECHCRAFT_UTIL NAMES lcutil)
--FIND_LIBRARY(_LEECHCRAFT_XSD NAMES xmlsettingsdialog)
-+FIND_LIBRARY(_LEECHCRAFT_UTIL NAMES leechcraft-util)
-+FIND_LIBRARY(_LEECHCRAFT_XSD NAMES leechcraft-xmlsettingsdialog)
- SET (LEECHCRAFT_LIBRARIES ${_LEECHCRAFT_UTIL} ${_LEECHCRAFT_XSD})
- SET (LEECHCRAFT_USE_FILE "${CMAKE_MODULE_PATH}/UseLeechCraft.cmake")
+@@ -6,8 +6,8 @@
+ if (LEECHCRAFT_INCLUDE_DIR)
+ 	set (LEECHCRAFT_INCLUDE_DIR "${LEECHCRAFT_INCLUDE_DIR}/leechcraft")
+ endif ()
+-find_library(_LEECHCRAFT_UTIL NAMES lcutil)
+-find_library(_LEECHCRAFT_XSD NAMES xmlsettingsdialog)
++find_library(_LEECHCRAFT_UTIL NAMES leechcraft-util)
++find_library(_LEECHCRAFT_XSD NAMES leechcraft-xmlsettingsdialog)
+ set (LEECHCRAFT_LIBRARIES ${_LEECHCRAFT_UTIL} ${_LEECHCRAFT_XSD})
+ set (LEECHCRAFT_USE_FILE "${CMAKE_MODULE_PATH}/UseLeechCraft.cmake")
  
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -105,19 +105,20 @@
- ADD_DEFINITIONS(-DQT_NO_DEBUG)
- ADD_DEFINITIONS(-DQT_SHARED)
- ADD_DEFINITIONS(-DQT_GUI_LIB)
-+ADD_DEFINITIONS(-Dlcutil_EXPORTS)
+@@ -105,20 +105,21 @@
+ add_definitions(-DQT_NO_DEBUG)
+ add_definitions(-DQT_SHARED)
+ add_definitions(-DQT_GUI_LIB)
++add_definitions(-Dleechcraft-util_EXPORTS)
  
--ADD_LIBRARY (lcutil SHARED
-+ADD_LIBRARY (leechcraft-util SHARED
+-add_library (lcutil SHARED
++add_library (leechcraft-util SHARED
  	${SRCS}
  	${UIS_H}
  	)
--TARGET_LINK_LIBRARIES (lcutil
-+TARGET_LINK_LIBRARIES (leechcraft-util
+-target_link_libraries (lcutil
++target_link_libraries (leechcraft-util
  	${QT_LIBRARIES}
  	${MAGIC_LIBRARIES}
  	${ADDITIONAL_LIBS}
 -	xmlsettingsdialog
 +	leechcraft-xmlsettingsdialog
  	)
--SET_PROPERTY (TARGET lcutil PROPERTY SOVERSION 0.5.0)
--INSTALL (TARGETS lcutil DESTINATION ${LIBDIR})
-+SET_PROPERTY (TARGET leechcraft-util PROPERTY SOVERSION 0.5.0)
-+INSTALL (TARGETS leechcraft-util DESTINATION ${LIBDIR})
+-set_property (TARGET lcutil PROPERTY SOVERSION 0.5.0)
+-install (TARGETS lcutil DESTINATION ${LIBDIR})
++set_property (TARGET leechcraft-util PROPERTY SOVERSION 0.5.0)
++install (TARGETS leechcraft-util DESTINATION ${LIBDIR})
  
- IF (USE_QT5)
- 	QT5_USE_MODULES (lcutil Declarative Network Xml Sql Widgets)
+ if (USE_QT5)
+-	QT5_USE_MODULES (lcutil Declarative Network Xml Sql Widgets)
++	QT5_USE_MODULES (leechcraft-util Declarative Network Xml Sql Widgets)
+ endif ()
 --- a/src/xmlsettingsdialog/CMakeLists.txt
 +++ b/src/xmlsettingsdialog/CMakeLists.txt
 @@ -7,6 +7,7 @@
  	${CMAKE_CURRENT_BINARY_DIR}
  	..
  	)
-+ADD_DEFINITIONS (-Dxmlsettingsdialog_EXPORTS)
++add_definitions (-Dxmlsettingsdialog_EXPORTS)
  
- SET (SRCS
+ set (SRCS
      xmlsettingsdialog.cpp
-@@ -111,15 +112,15 @@
- SET (XSD_SRCS ${XSD_SRCS} PARENT_SCOPE)
- SET (XSD_FORMS ${XSD_FORMS} PARENT_SCOPE)
+@@ -111,16 +112,16 @@
+ set (XSD_SRCS ${XSD_SRCS} PARENT_SCOPE)
+ set (XSD_FORMS ${XSD_FORMS} PARENT_SCOPE)
  
--ADD_LIBRARY (xmlsettingsdialog SHARED
-+ADD_LIBRARY (leechcraft-xmlsettingsdialog SHARED
+-add_library (xmlsettingsdialog SHARED
++add_library (leechcraft-xmlsettingsdialog SHARED
  	${SRCS}
  	${MOC_SRCS}
  	${UIS_H})
--TARGET_LINK_LIBRARIES (xmlsettingsdialog
-+TARGET_LINK_LIBRARIES (leechcraft-xmlsettingsdialog
+-target_link_libraries (xmlsettingsdialog
++target_link_libraries (leechcraft-xmlsettingsdialog
  	${QT_LIBRARIES}
  	)
--SET_PROPERTY (TARGET xmlsettingsdialog PROPERTY SOVERSION 0.3.0)
--INSTALL (TARGETS xmlsettingsdialog DESTINATION ${LIBDIR})
-+SET_PROPERTY (TARGET leechcraft-xmlsettingsdialog PROPERTY SOVERSION 0.3.0)
-+INSTALL (TARGETS leechcraft-xmlsettingsdialog DESTINATION ${LIBDIR})
+-set_property (TARGET xmlsettingsdialog PROPERTY SOVERSION 0.3.0)
+-install (TARGETS xmlsettingsdialog DESTINATION ${LIBDIR})
++set_property (TARGET leechcraft-xmlsettingsdialog PROPERTY SOVERSION 0.3.0)
++install (TARGETS leechcraft-xmlsettingsdialog DESTINATION ${LIBDIR})
  
- IF (USE_QT5)
- 	QT5_USE_MODULES (xmlsettingsdialog Xml Sql Widgets Script Network)
+ if (USE_QT5)
+-	QT5_USE_MODULES (xmlsettingsdialog Xml Sql Widgets Script Network)
++	QT5_USE_MODULES (leechcraft-xmlsettingsdialog Xml Sql Widgets Script Network)
+ endif ()
