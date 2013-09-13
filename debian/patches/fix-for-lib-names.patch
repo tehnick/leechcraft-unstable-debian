@@ -1,19 +1,19 @@
 Description: Fix for lib names
  Upstream is not interested in renaming these shared libraries.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2013-06-05
+Last-Update: 2013-09-13
 
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -133,7 +133,7 @@
+@@ -136,7 +136,7 @@
  endif ()
  
  set (LEECHCRAFT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 -set (LEECHCRAFT_LIBRARIES lcutil xmlsettingsdialog)
 +set (LEECHCRAFT_LIBRARIES leechcraft-util leechcraft-xmlsettingsdialog)
  
- # Various options
- option (STRICT_LICENSING "Makes LeechCraft more prepared, for example, to lacking artwork due to licensing restrictions" OFF)
+ set (CMAKE_MODULE_PATH "/usr/local/share/apps/cmake/modules;/usr/share/apps/cmake/modules;${CMAKE_MODULE_PATH}")
+ 
 --- a/src/FindLeechCraft.cmake.in
 +++ b/src/FindLeechCraft.cmake.in
 @@ -6,8 +6,8 @@
@@ -29,7 +29,7 @@ Last-Update: 2013-06-05
  
 --- a/src/util/CMakeLists.txt
 +++ b/src/util/CMakeLists.txt
-@@ -105,20 +105,21 @@
+@@ -116,20 +116,21 @@
  add_definitions(-DQT_NO_DEBUG)
  add_definitions(-DQT_SHARED)
  add_definitions(-DQT_GUI_LIB)
