@@ -1,2 +1,2 @@
-fix-for-lib-names
-fix-for-resources-in-cstp
+fix-for-lib-names.patch
+fix-for-resources-in-cstp.patch
