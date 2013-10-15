@@ -142,12 +142,12 @@ override_dh_strip:
 
 .PHONY: override_dh_makeshlibs
 override_dh_makeshlibs:
-	dh_makeshlibs -V -plibleechcraft-xmlsettingsdialog0.3.0 \
+	dh_makeshlibs -V -plibleechcraft-xsd0.3.0 \
 					 -plibleechcraft-util0.5.0
 
 .PHONY: override_dh_shlibdeps
 override_dh_shlibdeps:
-	dh_shlibdeps -a -ldebian/libleechcraft-xmlsettingsdialog0.3.0/usr/lib \
+	dh_shlibdeps -a -ldebian/libleechcraft-xsd0.3.0/usr/lib \
 					-ldebian/libleechcraft-util0.5.0/usr/lib
 
 override_dh_builddeb:

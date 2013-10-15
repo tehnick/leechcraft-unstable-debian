@@ -258,7 +258,7 @@ Description: Documentation files for LeechCraft
  each other with no effert while staying abstract from the exact
  implementation.
 
-Package: libleechcraft-xmlsettingsdialog0.3.0
+Package: libleechcraft-xsd0.3.0
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
