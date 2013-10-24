@@ -170,8 +170,8 @@ get-orig-source:
 	tar xzf "$(NEW_VER)"
 	mv $(DEVELOPER)-$(PROJECT)-* "$(PACKAGE)-$(CUR_VER)"
 	# processing
-	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/cstp/resources/images/clients/*
-	rm -rf "$(PACKAGE)-$(CUR_VER)"/src/plugins/advancednotifications/share/sounds/*
+	rm -r "$(PACKAGE)-$(CUR_VER)"/src/plugins/cstp/resources/images/clients/*
+	rm -r "$(PACKAGE)-$(CUR_VER)"/src/plugins/advancednotifications/share/sounds/*
 	mv "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/default/unknown.png \
 	   "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/unknown.png
 	rm -f "$(PACKAGE)-$(CUR_VER)"/src/plugins/azoth/share/azoth/iconsets/clients/default/*
