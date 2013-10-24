@@ -100,18 +100,18 @@ Recommends:
 Conflicts: leechcraft-full
 Replaces: leechcraft-full
 Provides: leechcraft-full
-Description: Full LeechCraft installation
+Description: modular live environment (full installation)
  This metapackage installs all main LeechCraft plugins.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
  .
- Features can be easily added via plugins that can be integrated with
- each other with no effert while staying abstract from the exact
- implementation.
+ LeechCraft is a modular system, and by installing different modules you can
+ customize the feature set, keeping off the things you don't need and getting
+ a decent IM client, media player or a feed reader, for example.
 
 Package: leechcraft-extra
 Section: metapackages
@@ -119,19 +119,19 @@ Architecture: all
 Depends: ${misc:Depends},
  leechcraft-anhero (>= ${source:Version}),
  leechcraft-dolozhee (>= ${source:Version})
-Description: Extra LeechCraft plugins beyond full installation
- This metapackage installs additional LeechCraft plugins that may
- pull a lot of dependencies.
+Description: modular live environment (extra plugins)
+ This metapackage installs additional LeechCraft plugins which are not needed
+ in regular use but may be useful sometimes.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
  .
- Features can be easily added via plugins that can be integrated with
- each other with no effert while staying abstract from the exact
- implementation.
+ LeechCraft is a modular system, and by installing different modules you can
+ customize the feature set, keeping off the things you don't need and getting
+ a decent IM client, media player or a feed reader, for example.
 
 Package: leechcraft-core
 Architecture: any
@@ -179,20 +179,20 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-vrooby,
  leechcraft-xproxy
 Breaks: leechcraft (<< 0.5.80-182-g52295f3+dfsg-0ppa1)
-Description: Core executable of LeechCraft
+Description: core executable of LeechCraft and basic files
  This package contains the main LeechCraft executable, which connects
  all the plugins with each other, routes requests between them, tracks
  dependencies and performs several other housekeeping tasks.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
  .
- Features can be easily added via plugins that can be integrated with
- each other with no effert while staying abstract from the exact
- implementation.
+ LeechCraft is a modular system, and by installing different modules you can
+ customize the feature set, keeping off the things you don't need and getting
+ a decent IM client, media player or a feed reader, for example.
 
 Package: leechcraft-dev
 Section: devel
@@ -200,19 +200,19 @@ Architecture: any
 Depends: ${misc:Depends},
  leechcraft-core (= ${binary:Version})
 Suggests: leechcraft-doc
-Description: Files required for development for LeechCraft
- This package contains header files required to develop new modules for
- LeechCraft.
+Description: development files for LeechCraft
+ This package contains header files and cmake files required to develop new
+ modules for LeechCraft.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
  .
- Features can be easily added via plugins that can be integrated with
- each other with no effert while staying abstract from the exact
- implementation.
+ LeechCraft is a modular system, and by installing different modules you can
+ customize the feature set, keeping off the things you don't need and getting
+ a decent IM client, media player or a feed reader, for example.
 
 Package: leechcraft-dbg
 Section: debug
@@ -221,19 +221,19 @@ Architecture: any
 Depends: ${misc:Depends},
  leechcraft-core (= ${binary:Version})
 Recommends: libqxmpp0-dbg
-Description: Debug symbols for LeechCraft
+Description: debug symbols for LeechCraft
  This package contains the debug symbols for LeechCraft and all its
  official plugins.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
  .
- Features can be easily added via plugins that can be integrated with
- each other with no effert while staying abstract from the exact
- implementation.
+ LeechCraft is a modular system, and by installing different modules you can
+ customize the feature set, keeping off the things you don't need and getting
+ a decent IM client, media player or a feed reader, for example.
 
 Package: leechcraft-doc
 Section: doc
@@ -241,25 +241,25 @@ Architecture: all
 Depends: ${misc:Depends},
  libjs-jquery
 Recommends: leechcraft-dev
-Description: Documentation files for LeechCraft
+Description: documentation files for LeechCraft
  This package contains documentation files which should be helpful for
  LeechCraft developing.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
  .
- Features can be easily added via plugins that can be integrated with
- each other with no effert while staying abstract from the exact
- implementation.
+ LeechCraft is a modular system, and by installing different modules you can
+ customize the feature set, keeping off the things you don't need and getting
+ a decent IM client, media player or a feed reader, for example.
 
 Package: libleechcraft-xsd0.3.0
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Dynamic settings dialog builder for LeechCraft
+Description: dynamic settings dialog builder for LeechCraft
  XmlSettingsDialog provides a simple but powerful and abstract way to
  create settings dialogs from XML files and store their (and not only)
  values.
@@ -268,15 +268,15 @@ Package: libleechcraft-util0.5.0
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Common library for LeechCraft
+Description: common library for LeechCraft
  A library providing some useful and commonly used routines as well as
  communications with the LeechCraft core.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-advancednotifications
 Architecture: any
@@ -299,11 +299,11 @@ Description: Advanced Notifications framework for LeechCraft
  Advanced Notifications module contains a default set of rules pretty
  suitable for average use cases.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-aggregator
 Architecture: any
@@ -326,39 +326,41 @@ Description: RSS/Atom feed reader for LeechCraft
  .
  A web browser plugin is recommended to show the news in a fancy way.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-anhero
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft-core (= ${binary:Version})
-Description: Crash handler for LeechCraft
+ leechcraft-core (= ${binary:Version}),
+ leechcraft-dbg (= ${binary:Version})
+Recommends: leechcraft-dolozhee
+Description: crash handler for LeechCraft
  This package contains AnHero, the crash handler for LeechCraft.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-auscrie
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
-Description: Screenshooter for LeechCraft
+Description: screenshooter for LeechCraft
  This package contains Auscrie, the auto screenshooter for LeechCraft.
  It can make screenshots of LeechCraft and then either save them locally
  or upload them to an imagebin.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-azoth
 Architecture: any
@@ -367,7 +369,7 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
 Recommends: leechcraft-provider-securestorage,
  telepathy-mission-control-5, telepathy-haze
 Suggests: telepathy-butterfly, telepathy-rakia, telepathy-salut
-Description: Modular IM client for LeechCraft
+Description: modular IM client for LeechCraft
  This package contains the core of the Azoth plugin (the modular IM client for
  LeechCraft) and its own sub-plugins:
   * acetamide (IRC protocol support)
@@ -423,11 +425,11 @@ Description: Modular IM client for LeechCraft
     about current tune.
   * zheet (libmsn-based Windows Live protocol support)
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-bittorrent
 Architecture: any
@@ -449,11 +451,11 @@ Description: BitTorrent client for LeechCraft
   * fast resume
   * speed limits and IP filter
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-blogique
 Architecture: any
@@ -469,11 +471,11 @@ Description: blogging client for LeechCraft
   well as local drafts and backups. LHTR module is used for editing, providing
   WYSIWYG functionality.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-cstp
 Architecture: any
@@ -484,11 +486,11 @@ Provides: leechcraft-provider-http
 Description: HTTP client for LeechCraft
  This package contains clean and simple HTTP implementation.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-dumbeep
 Architecture: any
@@ -498,11 +500,11 @@ Provides: leechcraft-provider-mediaplayer
 Description: simple sound notifier for LeechCraft
  Simple sound notifier for those who do not need all LMP features.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-dbusmanager
 Architecture: any
@@ -515,42 +517,43 @@ Description: D-Bus side of LeechCraft
  desktop notifications (KDE ≥ 4.4 and others supporting libnotify
  interfaces).
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-deadlyrics
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version}),
  leechcraft-provider-searchesview
-Description: Song lyrics finder for LeechCraft
+Description: song lyrics finder for LeechCraft
  This package contains a simple client for finding song lyrics on
  various sites.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-dolozhee
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-provider-securestorage
-Description: Plugin for feature requests and bug reports for LeechCraft
- This package contains Dolozhee module which simplifies making feature requests
- and bug reports for both anonymous users and those already registered on
- LeechCraft issue tracker.
+Suggests: leechcraft-anhero
+Description: plugin for feature requests and bug reports for LeechCraft
+ This package contains Dolozhee module which simplifies making feature
+ requests and bug reports for both anonymous users and those already
+ registered on LeechCraft issue tracker.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-gacts
 Architecture: any
@@ -561,57 +564,57 @@ Description: Global Actions provider plugin for LeechCraft
  This package contains the GActs module that adds support for global shortcuts
  to LeechCraft.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-glance
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-dbus
-Description: Provides a quick overview of tabs in LeechCraft
+Description: provides quick overview of tabs in LeechCraft
  This plugin adds an action to the quick launch area that allows one
  to quickly overview all the currently opened tabs in LeechCraft,
  with thumbnails. Of course, one could navigate to a chosen tab by
  clicking on it.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-gmailnotifier
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-dbus
-Description: Notifications about new mail in GMail for LeechCraft
+Description: notifications about new mail in GMail for LeechCraft
  This plugin notifies whenever new mail arrives to your GMail inbox.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-historyholder
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version}),
  leechcraft-provider-searchesview
-Description: History keeper for LeechCraft
+Description: history keeper for LeechCraft
  This package contains a history keeper that stores information about
  finished downloads and similar events.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-hotstreams
 Architecture: any
@@ -619,72 +622,72 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-provider-http
 Provides: leechcraft-provider-radiostreams
-Description: Radio streams provider module for LeechCraft
+Description: radio streams provider module for LeechCraft
  This package contains the HotStreams module which provides some cool radio
  stations to media players.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-kbswitch
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
-Description: Keyboard plugin for LeechCraft
+Description: keyboard plugin for LeechCraft
  This package contains the KBSwitch plugin which allows one to have different
  keyboard layouts for different tabs.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-kinotify
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
-Description: Fancy notifications for LeechCraft
+Description: fancy notifications for LeechCraft
  This package contains Kinotify which provides fancy notifications for
  LeechCraft instead of old-style tray-based ones.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-knowhow
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
-Description: Plugin for displaying tips of the day about LeechCraft
+Description: plugin for displaying tips of the day about LeechCraft
  This package contains the KnowHow module which displays various tips at
  startup.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-lackman
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version}),
  leechcraft-provider-http
-Description: Userspace Package Manager for LeechCraft
+Description: userspace package manager for LeechCraft
  This package contains LackMan, the Package Manager for userspace stuff
  like script plugins, extensions, themes and frequently updated data.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-lads
 Architecture: any
@@ -693,11 +696,11 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: Ubuntu Unity integration layer for LeechCraft
  This package contains Lads, Ubuntu Unity integration layer for LeechCraft.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-lastfmscrobble
 Architecture: any
@@ -710,11 +713,11 @@ Description: Last.fm scrobbler for LeechCraft
  Last.FM-related services from scrobbling and streaming to obtaining
  recommendations, similar artists and biographies.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-lhtr
 Architecture: any
@@ -727,11 +730,11 @@ Description: LeechCraft HTML Text editor in WYSIWYG style
  editing facilities. It is embedded into other plugins, like mail clients,
  blog clients, etc.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-liznoo
 Architecture: any
@@ -744,22 +747,22 @@ Description: UPower-based power manager for LeechCraft
  For example Azoth gracefully disconnects from the servers after receiving
  suspend notification, and reconnects back after resume.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-lmp
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft-core (= ${binary:Version})
+ leechcraft-core (= ${binary:Version}),
+ leechcraft-provider-removabledevicemgr
 Recommends: ffmpeg, leechcraft-lastfmscrobble,
- leechcraft-provider-removabledevicemgr,
  leechcraft-provider-globalshortcuts,
  leechcraft-provider-radiostreams
 Provides: leechcraft-provider-mediaplayer
-Description: Music Player for LeechCraft
+Description: featureful music player for LeechCraft
  This package contains the LMP (LeechCraft Music Player), a collection-oriented
  music player based on Phonon. Currently it features:
   * Collection-oriented music player with playback statistics.
@@ -787,128 +790,129 @@ Description: Music Player for LeechCraft
  .
  Such sub-plugins are also available in this package:
   * dumbsync (for uploading files to USB flash-like media players)
-  * mp3tunes (for synchronization with the corresponding service)
-  * graffiti (for editing audo tags)
+  * graffiti (for manipulating audio file tags)
+  * mp3tunes (for syncing and using the mp3tunes.com service)
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-monocle
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-provider-sessionmanager
-Description: Document viewer for LeechCraft
+Description: document viewer for LeechCraft
  This package contains Monocle, the modular document reader for LeechCraft.
  Currently it has the following backend modules:
+  * dik -- MOBI file format (*.mobi)
   * fxb -- FictionBook file format (*.fb2)
   * pdf -- PDF file format (*.pdf) (libpoppler is used)
-  * seen -- DjVu file format (*.djvu) (libdjvulibre is used)
   * postrus -- PostScript file format (*.ps) (libspectre is used)
+  * seen -- DjVu file format (*.djvu) (libdjvulibre is used)
  .
  Monocle supports links and tables of contents, two-page spreads, copying
  selection as image or text, fullscreen presentation mode and has a bunch
  of other features.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-nacheku
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
-Description: Clipboard/download dir watcher for LeechCraft
+Description: clipboard/download dir watcher for LeechCraft
  This package contains Nacheku. This module watches clipboard and download
  directory in order to get links and download files.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-netstoremanager
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
-Description: Manages network data storages for LeechCraft
+Description: manager for network data storages for LeechCraft
  This package contains NetStoreManager, the module for managing network data
  storages like Google Drive.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-networkmonitor
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
-Description: Network monitor for LeechCraft
+Description: network monitor for LeechCraft
  This package contains a monitor that watches for HTTP requests
  and responses around.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-newlife
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-importer
-Description: Settings importer for LeechCraft
- This package contains importer of settings, preferences etc. from
- various applications into LeechCraft. Currently it supports importing
- RSS feeds and settings from Akregator and Liferea.
+Description: settings importer for LeechCraft
+ This package contains importer of settings, preferences etc. from various
+ applications into LeechCraft. Currently supported: Akregator, Firefox,
+ Kopete, KTorrent, Liferea, Psi+, Vacuum IM.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-pintab
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Recommends: leechcraft-provider-sessionmanager
-Description: Tabs pinning for LeechCraft
- This package contains the Pintab module which allows tabs to be pinned, so that
- important tabs that are to be always opened can occupy less space. You can also
- install TabSessManager for Pintab to preserve the pinned state across
- LeechCraft runs.
+Description: tabs pinning for LeechCraft
+ This package contains the Pintab module which allows tabs to be pinned, so
+ that important tabs that are to be always opened can occupy less space. You
+ can also install TabSessManager for Pintab to preserve the pinned state
+ across LeechCraft runs.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-popishu
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-texteditor
-Description: Plain text editor for LeechCraft
+Description: plain text editor for LeechCraft
  This package contains Popishu, a simple text editor for LeechCraft
  with support for syntax highlighting and aimed at in-place editing
  of scripts, data, documentation etc.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-poshuku
 Architecture: any
@@ -950,36 +954,28 @@ Description: Web browser for LeechCraft
   * onlinebookmarks (Support for syncing bookmarks with online services)
   This is a plugin for the Poshuku web browser that allows it to synchronize
   local bookmarks with online social bookmarking systems like Read It Later.
-  * pintab (Support of pinned tab)
-  * pogooglue (Support for searching selected text in Google)
-  This is a plugin for the Poshuku web browser that replaces default flash-based
-  video players on some sites with any suitable LeechCraft's media player thus
-  avoiding the need for Flash. First you should install package:
-  leechcraft-provider-mediaplayer
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-secman
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-securestorage
-Description: Security Manager plugin for LeechCraft
+Description: security manager plugin for LeechCraft
  This package contains the base plugin for secure storage stuff for LeechCraft
- and its own sub-plugin:
-  * simplestorage (Simple storage backend)
-  This is a simple, unencrypted storage backend for  SecMan, LeechCraft's
-  security manager plugin.
+ and its own sub-plugins:
+  * simplestorage (simple unencrypted storage backend)
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-seekthru
 Architecture: any
@@ -991,11 +987,11 @@ Provides: leechcraft-provider-search
 Description: OpenSearch-support plugin for LeechCraft
  This package contains a search client for OpenSearch-aware web sites.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-sb2
 Architecture: any
@@ -1004,17 +1000,17 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
 Conflicts: leechcraft-sidebar
 Replaces: leechcraft-sidebar
 Provides: leechcraft-quark-display, leechcraft-sidebar
-Description: Next generation kinetic sidebar for LeechCraft
+Description: kinetic sidebar for LeechCraft
  This package contains the sb2 module which provides a nice sidebar with
  combined quick launch and grouping tabs switcher, tray area and support
  for displaying components (quarks) from other plugins, as well as
  standalone quarks.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-summary
 Architecture: any
@@ -1022,65 +1018,65 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-searchesview,
  leechcraft-provider-tasksview
-Description: Quick summary of what's going on in LeechCraft
+Description: quick summary of what's going on in LeechCraft
  This package contains Summary which shows currently running download
  tasks like BitTorrent files as well as news, events and statuses, like
  unread items in RSS feed reader. It also allows one to perform search
  queries with instaled search plugins.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-tabsessmanager
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-sessionmanager
-Description: Tab Session Manager for LeechCraft
+Description: tab session manager for LeechCraft
  This plugin stores the list and state of opened tabs between LeechCraft runs.
  It supports different types of tabs, like browser tab, IM chat or else.
  It also supports manually saving and restoring different sessions.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-tabslist
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version})
 Provides: leechcraft-provider-searchesview
-Description: Displays list of opened tabs, with navigation between them
+Description: manager of opened tabs for LeechCraft
  This plugin adds an action to the quick launch area that, when triggered,
  opens a list of tabs and allows one to navigate to another tab.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-tpi
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version}),
  leechcraft-quark-display
-Description: Task Progress Indicator quark
+Description: task progress indicator quark for LeechCraft sidebar
  This package provides the Task Progress Indicator task which displays small
  progress bars for ongoing tasks (like BitTorrent downloads, IM file transfers
  or cloud synchronization). The indicator is shown in a suitable quark
  displayer like SB2.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-vgrabber
 Architecture: any
@@ -1093,11 +1089,11 @@ Description: vkontakte.ru plugin for LeechCraft
  This package contains a music search/grabber for the vkontakte.ru social
  network.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-vrooby
 Architecture: any
@@ -1112,22 +1108,22 @@ Description: removable storage devices manager for LeechCraft
  removable devices (like LMP device syncer), as well at allows the user
  to mount and unmount devices easily.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
 
 Package: leechcraft-xproxy
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  leechcraft-core (= ${binary:Version}),
  leechcraft-provider-http
-Description: Advanced proxy manager for LeechCraft
+Description: proxy manager for LeechCraft
  This package contains XProxy, the advanced proxy manager for LeechCraft.
  .
- LeechCraft is a free modular "Internet client" application.
+ LeechCraft is a free cross-platform modular live environment.
  .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
