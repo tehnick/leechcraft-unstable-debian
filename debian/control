@@ -56,6 +56,7 @@ Depends:
  leechcraft-auscrie (>= ${source:Version}),
  leechcraft-azoth (>= ${source:Version}),
  leechcraft-bittorrent (>= ${source:Version}),
+ leechcraft-blasq (>= ${source:Version}),
  leechcraft-blogique (>= ${source:Version}),
  leechcraft-core (>= ${source:Version}),
  leechcraft-cstp (>= ${source:Version}),
@@ -154,6 +155,7 @@ Suggests:
  leechcraft-auscrie,
  leechcraft-azoth,
  leechcraft-bittorrent,
+ leechcraft-blasq,
  leechcraft-blogique,
  leechcraft-cstp,
  leechcraft-dbusmanager,
@@ -494,6 +496,27 @@ Description: BitTorrent client for LeechCraft
   * torrents queue with smart rotation depending on torrent's health
   * fast resume
   * speed limits and IP filter
+ .
+ LeechCraft is a free cross-platform modular live environment.
+ .
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
+
+Package: leechcraft-blasq
+Architecture: any
+Depends:
+ leechcraft-core (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Provides:
+ leechcraft-provider-image-uploader
+Description: client for cloud image storages for LeechCraft
+ This package provides support of cloud image storages in LeechCraft. The
+ following service sub-plugins are available:
+  * rappor (VKontakte client module)
+  * vangog (Picasa client module)
+  * deathnote (LiveJournal FotoBilder client module)
  .
  LeechCraft is a free cross-platform modular live environment.
  .

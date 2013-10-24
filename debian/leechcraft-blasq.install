@@ -1,0 +1,3 @@
+usr/lib/leechcraft/plugins/*leechcraft_blasq*.so
+usr/share/leechcraft/settings/blasq*settings.xml
+usr/share/leechcraft/translations/leechcraft_blasq*.qm
