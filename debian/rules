@@ -159,7 +159,7 @@ override_dh_shlibdeps:
 					-ldebian/libleechcraft-util0.5.0/usr/lib
 
 override_dh_builddeb:
-	dh_builddeb -- -Zbzip2
+	dh_builddeb -- -Zxz
 
 get-orig-source:
 	# preparation
