@@ -58,6 +58,7 @@ Depends: ${misc:Depends},
  leechcraft-bittorrent (>= ${source:Version}),
  leechcraft-blogique (>= ${source:Version}),
  leechcraft-cstp (>= ${source:Version}),
+ leechcraft-dumbeep (>= ${source:Version}),
  leechcraft-dbusmanager (>= ${source:Version}),
  leechcraft-deadlyrics (>= ${source:Version}),
  leechcraft-gacts (>= ${source:Version}),
@@ -146,6 +147,7 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-bittorrent,
  leechcraft-blogique,
  leechcraft-cstp,
+ leechcraft-dumbeep,
  leechcraft-dbusmanager,
  leechcraft-deadlyrics,
  leechcraft-gacts,
@@ -481,6 +483,20 @@ Depends: ${misc:Depends}, ${shlibs:Depends},
 Provides: leechcraft-provider-http
 Description: HTTP client for LeechCraft
  This package contains clean and simple HTTP implementation.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
+Package: leechcraft-dumbeep
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft-core (= ${binary:Version})
+Provides: leechcraft-provider-mediaplayer
+Description: simple sound notifier for LeechCraft
+ Simple sound notifier for those who do not need all LMP features.
  .
  LeechCraft is a free modular "Internet client" application.
  .
