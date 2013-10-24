@@ -46,7 +46,7 @@ Build-Depends: debhelper (>= 9),
 Homepage: http://leechcraft.org
 Vcs-Git: git://github.com/tehnick/leechcraft-unstable-debian.git
 Vcs-Browser: https://github.com/tehnick/leechcraft-unstable-debian
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 
 Package: leechcraft
 Section: metapackages
