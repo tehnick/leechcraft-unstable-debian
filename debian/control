@@ -81,7 +81,6 @@ Depends: ${misc:Depends},
  leechcraft-networkmonitor (>= ${source:Version}),
  leechcraft-newlife (>= ${source:Version}),
  leechcraft-pintab (>= ${source:Version}),
- leechcraft-otlozhu (>= ${source:Version}),
  leechcraft-popishu (>= ${source:Version}),
  leechcraft-poshuku (>= ${source:Version}),
  leechcraft-sb2 (>= ${source:Version}),
@@ -168,7 +167,6 @@ Suggests: leechcraft-advancednotifications,
  leechcraft-netstoremanager,
  leechcraft-networkmonitor,
  leechcraft-newlife,
- leechcraft-otlozhu,
  leechcraft-pintab,
  leechcraft-popishu,
  leechcraft-poshuku,
@@ -747,7 +745,6 @@ Recommends: ffmpeg, leechcraft-lastfmscrobble,
  leechcraft-provider-removabledevicemgr,
  leechcraft-provider-globalshortcuts,
  leechcraft-provider-radiostreams
-Suggests: leechcraft-provider-todolist
 Provides: leechcraft-provider-mediaplayer
 Description: Music Player for LeechCraft
  This package contains the LMP (LeechCraft Music Player), a collection-oriented
@@ -860,28 +857,6 @@ Description: Settings importer for LeechCraft
  This package contains importer of settings, preferences etc. from
  various applications into LeechCraft. Currently it supports importing
  RSS feeds and settings from Akregator and Liferea.
- .
- LeechCraft is a free modular "Internet client" application.
- .
- LeechCraft allows one to browse the web, read RSS/Atom feeds, download
- files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
- download or play podcasts and other media files and much more.
-
-Package: leechcraft-otlozhu
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- leechcraft-core (= ${binary:Version})
-Recommends: leechcraft-advancednotifications
-Provides: leechcraft-provider-todolist
-Description: (Getting Things Done style) TODO manager for LeechCraft
- This package contains the Otlozhu module, GTD-inspired TODO manager.
- .
- The Getting Things Done method rests on the idea that a person needs to move
- tasks out of the mind by recording them externally, so the mind is free from
- the job of remembering the tasks that need to be completed. One can then 
- concentrate on performing the tasks, instead of remembering.
- .
- More detail: https://en.wikipedia.org/wiki/Getting_Things_Done
  .
  LeechCraft is a free modular "Internet client" application.
  .
