@@ -106,7 +106,10 @@ CMAKEOPTS = "$(CURDIR)/src" \
 	-DENABLE_VROOBY=True \
 	-DENABLE_VTYULC=False \
 	-DENABLE_XPROXY=True \
-	-DENABLE_XTAZY=False
+	-DENABLE_XTAZY=False \
+	\
+	-DWITH_GACTS_BUNDLED_QXT=False
+
 
 %:
 	dh $@ --parallel --buildsystem=cmake
