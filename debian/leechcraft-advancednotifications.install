@@ -1,4 +1,4 @@
 usr/lib/leechcraft/plugins/*leechcraft_advancednotifications.so
-usr/share/leechcraft/translations/leechcraft_advancednotifications*.qm
-usr/share/leechcraft/settings/advancednotificationssettings.xml
 usr/share/leechcraft/qml/advancednotifications/*
+usr/share/leechcraft/settings/advancednotificationssettings.xml
+usr/share/leechcraft/translations/leechcraft_advancednotifications*.qm

@@ -1,4 +1,4 @@
 usr/lib/leechcraft/plugins/*leechcraft_bittorrent.so
-usr/share/leechcraft/translations/leechcraft_bittorrent*.qm
-usr/share/leechcraft/settings/torrentsettings.xml
 usr/share/applications/leechcraft-bittorrent*.desktop
+usr/share/leechcraft/settings/torrentsettings.xml
+usr/share/leechcraft/translations/leechcraft_bittorrent*.qm
