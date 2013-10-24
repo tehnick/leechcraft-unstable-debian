@@ -4,17 +4,16 @@ Priority: optional
 Maintainer: Boris Pek <tehnick@debian.org>
 Build-Depends: debhelper (>= 9),
  po-debconf,
- cmake (>= 2.8),
- kdelibs5-dev (>= 4.2.0),
- libboost-thread-dev (>=1.48),
- libboost-date-time-dev (>=1.48),
- libboost-filesystem-dev (>=1.48),
- libboost-regex-dev (>=1.48),
- libboost-program-options-dev (>=1.48),
- libtorrent-rasterbar-dev (>=0.15),
- libphonon-dev,
- libqt4-dev (>= 4.8),
+ cmake (>= 2.8.9),
+ libboost-thread-dev (>= 1.49),
+ libboost-date-time-dev (>= 1.49),
+ libboost-filesystem-dev (>= 1.49),
+ libboost-regex-dev (>= 1.49),
+ libboost-program-options-dev (>= 1.49),
+ libtorrent-rasterbar-dev (>= 0.15),
+ libotr5-dev | libotr2-dev,
  libqxmpp-dev (>= 0.7.4),
+ libqt4-dev (>= 4.8),
  libqtwebkit-dev,
  libgeoip-dev,
  libtelepathy-qt4-dev,
@@ -30,7 +29,6 @@ Build-Depends: debhelper (>= 9),
  libmagic-dev,
  libpcre3-dev,
  libqca2-dev,
- libotr5-dev,
  libaspell-dev,
  libspeex-dev,
  libtag1-dev,
@@ -122,8 +120,7 @@ Depends: ${misc:Depends},
  leechcraft-dolozhee (>= ${source:Version})
 Description: Extra LeechCraft plugins beyond full installation
  This metapackage installs additional LeechCraft plugins that may
- pull a lot of dependencies on some systems (like AnHero pulling
- half of KDE).
+ pull a lot of dependencies.
  .
  LeechCraft is a free modular "Internet client" application.
  .
