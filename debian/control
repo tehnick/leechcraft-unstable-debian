@@ -28,7 +28,7 @@ Build-Depends:
  libqca2-dev,
  libqjson-dev,
  libqscintilla2-dev,
- libqt4-dev (>= 4.8),
+ libqt4-dev,
  libqtwebkit-dev,
  libqwt-dev,
  libqxmpp-dev (>= 0.7.4),
@@ -97,8 +97,8 @@ Suggests:
  leechcraft-extra,
  leechcraft-lads (>= ${source:Version})
 Recommends:
- libqt4-sql-mysql (>= 4.6.0),
- libqt4-sql-psql (>= 4.6.0)
+ libqt4-sql-mysql,
+ libqt4-sql-psql
 Conflicts:
  leechcraft-full
 Replaces:
@@ -142,9 +142,9 @@ Description: modular live environment (extra plugins)
 Package: leechcraft-core
 Architecture: any
 Depends:
- libqt4-sql-psql (>= 4.6.0),
- libqt4-sql-sqlite (>= 4.6.0),
- libqt4-svg (>= 4.6.0),
+ libqt4-sql-psql,
+ libqt4-sql-sqlite,
+ libqt4-svg,
  oxygen-icon-theme | tango-icon-theme | nuvola-icon-theme,
  ${misc:Depends},
  ${shlibs:Depends}
