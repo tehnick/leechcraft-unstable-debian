@@ -120,6 +120,7 @@ Description: modular live environment (full installation)
  a decent IM client, media player or a feed reader, for example.
 
 Package: leechcraft-extra
+Priority: extra
 Section: metapackages
 Architecture: all
 Depends:
@@ -363,6 +364,7 @@ Description: RSS/Atom feed reader for LeechCraft
  much more.
 
 Package: leechcraft-anhero
+Priority: extra
 Architecture: any
 Depends:
  leechcraft-core (= ${binary:Version}),
@@ -619,6 +621,7 @@ Description: song lyrics finder for LeechCraft
  much more.
 
 Package: leechcraft-dolozhee
+Priority: extra
 Architecture: any
 Depends:
  leechcraft-core (= ${binary:Version}),
