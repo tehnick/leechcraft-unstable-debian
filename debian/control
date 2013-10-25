@@ -42,6 +42,7 @@ Build-Depends:
  libudev-dev,
  libx11-dev,
  po-debconf,
+ qtmobility-dev,
  x11proto-randr-dev,
  zlib1g-dev
 Homepage: http://leechcraft.org
