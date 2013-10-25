@@ -86,6 +86,7 @@ Depends:
  leechcraft-networkmonitor (>= ${source:Version}),
  leechcraft-newlife (>= ${source:Version}),
  leechcraft-pintab (>= ${source:Version}),
+ leechcraft-pogooglue (>= ${source:Version}),
  leechcraft-popishu (>= ${source:Version}),
  leechcraft-poshuku (>= ${source:Version}),
  leechcraft-sb2 (>= ${source:Version}),
@@ -185,6 +186,7 @@ Suggests:
  leechcraft-networkmonitor,
  leechcraft-newlife,
  leechcraft-pintab,
+ leechcraft-pogooglue,
  leechcraft-popishu,
  leechcraft-poshuku,
  leechcraft-sb2,
@@ -1074,6 +1076,21 @@ Description: tabs pinning for LeechCraft
  that important tabs that are to be always opened can occupy less space. You
  can also install TabSessManager for Pintab to preserve the pinned state
  across LeechCraft runs.
+ .
+ LeechCraft is a free cross-platform modular live environment.
+ .
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
+
+Package: leechcraft-pogooglue
+Architecture: any
+Depends:
+ leechcraft-core (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: Google search client for LeechCraft
+ This plugin allows to search for selected text in Google in two clicks.
  .
  LeechCraft is a free cross-platform modular live environment.
  .
