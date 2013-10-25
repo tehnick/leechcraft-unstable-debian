@@ -790,6 +790,8 @@ Depends:
  leechcraft-core (= ${binary:Version}),
  ${misc:Depends},
  ${shlibs:Depends}
+Recommends:
+ leechcraft-quark-display
 Description: keyboard plugin for LeechCraft
  This package contains the KBSwitch plugin which allows one to have different
  keyboard layouts for different tabs.
