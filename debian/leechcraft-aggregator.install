@@ -1,3 +1,4 @@
 usr/lib/leechcraft/plugins/*leechcraft_aggregator*.so
+usr/share/leechcraft/scripts/aggregator/*
 usr/share/leechcraft/settings/aggregator*settings.xml
 usr/share/leechcraft/translations/leechcraft_aggregator*.qm
