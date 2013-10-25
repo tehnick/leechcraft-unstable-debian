@@ -21,6 +21,7 @@ Build-Depends:
  liblastfm-dev,
  libmagic-dev,
  libmsn-dev,
+ libmtp-dev,
  libotr5-dev | libotr2-dev,
  libpcre3-dev,
  libpoppler-cpp-dev,
@@ -917,6 +918,7 @@ Package: leechcraft-lmp
 Architecture: any
 Depends:
  leechcraft-core (= ${binary:Version}),
+ leechcraft-devmon (= ${binary:Version}),
  leechcraft-provider-removabledevicemgr,
  ${misc:Depends},
  ${shlibs:Depends}
@@ -957,6 +959,7 @@ Description: featureful music player for LeechCraft
   * dumbsync (for uploading files to USB flash-like media players)
   * graffiti (for manipulating audio file tags)
   * mp3tunes (for syncing and using the mp3tunes.com service)
+  * mtpsync  (for syncing with MTP devices)
  .
  LeechCraft is a free cross-platform modular live environment.
  .
