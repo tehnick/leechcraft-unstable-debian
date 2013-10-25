@@ -38,6 +38,7 @@ Build-Depends:
  libtag1-dev,
  libtelepathy-qt4-dev,
  libtorrent-rasterbar-dev (>= 0.15),
+ libudev-dev,
  libx11-dev,
  po-debconf,
  x11proto-randr-dev,
@@ -62,6 +63,7 @@ Depends:
  leechcraft-cstp (>= ${source:Version}),
  leechcraft-dbusmanager (>= ${source:Version}),
  leechcraft-deadlyrics (>= ${source:Version}),
+ leechcraft-devmon (>= ${source:Version}),
  leechcraft-dumbeep (>= ${source:Version}),
  leechcraft-gacts (>= ${source:Version}),
  leechcraft-glance (>= ${source:Version}),
@@ -162,6 +164,7 @@ Suggests:
  leechcraft-cstp,
  leechcraft-dbusmanager,
  leechcraft-deadlyrics,
+ leechcraft-devmon,
  leechcraft-dumbeep,
  leechcraft-gacts,
  leechcraft-glance,
@@ -615,6 +618,22 @@ Depends:
 Description: song lyrics finder for LeechCraft
  This package contains a simple client for finding song lyrics on
  various sites.
+ .
+ LeechCraft is a free cross-platform modular live environment.
+ .
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
+
+Package: leechcraft-devmon
+Architecture: any
+Depends:
+ leechcraft-core (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: devices monitoring plugin for LeechCraft
+ This package provides a non-mass-storage USB devices monitor and enumerator
+ to be used by other plugins.
  .
  LeechCraft is a free cross-platform modular live environment.
  .
