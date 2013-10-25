@@ -791,7 +791,7 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends}
 Recommends:
- leechcraft-quark-display
+ leechcraft-provider-quark-display
 Description: keyboard plugin for LeechCraft
  This package contains the KBSwitch plugin which allows one to have different
  keyboard layouts for different tabs.
@@ -1228,7 +1228,7 @@ Conflicts:
 Replaces:
  leechcraft-sidebar
 Provides:
- leechcraft-quark-display,
+ leechcraft-provider-quark-display,
  leechcraft-sidebar
 Description: kinetic sidebar for LeechCraft
  This package contains the sb2 module which provides a nice sidebar with
@@ -1304,7 +1304,7 @@ Package: leechcraft-tpi
 Architecture: any
 Depends:
  leechcraft-core (= ${binary:Version}),
- leechcraft-quark-display,
+ leechcraft-provider-quark-display,
  ${misc:Depends},
  ${shlibs:Depends}
 Description: task progress indicator quark for LeechCraft sidebar
