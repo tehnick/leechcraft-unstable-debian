@@ -395,6 +395,7 @@ Package: leechcraft-auscrie
 Architecture: any
 Depends:
  leechcraft-core (= ${binary:Version}),
+ leechcraft-provider-image-uploader,
  ${misc:Depends},
  ${shlibs:Depends}
 Description: screenshooter for LeechCraft
