@@ -1,0 +1,2 @@
+# There are too many identical small files. Problem should be fixed in Doxygen.
+leechcraft-doc: duplicate-files usr/share/doc/leechcraft-doc/html/*
