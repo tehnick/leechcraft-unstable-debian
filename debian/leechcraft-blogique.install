@@ -1,3 +1,4 @@
 usr/lib/leechcraft/plugins/*leechcraft_blogique*.so
+usr/share/leechcraft/qml/blogique/*
 usr/share/leechcraft/settings/blogique*settings.xml
 usr/share/leechcraft/translations/leechcraft_blogique*.qm
