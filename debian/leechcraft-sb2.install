@@ -1,2 +1,3 @@
 usr/lib/leechcraft/plugins/*leechcraft_sb2.so
 usr/share/leechcraft/qml/sb2/*
+usr/share/leechcraft/settings/sb2*settings.xml
