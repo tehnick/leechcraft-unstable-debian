@@ -45,6 +45,8 @@ Build-Depends:
  libtorrent-rasterbar-dev (>= 0.15),
  libudev-dev,
  libx11-dev,
+ libxkbcommon-dev,
+ libxkbfile-dev,
  libxml2-dev,
  po-debconf,
  qtmobility-dev,

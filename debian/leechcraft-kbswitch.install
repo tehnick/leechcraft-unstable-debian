@@ -1,2 +1,4 @@
-usr/lib/leechcraft/plugins/*leechcraft_kbswitch.so
-usr/share/leechcraft/settings/kbswitchsettings.xml
+usr/lib/leechcraft/plugins/*leechcraft_kbswitch*.so
+usr/share/leechcraft/qml/kbswitch/*
+usr/share/leechcraft/settings/kbswitch*settings.xml
+usr/share/leechcraft/translations/leechcraft_kbswitch*.qm
