@@ -49,7 +49,6 @@ Build-Depends:
  libxkbfile-dev,
  libxml2-dev,
  po-debconf,
- qtmobility-dev,
  x11proto-randr-dev,
  zlib1g-dev
 Homepage: http://leechcraft.org
