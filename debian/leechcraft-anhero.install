@@ -1,2 +1,3 @@
-usr/lib/leechcraft/plugins/*leechcraft_anhero.so
+usr/bin/lc_anhero_crashprocess
+usr/lib/leechcraft/plugins/*leechcraft_anhero*.so
 usr/share/leechcraft/translations/leechcraft_anhero*.qm
