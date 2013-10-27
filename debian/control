@@ -1099,7 +1099,7 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends}
 Description: Google search client for LeechCraft
- This plugin allows to search for selected text in Google in two clicks.
+ This plugin allows one to search for selected text in Google in two clicks.
  .
  LeechCraft is a free cross-platform modular live environment.
  .
