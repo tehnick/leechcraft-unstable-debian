@@ -8,17 +8,12 @@ Build-Depends:
  doxygen,
  graphviz,
  libaspell-dev,
- libavcodec-dev,
- libavformat-dev,
- libavresample-dev | libswresample-dev,
- libavutil-dev,
  libboost-date-time-dev (>= 1.49),
  libboost-filesystem-dev (>= 1.49),
  libboost-program-options-dev (>= 1.49),
  libboost-regex-dev (>= 1.49),
  libboost-thread-dev (>= 1.49),
  libbz2-dev,
- libchromaprint-dev,
  libcurl4-openssl-dev,
  libdjvulibre-dev,
  libgeoip-dev,
@@ -92,7 +87,6 @@ Depends:
  leechcraft-liznoo (>= ${source:Version}),
  leechcraft-lmp (>= ${source:Version}),
  leechcraft-monocle (>= ${source:Version}),
- leechcraft-musiczombie (>= ${source:Version}),
  leechcraft-nacheku (>= ${source:Version}),
  leechcraft-netstoremanager (>= ${source:Version}),
  leechcraft-networkmonitor (>= ${source:Version}),
@@ -193,7 +187,6 @@ Suggests:
  leechcraft-lastfmscrobble,
  leechcraft-lmp,
  leechcraft-monocle,
- leechcraft-musiczombie,
  leechcraft-nacheku,
  leechcraft-netstoremanager,
  leechcraft-networkmonitor,
@@ -1005,25 +998,6 @@ Description: document viewer for LeechCraft
  Monocle supports links and tables of contents, two-page spreads, copying
  selection as image or text, fullscreen presentation mode and has a bunch
  of other features.
- .
- LeechCraft is a free cross-platform modular live environment.
- .
- LeechCraft allows one to browse the web, chat using common IM networks, play
- music, read RSS/Atom feeds, download files via BitTorrent, read documents and
- much more.
-
-Package: leechcraft-musiczombie
-Architecture: any
-Depends:
- leechcraft-core (= ${binary:Version}),
- ${misc:Depends},
- ${shlibs:Depends}
-Provides:
- leechcraft-provider-audotags-fetcher,
- leechcraft-provider-audiodisco-fetcher
-Description: MusicBrainz.org client for LeechCraft
- This plugin allows one to get artists discographies and fetch audio tags by
- acoustic fingerprinting from MusicBrainz.
  .
  LeechCraft is a free cross-platform modular live environment.
  .
