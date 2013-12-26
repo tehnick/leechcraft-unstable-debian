@@ -1,3 +1,4 @@
 usr/lib/leechcraft/plugins/*leechcraft_netstoremanager*.so
 usr/share/leechcraft/settings/netstoremanager*settings.xml
+usr/share/leechcraft/settings/nsmgoogledrivesettings.xml
 usr/share/leechcraft/translations/leechcraft_netstoremanager*.qm
