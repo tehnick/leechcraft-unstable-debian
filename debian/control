@@ -3,8 +3,8 @@ Section: net
 Priority: optional
 Maintainer: Boris Pek <tehnick@debian.org>
 Build-Depends:
- cmake (>= 2.8.9),
  debhelper (>= 9),
+ cmake,
  doxygen,
  graphviz,
  libaspell-dev,
