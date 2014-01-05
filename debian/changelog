@@ -1,8 +1,8 @@
-leechcraft-unstable (0.6.60-71-gc5d2844+dfsg-0ppa1~trusty1) trusty; urgency=medium
+leechcraft-unstable (0.6.60-85-gdf61ee3+dfsg-0ppa1~trusty1) trusty; urgency=medium
 
   * Minor update from Git  branch.
 
- -- Boris Pek <tehnick@debian.org>  Sat, 04 Jan 2014 21:42:36 +0400
+ -- Boris Pek <tehnick@debian.org>  Sun, 05 Jan 2014 22:24:19 +0400
 
 leechcraft-unstable (0.4.90-0ppa1~oneiric1) oneiric; urgency=low
 
