@@ -1,3 +1,9 @@
+leechcraft-unstable (0.6.60-791-gabb9fdf+dfsg-0ppa1~trusty1) trusty; urgency=medium
+
+  * Minor update from Git  branch.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 28 Feb 2014 18:56:16 +0400
+
 leechcraft-unstable (0.6.60-746-g5c983dc+dfsg-0ppa1~trusty1) trusty; urgency=medium
 
   * Minor update from Git  branch.
