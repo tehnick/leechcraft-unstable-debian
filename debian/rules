@@ -115,7 +115,7 @@ CMAKEOPTS = "$(CURDIR)/src" \
 
 
 %:
-	dh $@ --parallel --buildsystem=cmake
+	dh $@ --parallel --list-missing --buildsystem=cmake
 
 override_dh_auto_configure:
 	mkdir -p $(DEB_BUILDDIR)
