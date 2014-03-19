@@ -1,2 +1,3 @@
 usr/lib/leechcraft/plugins/*leechcraft_nacheku.so
 usr/share/leechcraft/settings/nachekusettings.xml
+usr/share/leechcraft/translations/leechcraft_nacheku*.qm
