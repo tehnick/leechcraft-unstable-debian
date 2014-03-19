@@ -394,6 +394,7 @@ Depends: leechcraft-core (= ${binary:Version}),
          ${shlibs:Depends}
 Recommends: leechcraft-provider-securestorage,
             leechcraft-rosenthal,
+            leechcraft-xtazy,
             telepathy-haze,
             telepathy-mission-control-5
 Suggests: telepathy-butterfly, telepathy-rakia, telepathy-salut
@@ -511,6 +512,7 @@ Depends: leechcraft-core (= ${binary:Version}),
          leechcraft-provider-html-wysiwyg,
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: leechcraft-xtazy
 Description: blogging client for LeechCraft
  This package contains the base plugin of LeechCraft blogging client and its
  own sub-plugin:
