@@ -102,6 +102,7 @@ Depends: leechcraft-advancednotifications (>= ${source:Version}),
          leechcraft-secman (>= ${source:Version}),
          leechcraft-seekthru (>= ${source:Version}),
          leechcraft-summary (>= ${source:Version}),
+         leechcraft-sysnotify (>= ${source:Version}),
          leechcraft-tabsessmanager (>= ${source:Version}),
          leechcraft-tabslist (>= ${source:Version}),
          leechcraft-touchstreams (>= ${source:Version}),
@@ -198,6 +199,7 @@ Suggests: leechcraft-advancednotifications,
           leechcraft-secman,
           leechcraft-seekthru,
           leechcraft-summary,
+          leechcraft-sysnotify,
           leechcraft-tabsessmanager,
           leechcraft-tabslist,
           leechcraft-vgrabber,
@@ -1248,6 +1250,22 @@ Description: quick summary of what's going on in LeechCraft
  tasks like BitTorrent files as well as news, events and statuses, like
  unread items in RSS feed reader. It also allows one to perform search
  queries with instaled search plugins.
+ .
+ LeechCraft is a free cross-platform modular live environment.
+ .
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
+
+Package: leechcraft-sysnotify
+Architecture: any
+Depends: leechcraft-core (= ${binary:Version}),
+         notification-daemon,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: LeechCraft plugin for displaying standard system notifications
+ This package contains LeechCraft plugin for sending system messages using
+ the D-Bus notification API.
  .
  LeechCraft is a free cross-platform modular live environment.
  .
