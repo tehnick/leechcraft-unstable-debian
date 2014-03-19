@@ -97,6 +97,7 @@ Depends:
  leechcraft-pogooglue (>= ${source:Version}),
  leechcraft-popishu (>= ${source:Version}),
  leechcraft-poshuku (>= ${source:Version}),
+ leechcraft-rosenthal (>= ${source:Version}),
  leechcraft-sb2 (>= ${source:Version}),
  leechcraft-secman (>= ${source:Version}),
  leechcraft-seekthru (>= ${source:Version}),
@@ -199,6 +200,7 @@ Suggests:
  leechcraft-pogooglue,
  leechcraft-popishu,
  leechcraft-poshuku,
+ leechcraft-rosenthal,
  leechcraft-sb2,
  leechcraft-secman,
  leechcraft-seekthru,
@@ -1216,6 +1218,22 @@ Description: Web browser for LeechCraft
   * onlinebookmarks (Support for syncing bookmarks with online services)
   This is a plugin for the Poshuku web browser that allows it to synchronize
   local bookmarks with online social bookmarking systems like Read It Later.
+ .
+ LeechCraft is a free cross-platform modular live environment.
+ .
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
+
+Package: leechcraft-rosenthal
+Architecture: any
+Depends:
+ leechcraft-core (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: hunspell based spell checker for LeechCraft
+ This package contains the Hunspell-based spell checker service plugin for
+ LeechCraft.
  .
  LeechCraft is a free cross-platform modular live environment.
  .

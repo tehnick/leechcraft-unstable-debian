@@ -1,0 +1,3 @@
+usr/lib/leechcraft/plugins/*leechcraft_rosenthal*.so
+usr/share/leechcraft/settings/rosenthal*settings.xml
+usr/share/leechcraft/translations/leechcraft_rosenthal*.qm
