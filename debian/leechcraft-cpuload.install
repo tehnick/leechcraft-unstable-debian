@@ -1,0 +1,2 @@
+usr/lib/leechcraft/plugins/*leechcraft_cpuload*.so
+usr/share/leechcraft/qml/cpuload/*

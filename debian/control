@@ -67,6 +67,7 @@ Depends:
  leechcraft-blasq (>= ${source:Version}),
  leechcraft-blogique (>= ${source:Version}),
  leechcraft-core (>= ${source:Version}),
+ leechcraft-cpuload (>= ${source:Version}),
  leechcraft-cstp (>= ${source:Version}),
  leechcraft-dbusmanager (>= ${source:Version}),
  leechcraft-deadlyrics (>= ${source:Version}),
@@ -571,6 +572,22 @@ Description: blogging client for LeechCraft
  music, read RSS/Atom feeds, download files via BitTorrent, read documents and
  much more.
 
+Package: leechcraft-cpuload
+Architecture: any
+Depends:
+ leechcraft-core (= ${binary:Version}),
+ leechcraft-provider-quark-display,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: LeechCraft plugin for monitoring the CPU load
+ This package contains LeechCraft plugin for monitoring the CPU load.
+ .
+ LeechCraft is a free cross-platform modular live environment.
+ .
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
+
 Package: leechcraft-cstp
 Architecture: any
 Depends:
@@ -900,7 +917,7 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends}
 Recommends:
- leechcraft-sb2
+ leechcraft-provider-quark-display
 Provides:
  leechcraft-provider-html-wysiwyg
 Description: LeechCraft HTML Text editor in WYSIWYG style
@@ -918,7 +935,7 @@ Package: leechcraft-liznoo
 Architecture: any
 Depends:
  leechcraft-core (= ${binary:Version}),
- leechcraft-sb2,
+ leechcraft-provider-quark-display,
  ${misc:Depends},
  ${shlibs:Depends}
 Description: UPower-based power manager for LeechCraft
@@ -1407,7 +1424,7 @@ Package: leechcraft-vrooby
 Architecture: any
 Depends:
  leechcraft-core (= ${binary:Version}),
- leechcraft-sb2,
+ leechcraft-provider-quark-display,
  udisks (>= 1.0),
  ${misc:Depends},
  ${shlibs:Depends}
