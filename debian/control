@@ -36,6 +36,7 @@ Build-Depends: cmake,
                libqwt-dev,
                libqxmpp-dev (>= 0.7.4),
                libqxt-dev,
+               libsensors4-dev,
                libspectre-dev,
                libspeex-dev,
                libtag1-dev,
@@ -75,6 +76,7 @@ Depends: leechcraft-advancednotifications (>= ${source:Version}),
          leechcraft-glance (>= ${source:Version}),
          leechcraft-gmailnotifier (>= ${source:Version}),
          leechcraft-historyholder (>= ${source:Version}),
+         leechcraft-hotsensors (>= ${source:Version}),
          leechcraft-hotstreams (>= ${source:Version}),
          leechcraft-imgaste (>= ${source:Version}),
          leechcraft-kbswitch (>= ${source:Version}),
@@ -705,6 +707,21 @@ Depends: leechcraft-core (= ${binary:Version}),
 Description: history keeper for LeechCraft
  This package contains a history keeper that stores information about
  finished downloads and similar events.
+ .
+ LeechCraft is a free cross-platform modular live environment.
+ .
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
+
+Package: leechcraft-hotsensors
+Architecture: any
+Depends: leechcraft-core (= ${binary:Version}),
+         leechcraft-provider-quark-display,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: temperature sensors quark for LeechCraft
+ This package provides temperature sensors quark for the LeechCraft SB2 panel.
  .
  LeechCraft is a free cross-platform modular live environment.
  .
