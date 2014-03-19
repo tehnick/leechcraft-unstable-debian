@@ -151,6 +151,7 @@ override_dh_auto_clean:
 
 override_dh_auto_install:
 	dh_auto_install
+	rm -rf $(CURDIR)/debian/tmp/usr/include/leechcraft/util/cmake/
 	mkdir -p $(DEB_DOCDIR)/html/azoth
 	mkdir -p $(DEB_DOCDIR)/html/core
 	mkdir -p $(DEB_DOCDIR)/html/monocle
