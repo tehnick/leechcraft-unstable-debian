@@ -1118,6 +1118,9 @@ Description: Web browser for LeechCraft
   * support for SQLite or PostgreSQL storage
  .
  Such sub-plugins are available in this package:
+  * autosearch (autosearch plugin)
+  This is a plugin for the Poshuku web browser that provides search
+  autosuggestions in Poshuku omnibox.
   * cleanweb (Ad filter for Web browser)
   This is a plugin for the Poshuku web browser that filters out ads according to
   predefined rules. It is compatible with Firefox's AdBlock rules list files.
