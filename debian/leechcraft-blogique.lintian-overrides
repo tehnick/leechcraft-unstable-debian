@@ -1,2 +1,0 @@
-# False positives for lintian tag hardening-no-fortify-functions.
-leechcraft-blogique: hardening-no-fortify-functions usr/lib/leechcraft/plugins/libleechcraft_blogique_metida.so
