@@ -107,6 +107,7 @@ Depends:
  leechcraft-vgrabber (>= ${source:Version}),
  leechcraft-vrooby (>= ${source:Version}),
  leechcraft-xproxy (>= ${source:Version}),
+ leechcraft-xtazy (>= ${source:Version}),
  ${misc:Depends}
 Suggests:
  leechcraft-extra,
@@ -209,7 +210,8 @@ Suggests:
  leechcraft-tabslist,
  leechcraft-vgrabber,
  leechcraft-vrooby,
- leechcraft-xproxy
+ leechcraft-xproxy,
+ leechcraft-xtazy
 Breaks:
  leechcraft (<< 0.5.80-182-g52295f3+dfsg-0ppa1)
 Description: core executable of LeechCraft and basic files
@@ -1432,6 +1434,22 @@ Depends:
  ${shlibs:Depends}
 Description: proxy manager for LeechCraft
  This package contains XProxy, the advanced proxy manager for LeechCraft.
+ .
+ LeechCraft is a free cross-platform modular live environment.
+ .
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
+
+Package: leechcraft-xtazy
+Architecture: any
+Depends:
+ leechcraft-core (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: LeechCraft plugin for keeping track of currently playing song
+ This package contains LeechCraft plugin for keeping track of a currently
+ playing song.
  .
  LeechCraft is a free cross-platform modular live environment.
  .
