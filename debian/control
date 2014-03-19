@@ -390,6 +390,7 @@ Description: screenshooter for LeechCraft
 Package: leechcraft-azoth
 Architecture: any
 Depends: leechcraft-core (= ${binary:Version}),
+         libqca2-plugin-gnupg,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: leechcraft-provider-securestorage,
