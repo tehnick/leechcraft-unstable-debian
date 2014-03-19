@@ -431,6 +431,7 @@ Depends:
  ${shlibs:Depends}
 Recommends:
  leechcraft-provider-securestorage,
+ leechcraft-rosenthal,
  telepathy-haze,
  telepathy-mission-control-5
 Suggests:
