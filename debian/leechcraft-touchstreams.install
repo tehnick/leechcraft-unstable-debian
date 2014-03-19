@@ -1,0 +1,3 @@
+usr/lib/leechcraft/plugins/*leechcraft_touchstreams*.so
+usr/share/leechcraft/settings/touchstreams*settings.xml
+usr/share/leechcraft/translations/leechcraft_touchstreams*.qm

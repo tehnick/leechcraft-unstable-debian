@@ -104,6 +104,7 @@ Depends: leechcraft-advancednotifications (>= ${source:Version}),
          leechcraft-summary (>= ${source:Version}),
          leechcraft-tabsessmanager (>= ${source:Version}),
          leechcraft-tabslist (>= ${source:Version}),
+         leechcraft-touchstreams (>= ${source:Version}),
          leechcraft-vgrabber (>= ${source:Version}),
          leechcraft-vrooby (>= ${source:Version}),
          leechcraft-xproxy (>= ${source:Version}),
@@ -1280,6 +1281,21 @@ Provides: leechcraft-provider-searchesview
 Description: manager of opened tabs for LeechCraft
  This plugin adds an action to the quick launch area that, when triggered,
  opens a list of tabs and allows one to navigate to another tab.
+ .
+ LeechCraft is a free cross-platform modular live environment.
+ .
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
+
+Package: leechcraft-touchstreams
+Architecture: any
+Depends: leechcraft-core (= ${binary:Version}),
+         leechcraft-lmp,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: vk.com music streaming plugin for LeechCraft
+ This package provides the VK.com music streaming plugin for LeechCraft.
  .
  LeechCraft is a free cross-platform modular live environment.
  .
