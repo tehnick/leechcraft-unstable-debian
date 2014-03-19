@@ -84,6 +84,7 @@ Depends: leechcraft-advancednotifications (>= ${source:Version}),
          leechcraft-knowhow (>= ${source:Version}),
          leechcraft-lackman (>= ${source:Version}),
          leechcraft-lastfmscrobble (>= ${source:Version}),
+         leechcraft-launchy (>= ${source:Version}),
          leechcraft-lhtr (>= ${source:Version}),
          leechcraft-liznoo (>= ${source:Version}),
          leechcraft-lmp (>= ${source:Version}),
@@ -183,6 +184,7 @@ Suggests: leechcraft-advancednotifications,
           leechcraft-knowhow,
           leechcraft-lackman,
           leechcraft-lastfmscrobble,
+          leechcraft-launchy,
           leechcraft-lmp,
           leechcraft-monocle,
           leechcraft-nacheku,
@@ -848,6 +850,22 @@ Description: Last.fm scrobbler for LeechCraft
  This package contains LastFMScrobble, which provides support for various
  Last.FM-related services from scrobbling and streaming to obtaining
  recommendations, similar artists and biographies.
+ .
+ LeechCraft is a free cross-platform modular live environment.
+ .
+ LeechCraft allows one to browse the web, chat using common IM networks, play
+ music, read RSS/Atom feeds, download files via BitTorrent, read documents and
+ much more.
+
+Package: leechcraft-launchy
+Architecture: any
+Depends: leechcraft-core (= ${binary:Version}),
+         leechcraft-provider-quark-display,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: applications launcher module for LeechCraft
+ This package contains Launchy, a launcher module that allows one to launch
+ third-party applications, LeechCraft modules and other things.
  .
  LeechCraft is a free cross-platform modular live environment.
  .

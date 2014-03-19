@@ -1,0 +1,3 @@
+usr/lib/leechcraft/plugins/*leechcraft_launchy*.so
+usr/share/leechcraft/qml/launchy/*
+usr/share/leechcraft/translations/leechcraft_launchy*.qm
