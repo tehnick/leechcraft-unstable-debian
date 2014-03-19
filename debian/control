@@ -91,6 +91,7 @@ Depends:
  leechcraft-netstoremanager (>= ${source:Version}),
  leechcraft-networkmonitor (>= ${source:Version}),
  leechcraft-newlife (>= ${source:Version}),
+ leechcraft-ooronee (>= ${source:Version}),
  leechcraft-otlozhu (>= ${source:Version}),
  leechcraft-pintab (>= ${source:Version}),
  leechcraft-pogooglue (>= ${source:Version}),
@@ -192,6 +193,7 @@ Suggests:
  leechcraft-netstoremanager,
  leechcraft-networkmonitor,
  leechcraft-newlife,
+ leechcraft-ooronee,
  leechcraft-otlozhu,
  leechcraft-pintab,
  leechcraft-pogooglue,
@@ -1076,6 +1078,22 @@ Description: settings importer for LeechCraft
  music, read RSS/Atom feeds, download files via BitTorrent, read documents and
  much more.
 
+Package: leechcraft-ooronee
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ leechcraft-core (= ${binary:Version}),
+ leechcraft-provider-image-uploader
+Recommends: leechcraft-provider-search
+Description: text and images paster plugin for LeechCraft
+ This package contains quark for SB2 panel for handling text and images
+ dropped on it.
+ .
+ LeechCraft is a free modular "Internet client" application.
+ .
+ LeechCraft allows one to browse the web, read RSS/Atom feeds, download
+ files via BitTorrent, HTTP, FTP and Direct Connect, automatically stream,
+ download or play podcasts and other media files and much more.
+
 Package: leechcraft-otlozhu
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
@@ -1124,6 +1142,8 @@ Depends:
  leechcraft-core (= ${binary:Version}),
  ${misc:Depends},
  ${shlibs:Depends}
+Provides:
+ leechcraft-provider-search
 Description: Google search client for LeechCraft
  This plugin allows one to search for selected text in Google in two clicks.
  .
