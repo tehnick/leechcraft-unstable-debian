@@ -268,7 +268,7 @@ Description: debug symbols for LeechCraft
 Package: leechcraft-doc
 Section: doc
 Architecture: all
-Depends: libjs-jquery, ${misc:Depends}
+Depends: ${misc:Depends}
 Recommends: leechcraft-dev
 Description: documentation files for LeechCraft
  This package contains documentation files which should be helpful for
