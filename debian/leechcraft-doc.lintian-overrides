@@ -1,2 +1,5 @@
 # There are too many identical small files. Problem should be fixed in Doxygen.
 leechcraft-doc: duplicate-files usr/share/doc/leechcraft-doc/html/*
+
+# See details at /usr/share/doc/doxygen/README.jquery.
+leechcraft-doc: embedded-javascript-library usr/share/doc/leechcraft-doc/html/*/jquery.js
