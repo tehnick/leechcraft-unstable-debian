@@ -35,7 +35,6 @@ Build-Depends: cmake,
                libqxmpp-dev (>= 0.7.4),
                libqxt-dev,
                libsensors4-dev,
-               libspectre-dev,
                libspeex-dev,
                libtag1-dev,
                libtelepathy-qt4-dev,
@@ -961,7 +960,8 @@ Description: featureful music player for LeechCraft
 
 Package: leechcraft-monocle
 Architecture: any
-Depends: leechcraft-core (= ${binary:Version}),
+Depends: ghostscript,
+         leechcraft-core (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: leechcraft-provider-sessionmanager
@@ -971,7 +971,7 @@ Description: document viewer for LeechCraft
   * dik -- MOBI file format (*.mobi)
   * fxb -- FictionBook file format (*.fb2)
   * pdf -- PDF file format (*.pdf) (libpoppler is used)
-  * postrus -- PostScript file format (*.ps) (libspectre is used)
+  * postrus -- PostScript file format (*.ps) (ps2pdf is used)
   * seen -- DjVu file format (*.djvu) (libdjvulibre is used)
  .
  Monocle supports links and tables of contents, two-page spreads, copying
