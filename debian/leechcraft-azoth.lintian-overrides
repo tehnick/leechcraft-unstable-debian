@@ -2,8 +2,7 @@
 leechcraft-azoth: hardening-no-fortify-functions usr/lib/leechcraft/plugins/libleechcraft_azoth_otroid.so
 
 # These *.desktop files are useless without plugins from this package.
-leechcraft-azoth: desktop-command-not-in-package usr/share/applications/leechcraft-azoth-acetamide.desktop leechcraft
-leechcraft-azoth: desktop-command-not-in-package usr/share/applications/leechcraft-azoth-xoox.desktop leechcraft
+leechcraft-azoth: desktop-command-not-in-package usr/share/applications/leechcraft-azoth-*.desktop leechcraft
 
 # This problem is in libotr, but not in the sub-plugin.
 leechcraft-azoth: shlib-calls-exit usr/lib/leechcraft/plugins/libleechcraft_azoth_otroid.so
