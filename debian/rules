@@ -1,14 +1,15 @@
 #!/usr/bin/make -f
 
 PACKAGE = leechcraft
-DEVELOPER = 0xd34df00d
-PROJECT = leechcraft
 
-DEB_VER = $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(\([0-9]\+\):\)\?\(.*\)-.*/\3/p')
+DEBIAN_PATH := $(abspath $(dir $(MAKEFILE_LIST)))
+USCAN_REPORT = $(shell uscan --noconf --report --dehs $(DEBIAN_PATH))
+CUR_URL = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-url>\(.*\)<\/upstream-url>.*/\1/p')
+NEW_VER = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
+CUR_VER = $(NEW_VER)+dfsg
+
+DEB_VER = $(shell dpkg-parsechangelog -l"$(DEBIAN_PATH)/changelog" | sed -ne 's/^Version: \(\([0-9]\+\):\)\?\(.*\)-.*/\3/p')
 CLN_VER = $(shell echo $(DEB_VER) | sed 's/\+dfsg//')
-
-NEW_VER = $(shell uscan --dehs | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
-CUR_VER = $(NEW_VER)\+dfsg
 
 DEB_DOCDIR = $(CURDIR)/debian/tmp/usr/share/doc/leechcraft-doc
 
@@ -183,13 +184,11 @@ override_dh_builddeb:
 	dh_builddeb -- -Zxz
 
 get-orig-source:
-	# preparation
-	rm -rf  "$(CUR_VER)" "$(PACKAGE)-$(CUR_VER)"
-	# main sources
-	wget -4 "https://codeload.github.com/$(DEVELOPER)/$(PROJECT)/tarball/$(NEW_VER)"
-	rm -rf $(DEVELOPER)-$(PROJECT)-*
-	tar xzf "$(NEW_VER)"
-	mv $(DEVELOPER)-$(PROJECT)-* "$(PACKAGE)-$(CUR_VER)"
+	# getting sources
+	wget -c "$(CUR_URL)" -O "$(PACKAGE)-$(NEW_VER).tar.gz"
+	rm -rf "$(PACKAGE)-$(NEW_VER)"
+	tar xzf "$(PACKAGE)-$(NEW_VER).tar.gz"
+	mv "$(PACKAGE)-$(NEW_VER)" "$(PACKAGE)-$(CUR_VER)"
 	# processing
 	rm -r "$(PACKAGE)-$(CUR_VER)"/src/plugins/cstp/resources/images/clients/*
 	rm -r "$(PACKAGE)-$(CUR_VER)"/src/plugins/advancednotifications/share/sounds/*
@@ -201,5 +200,5 @@ get-orig-source:
 	# tarball
 	tar -cJf "$(PACKAGE)_$(CUR_VER).orig.tar.xz" "$(PACKAGE)-$(CUR_VER)"
 	# cleaning
-	rm -rf "$(PACKAGE)-$(CUR_VER)" "$(CUR_VER)" "master"
+	rm -rf "$(PACKAGE)-$(CUR_VER)" "$(PACKAGE)-$(NEW_VER).tar.gz"
 
