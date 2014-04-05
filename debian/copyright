@@ -5,9 +5,9 @@ Upstream-Name: LeechCraft
 Upstream-Contact: Georg Rudoy <0xd34df00d@gmail.com>
 Source: https://github.com/0xd34df00d/leechcraft/tags
  Few files and directories are excluded from tarball:
- https://github.com/0xd34df00d/leechcraft/tree/master/src/plugins/cstp/resources/images/clients/*
- https://github.com/0xd34df00d/leechcraft/tree/master/src/plugins/advancednotifications/share/sounds/*
- https://github.com/0xd34df00d/leechcraft/tree/master/src/plugins/azoth/share/azoth/iconsets/clients/default/* (except file unknown.png)
+ src/plugins/cstp/resources/images/clients/*
+ src/plugins/advancednotifications/share/sounds/*
+ src/plugins/azoth/share/azoth/iconsets/clients/default/* (except file unknown.png)
  .
  See section get-orig-source in debian/rules file for details.
  .
@@ -15,74 +15,75 @@ Source: https://github.com/0xd34df00d/leechcraft/tags
  questionable licenses. Special patches in debian/patches/ directory give
  possibility to build program without these files.
 
-Files: src/* tools/*
-Copyright: 2006-2013 Georg Rudoy <0xd34df00d@gmail.com>
- 2010-2013 Oleg Linkin <MaledictusDeMagog@gmail.com>
- 2011-2012 Minh Ngo
- 2011-2012 Alexander Konovalov
- 2011-2012 Eugene Mamin
- 2011-2012 Azer Abdullaev aka Like-all
- 2011 Yury Erik Potapov
- 2011 ForNeVeR
- 2011 Andrey Batyiev
- 2010 Vadim Misbakh-Soloviev
- 2012 Dimitriy Ryazantcev
- 2012 Maxim Ignatenko
- 2012 Maxim Koltsov
- 2013 Slava Barinov <rayslava@gmail.com>
- 2013 Vladislav Tyulbashev
+Files: src/*
+       tools/*
+Copyright: 2006-2014 Georg Rudoy <0xd34df00d@gmail.com>
+           2010-2013 Oleg Linkin <MaledictusDeMagog@gmail.com>
+           2011-2012 Minh Ngo
+           2011-2012 Alexander Konovalov
+           2011-2012 Eugene Mamin
+           2011-2012 Azer Abdullaev aka Like-all
+           2011 Yury Erik Potapov
+           2011 ForNeVeR
+           2011 Andrey Batyiev
+           2010 Vadim Misbakh-Soloviev
+           2012 Dimitriy Ryazantcev
+           2012 Maxim Ignatenko
+           2012 Maxim Koltsov
+           2013 Slava Barinov <rayslava@gmail.com>
+           2013 Vladislav Tyulbashev
 License: BSL-1
 
 Files: src/cmake/*
- src/plugins/laure/cmake/*
- src/plugins/lmp/cmake/*
- src/plugins/bittorrent/cmake/*
- src/plugins/azoth/cmake/*
- src/plugins/azoth/plugins/otroid/cmake/*
- src/plugins/azoth/plugins/xoox/cmake/*
- src/plugins/azoth/plugins/zheet/cmake/*
- src/plugins/azoth/plugins/astrality/cmake/*
- src/plugins/azoth/plugins/velvetbird/cmake/*
- src/plugins/popishu/cmake/*
- src/plugins/liznoo/cmake/*
- src/plugins/poshuku/plugins/onlinebookmarks/plugins/readitlater/cmake/*
- src/plugins/qrosp/cmake/*
- src/plugins/monocle/plugins/pdf/cmake/*
- src/plugins/hotstreams/cmake/*
- src/plugins/poshuku/plugins/cleanweb/cmake/*
- src/plugins/monocle/plugins/postrus/cmake/*
- src/plugins/sb2/cmake/*
- src/plugins/lemon/cmake/*
+       src/plugins/laure/cmake/*
+       src/plugins/lmp/cmake/*
+       src/plugins/bittorrent/cmake/*
+       src/plugins/azoth/cmake/*
+       src/plugins/azoth/plugins/otroid/cmake/*
+       src/plugins/azoth/plugins/xoox/cmake/*
+       src/plugins/azoth/plugins/zheet/cmake/*
+       src/plugins/azoth/plugins/astrality/cmake/*
+       src/plugins/azoth/plugins/velvetbird/cmake/*
+       src/plugins/popishu/cmake/*
+       src/plugins/liznoo/cmake/*
+       src/plugins/poshuku/plugins/onlinebookmarks/plugins/readitlater/cmake/*
+       src/plugins/qrosp/cmake/*
+       src/plugins/monocle/plugins/pdf/cmake/*
+       src/plugins/hotstreams/cmake/*
+       src/plugins/poshuku/plugins/cleanweb/cmake/*
+       src/plugins/monocle/plugins/postrus/cmake/*
+       src/plugins/sb2/cmake/*
+       src/plugins/lemon/cmake/*
 Copyright: 2009 Brad Hards <bradh@kde.org>
- 2009 Michele Caini, <skypjack@gmail.com>
- 2007 Pau Garcia i Quiles <pgquiles@elpauer.org>
- 2008-2013 Georg Rudoy <0xd34df00d@gmail.com>
- 2008 Tanguy Krotoff <tkrotoff@gmail.com>
- 2011 Minh Ngo <nlminhtl@gmail.com>
- 2006-2008 Matthias Kretz <kretz@kde.org>
- 2008 Voker57 <voker57@gmail.com>
- 2011 Eugene Mamin aka DZhon <TheDZhon@gmail.com>
- 2006 Alessandro Praduroux <pradu@pradu.it>
- 2007 Urs Wolfer <uwolfer@kde.org>
- 2006 Andreas Schneider <mail@cynapses.org>
- 2006 Michael Larouche <michael.larouche@kdemail.net>
- 2007 Christian Ehrlicher <ch.ehrlicher@gmx.de>
- 2008 Matt Rogers <mattr@kde.org>
- 2008 Michael Zanetti <michael_zanetti@gnx.net>
- 2006 David Faure <faure@kde.org>
- 2007 Will Stephenson <wstephenson@kde.org>
- 2007 Thomas Moenicke <thomas.moenicke@kdemail.net>
- 2008 Allen Winter <winter@kde.org>
- 2009 Andre Moreira Magalhaes <andrunko@gmail.com>
- 2010 Casper van Donderen <casper.vandonderen@basyskom.de>
- 2006-2008 Laurent Montel <montel@kde.org>
- 2006 Wilfried Huss <wilfried.huss@gmx.at>
- 2006-2008 Alexander Neundorf <neundorf@kde.org>
- 2006-2007 Pino Toscano <pino@kde.org>
- 2008 Albert Astals Cid <aacid@kde.org>
- 2011 DZhon <TheDZhon@gmail.com>
- 2011 Michael Jansen <kde@michael-jansen.biz>
- 2008 Tarrisse Laurent <laurent@mbdsys.com>
+           2009 Michele Caini, <skypjack@gmail.com>
+           2007 Pau Garcia i Quiles <pgquiles@elpauer.org>
+           2008-2013 Georg Rudoy <0xd34df00d@gmail.com>
+           2008 Tanguy Krotoff <tkrotoff@gmail.com>
+           2011 Minh Ngo <nlminhtl@gmail.com>
+           2006-2008 Matthias Kretz <kretz@kde.org>
+           2008 Voker57 <voker57@gmail.com>
+           2011 Eugene Mamin aka DZhon <TheDZhon@gmail.com>
+           2006 Alessandro Praduroux <pradu@pradu.it>
+           2007 Urs Wolfer <uwolfer@kde.org>
+           2006 Andreas Schneider <mail@cynapses.org>
+           2006 Michael Larouche <michael.larouche@kdemail.net>
+           2007 Christian Ehrlicher <ch.ehrlicher@gmx.de>
+           2008 Matt Rogers <mattr@kde.org>
+           2008 Michael Zanetti <michael_zanetti@gnx.net>
+           2006 David Faure <faure@kde.org>
+           2007 Will Stephenson <wstephenson@kde.org>
+           2007 Thomas Moenicke <thomas.moenicke@kdemail.net>
+           2008 Allen Winter <winter@kde.org>
+           2009 Andre Moreira Magalhaes <andrunko@gmail.com>
+           2010 Casper van Donderen <casper.vandonderen@basyskom.de>
+           2006-2008 Laurent Montel <montel@kde.org>
+           2006 Wilfried Huss <wilfried.huss@gmx.at>
+           2006-2008 Alexander Neundorf <neundorf@kde.org>
+           2006-2007 Pino Toscano <pino@kde.org>
+           2008 Albert Astals Cid <aacid@kde.org>
+           2011 DZhon <TheDZhon@gmail.com>
+           2011 Michael Jansen <kde@michael-jansen.biz>
+           2008 Tarrisse Laurent <laurent@mbdsys.com>
 License: BSD-3-clause
 
 Files: src/plugins/qrosp/third-party/*
@@ -132,7 +133,7 @@ License: CPL-1.0 or LGPL-2.1
 
 Files: src/plugins/azoth/plugins/autoidler/3dparty/*
 Copyright: 2003 Justin Karneges
- 2003 Tarkvara Design Inc.
+           2003 Tarkvara Design Inc.
 License: LGPL-2.1+
 
 Files: src/plugins/azoth/share/azoth/iconsets/contactlist/oxygen/*
@@ -140,7 +141,7 @@ Copyright: 2007 Oxygen icons theme team (see http://www.oxygen-icons.org/)
 License: LGPL-3
 
 Files: src/plugins/azoth/plugins/adiumstyles/share/azoth/styles/adium/*/Contents/Resources/*.png
- src/plugins/azoth/plugins/adiumstyles/share/azoth/styles/adium/*/Contents/Resources/*/*.png
+       src/plugins/azoth/plugins/adiumstyles/share/azoth/styles/adium/*/Contents/Resources/*/*.png
 Copyright: 2001-2009 The Kopete Developers <kopete-devel@kde.org>
 License: GPL-2+
 
@@ -149,7 +150,7 @@ Copyright: 2004 Andreas Reigber <anderl@nought.de>
 License: GPL-3+
 
 Files: debian/*
-Copyright: 2011-2013 Boris Pek <tehnick-8@mail.ru>
+Copyright: 2011-2014 Boris Pek <tehnick-8@mail.ru>
 License: GPL-2+
 
 License: GPL-2+
