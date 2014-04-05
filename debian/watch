@@ -1,4 +1,4 @@
 version=3
 opts=dversionmangle=s/\+dfsg// \
- https://github.com/0xd34df00d/leechcraft/tags .*/0xd34df00d/leechcraft/tarball/(\d.+) \
+ https://github.com/0xd34df00d/leechcraft/tags .*/0xd34df00d/leechcraft/archive/(.+)\.tar\.gz \
  debian uupdate
