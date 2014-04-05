@@ -1,5 +1,2 @@
 # These *.desktop files are useless without plugins from this package.
-leechcraft-monocle: desktop-command-not-in-package usr/share/applications/leechcraft-monocle-fxb.desktop leechcraft
-leechcraft-monocle: desktop-command-not-in-package usr/share/applications/leechcraft-monocle-pdf.desktop leechcraft
-leechcraft-monocle: desktop-command-not-in-package usr/share/applications/leechcraft-monocle-postrus.desktop leechcraft
-leechcraft-monocle: desktop-command-not-in-package usr/share/applications/leechcraft-monocle-seen.desktop leechcraft
+leechcraft-monocle: desktop-command-not-in-package usr/share/applications/leechcraft-monocle-*.desktop leechcraft
