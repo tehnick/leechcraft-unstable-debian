@@ -4,8 +4,6 @@ Priority: optional
 Maintainer: Boris Pek <tehnick@debian.org>
 Build-Depends: cmake,
                debhelper (>= 9),
-               doxygen,
-               graphviz,
                libaspell-dev,
                libboost-date-time-dev (>= 1.49),
                libboost-filesystem-dev (>= 1.49),
@@ -50,6 +48,7 @@ Build-Depends: cmake,
                po-debconf,
                x11proto-randr-dev,
                zlib1g-dev
+Build-Depends-Indep: doxygen, graphviz
 Homepage: http://leechcraft.org
 Vcs-Git: git://github.com/tehnick/leechcraft-unstable-debian.git
 Vcs-Browser: https://github.com/tehnick/leechcraft-unstable-debian

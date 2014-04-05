@@ -10,10 +10,9 @@ CLN_VER = $(shell echo $(DEB_VER) | sed 's/\+dfsg//')
 NEW_VER = $(shell uscan --dehs | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
 CUR_VER = $(NEW_VER)\+dfsg
 
-DEB_BUILDDIR = obj-$(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 DEB_DOCDIR = $(CURDIR)/debian/tmp/usr/share/doc/leechcraft-doc
 
-LDFLAGS+=-Wl,--as-needed
+LDFLAGS += -Wl,--as-needed
 
 CMAKEOPTS = "$(CURDIR)/src" \
 	-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
@@ -122,24 +121,27 @@ CMAKEOPTS = "$(CURDIR)/src" \
 %:
 	dh $@ --parallel --list-missing --buildsystem=cmake
 
-override_dh_auto_configure:
-	mkdir -p $(DEB_BUILDDIR)
-	cd $(DEB_BUILDDIR) && cmake $(CMAKEOPTS)
+override_dh_auto_configure-arch:
+	dh_auto_configure -- $(CMAKEOPTS)
+
+override_dh_auto_configure-indep:
 	cd $(CURDIR)/doc/doxygen/azoth/   && cp Doxyfile Doxyfile.orig
 	cd $(CURDIR)/doc/doxygen/core/    && cp Doxyfile Doxyfile.orig
 	cd $(CURDIR)/doc/doxygen/monocle/ && cp Doxyfile Doxyfile.orig
 	sed -i $(CURDIR)/doc/doxygen/*/Doxyfile \
 		-e "s/PROJECT_NUMBER         = .*/PROJECT_NUMBER         = $(CLN_VER)/"
 
-override_dh_auto_build:
-	dh_auto_build --buildsystem=cmake
+override_dh_auto_build-indep:
 	cd $(CURDIR)/doc/doxygen/azoth/   && doxygen Doxyfile
 	cd $(CURDIR)/doc/doxygen/core/    && doxygen Doxyfile
 	cd $(CURDIR)/doc/doxygen/monocle/ && doxygen Doxyfile
 
-override_dh_auto_clean:
-	dh_testroot
+override_dh_auto_clean-arch:
+	dh_auto_clean -a
 	rm -f src/data/leechcraft.1.gz
+
+override_dh_auto_clean-indep:
+	dh_auto_clean -i
 	rm -fr $(CURDIR)/doc/doxygen/*/out
 	[ ! -f $(CURDIR)/doc/doxygen/azoth/Doxyfile.orig ] || \
 		( cd $(CURDIR)/doc/doxygen/azoth/ && mv -f Doxyfile.orig Doxyfile )
@@ -147,11 +149,12 @@ override_dh_auto_clean:
 		( cd $(CURDIR)/doc/doxygen/core/  && mv -f Doxyfile.orig Doxyfile )
 	[ ! -f $(CURDIR)/doc/doxygen/monocle/Doxyfile.orig ] || \
 		( cd $(CURDIR)/doc/doxygen/monocle/  && mv -f Doxyfile.orig Doxyfile )
-	dh_auto_clean
 
-override_dh_auto_install:
-	dh_auto_install
+override_dh_auto_install-arch:
+	dh_auto_install -a
 	rm -rf $(CURDIR)/debian/tmp/usr/include/leechcraft/util/cmake/
+
+override_dh_auto_install-indep:
 	mkdir -p $(DEB_DOCDIR)/html/azoth
 	mkdir -p $(DEB_DOCDIR)/html/core
 	mkdir -p $(DEB_DOCDIR)/html/monocle
@@ -159,19 +162,19 @@ override_dh_auto_install:
 	cp -r $(CURDIR)/doc/doxygen/core/out/html/*    $(DEB_DOCDIR)/html/core/
 	cp -r $(CURDIR)/doc/doxygen/monocle/out/html/* $(DEB_DOCDIR)/html/monocle/
 
-override_dh_installchangelogs:
-	dh_installchangelogs CHANGELOG
+# override_dh_installchangelogs:
+# 	dh_installchangelogs CHANGELOG
 
-.PHONY: override_dh_strip
+# .PHONY: override_dh_strip
 override_dh_strip:
 	dh_strip --dbg-package=leechcraft-dbg
 
-.PHONY: override_dh_makeshlibs
+# .PHONY: override_dh_makeshlibs
 override_dh_makeshlibs:
 	dh_makeshlibs -V -plibleechcraft-xsd0.3.0 \
 					 -plibleechcraft-util0.5.0
 
-.PHONY: override_dh_shlibdeps
+# .PHONY: override_dh_shlibdeps
 override_dh_shlibdeps:
 	dh_shlibdeps -a -ldebian/libleechcraft-xsd0.3.0/usr/lib \
 					-ldebian/libleechcraft-util0.5.0/usr/lib
