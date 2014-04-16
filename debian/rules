@@ -13,7 +13,8 @@ CLN_VER = $(shell echo $(DEB_VER) | sed 's/\+dfsg//')
 
 DEB_DOCDIR = $(CURDIR)/debian/tmp/usr/share/doc/leechcraft-doc
 
-LDFLAGS += -Wl,--as-needed
+export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CPPFLAGS)
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 CMAKEOPTS = "$(CURDIR)/src" \
 	-DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
