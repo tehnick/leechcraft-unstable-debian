@@ -1177,6 +1177,9 @@ Description: Web browser for LeechCraft
   * onlinebookmarks (Support for syncing bookmarks with online services)
   This is a plugin for the Poshuku web browser that allows it to synchronize
   local bookmarks with online social bookmarking systems like Read It Later.
+  * speeddial (Speed Dial support module)
+  This is a plugin for the Poshuku web browser that provides a speed dial-like
+  start page.
  .
  LeechCraft is a free cross-platform modular live environment.
  .
