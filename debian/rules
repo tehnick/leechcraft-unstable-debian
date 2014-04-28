@@ -121,7 +121,7 @@ CMAKEOPTS = "$(CURDIR)/src" \
 
 # This is the dirty hack for Ubuntu >= 14.04 LTS (Trusty Tahr)
 ifeq ($(shell ldd /usr/lib/*/libQtWebKit.so | grep libgstreamer-1.0.so.0 | wc -l), 1)
-	CMAKEOPTS += USE_GSTREAMER_10=True
+	CMAKEOPTS += -DUSE_GSTREAMER_10=True
 endif
 
 %:
