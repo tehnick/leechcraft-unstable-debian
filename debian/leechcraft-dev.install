@@ -1,3 +1,4 @@
 usr/include/leechcraft/*
+usr/lib/libleechcraft-*.so
 usr/share/cmake/Modules/* usr/share/leechcraft/cmake
 usr/share/leechcraft/cmake/*
